@@ -1,0 +1,53 @@
+<head>
+  <%= stylesheet_link_tag 'blueprint/screen.css'%>
+  <%= stylesheet_link_tag 'blueprint/print.css'%>
+  <!--[if lt IE 8]><link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+  <%= stylesheet_link_tag 'style'%>
+  <%= javascript_include_tag :defaults %>
+  
+  
+  <script type="text/javascript">
+  $(document).ready(function() {
+
+  
+
+  setTimeout(function() {
+          $("#flash_error").hide('blind', {}, 500)
+      }, 5000);
+      
+      setTimeout(function() {
+              $("#flash_notice").hide('blind', {}, 500)
+          }, 5000);
+    });
+  </script>
+  
+  <%= yield :head %>
+</head>
+
+<body>
+<div id='header'>
+  <div class='content'>
+    <a href='/' class='span-4'>
+    <div id='logo'>
+    </div>
+    </a>
+    
+    <%= render :partial=> 'users/user_bar'%>
+    
+    <div class='header_link_container'>
+    <%=link_to 'About', :class => 'header_link span-4'%>
+    <%=link_to 'Events', :class => 'header_link span-4'%>
+    <%=link_to 'Friends', :class => 'header_link span-4'%>
+    <%=link_to 'Search', :class => 'header_link span-4'%>
+    
+    
+    </div>
+  </div>
+</div>
+<div id='main_content' class='content'>
+<%= render :partial=> 'home/flash_error' unless flash[:error].blank?%>
+<%= render :partial=> 'home/flash_notice' unless flash[:notice].blank?%>
+  <%=yield%>
+<%= render :partial => 'home/recently_viewed'%>
+</div>
+</body>
