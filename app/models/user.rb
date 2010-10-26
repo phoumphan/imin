@@ -5,7 +5,17 @@ class User < ActiveRecord::Base
   include Authentication::ByPassword
   include Authentication::ByCookieToken
 
-  has_many :friendships, :through => :friendships
+  #Friendship associations (self - referencing)
+  has_many :friendships
+  has_many :friends, :through => :friendships
+
+  #Event associations (many-to-many)
+  has_many :user_events
+  has_many :events, :through => :user_events
+
+  #Eventtype associations (many-to-many)
+  has_many :user_eventtypes
+  has_many :eventtypes, :through => :user_eventtypes
 
   validates_presence_of     :login
   validates_length_of       :login,    :within => 3..40
