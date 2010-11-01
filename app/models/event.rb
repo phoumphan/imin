@@ -10,4 +10,7 @@ class Event < ActiveRecord::Base
   #photo associations (many-to-many)
   has_many :event_photos
   has_many :photos, :through => :event_photos
+
+  validates_presence_of :name
+  validates_presence_of :description
 end
