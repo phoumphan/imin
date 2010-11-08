@@ -1,4 +1,5 @@
 auth\:gen\:site_key=Generates config/initializers/site_keys.rb
+colorbox_helper\:install=Installs required javascript and css files in the public directory.
 db\:abort_if_pending_migrations=Raises an error if there are pending migrations
 db\:charset=Retrieves the charset for the current environment's database
 db\:collation=Retrieves the collation for the current environment's database
@@ -43,6 +44,7 @@ doc\:clobber_rails=Remove rdoc products
 doc\:guides=Generate Rails guides
 doc\:plugins=Generate documentation for all installed plugins
 doc\:plugins\:12_hour_time=Generate documentation for the 12_hour_time plugin
+doc\:plugins\:colorbox-on-rails=Generate documentation for the colorbox-on-rails plugin
 doc\:plugins\:jrails=Generate documentation for the jrails plugin
 doc\:plugins\:restful_authentication=Generate documentation for the restful_authentication plugin
 doc\:rails=Build the RDOC HTML Files

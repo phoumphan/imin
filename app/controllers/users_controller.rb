@@ -25,4 +25,9 @@ class UsersController < ApplicationController
       render :action => 'new'
     end
   end
+
+  #render users/profile
+  def profile
+
+  end
 end
