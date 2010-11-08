@@ -1,0 +1,18 @@
+<%fields_for 'event_eventtype[]' do |t|%>
+      <% rand = rand(100)%>
+      <script>
+         $(document).ready(function () {
+           $('#eventtypes_autocomplete_<%=rand%>').tokenInput("<%= eventtypes_autocomplete_path%>", {
+             tokenLimit: 1,
+               hintText: "Event tag",
+               noResultsText: "No results",
+               searchingText: "Searching..."
+             });
+         });
+       </script>
+  <div id="eventtype_sel" class='box'>
+    <div class='span-12'>
+      Tag: <%=t.text_field :eventtype_id, :id => "eventtypes_autocomplete_#{rand}"%>
+    </div>
+  </div>
+<%end%>

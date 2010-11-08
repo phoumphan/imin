@@ -1,0 +1,33 @@
+<h3><b><%=@event.name%></b></h3>
+
+<br />
+<b>Description:</b>
+<%=@event.description%>
+<br />
+<b>Location:</b>
+<%=@event.location%>
+<br />
+<b>Date:</b>
+<%=@event.event_date%>
+<br />
+<b>Time:</b>
+<%=@event.event_time%>
+<br />
+<b>Cost:</b>
+<%=@event.cost%>
+<br />
+<b>Dress Code:</b>
+<%=@event.formality%>
+<br />
+<b>This is a : <%=@event.formality%> event</b>
+<br />
+
+
+<h4><b>Event types</b></h4>
+<ol>
+  <%for type in @event.eventtypes%>
+    <li>
+      <%=type.description%>
+    </li>
+  <%end%>
+</ol>
