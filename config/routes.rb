@@ -3,9 +3,12 @@ ActionController::Routing::Routes.draw do |map|
   map.login '/login', :controller => 'sessions', :action => 'new'
   map.register '/register', :controller => 'users', :action => 'create'
   map.signup '/signup', :controller => 'users', :action => 'new'
+  map.eventtypes_autocomplete 'eventtypes/select_for_event', :controller => 'eventtypes', :action => 'select_for_event'
+  
   map.resources :users
   map.resources :events
   map.resource :session
+  map.resource :eventtypes
 
   # The priority is based upon order of creation: first created -> highest priority.
 

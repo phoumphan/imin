@@ -5,3 +5,243 @@
 #
 # two:
 #   column: value
+
+Bar:
+  id: 1
+  description: bar
+
+Barbeque:
+  id: 2
+  description: barbeque
+
+Baseball:
+  id: 3
+  description: baseball
+
+Basketball:
+  id: 4
+  description: basketball
+
+Beer Garden:
+  id: 5
+  description: beer garden
+
+Blues Music:
+  id: 6
+  description: blues music
+
+Camping:
+  id: 7
+  description: camping
+
+Cars:
+  id: 8
+  description: cars
+
+Concerts:
+  id: 9
+  description: concerts
+
+Conferences:
+  id: 10
+  description: conference
+
+Dancing:
+  id: 11
+  description: dancing
+
+Driving:
+  id: 12
+  description: driving
+
+Education:
+  id: 13
+  description: education
+
+Family:
+  id: 14
+  description: family
+
+Festivals:
+  id: 15
+  description: festivals
+
+Film:
+  id: 16
+  description: film
+
+Folk Music:
+  id: 17
+  description: folk music
+
+Food:
+  id: 18
+  description: food
+
+Football:
+  id: 19
+  description: football
+  
+Fraternity Party:
+  id: 20
+  description: fraternity party
+
+Fundraisers:
+  id: 21
+  description: fundraiser
+
+Galleries:
+  id: 22
+  description: gallery
+
+Golf:
+  id: 23
+  description: golf
+
+Hiking:
+  id: 24
+  description: hiking
+
+Health:
+  id: 25
+  description: health
+
+Hockey:
+  id: 26
+  description: hockey
+
+House Party:
+  id: 27
+  description: house party
+
+Jazz Music:
+  id: 28
+  description: jazz music
+
+Kayaking:
+  id: 29
+  description: kayaking
+
+Keg Party:
+  id: 30
+  description: keg party
+
+Literary:
+  id: 31
+  description: literary
+
+Mountain Biking:
+  id: 32
+  description: mountain biking
+
+Mountain Climbing:
+  id: 33
+  description: mountain climbing
+
+Movie:
+  id: 34
+  description: movie
+
+Museums:
+  id: 35
+  description: museum
+
+Neighborhood:
+  id: 36
+  description: neighborhood
+
+Networking:
+  id: 37
+  description: networking
+
+Nightlife:
+  id: 38
+  description: nightlife
+  
+On Campus:
+  id: 39
+  description: on campus
+
+Organizations:
+  id: 40
+  description: organizations
+
+Outdoors:
+  id: 41
+  description: outdoors
+
+Performing Arts:
+  id: 42
+  description: performing arts
+
+Pets:
+  id: 43
+  description: pets
+
+Politics:
+  id: 44
+  description: politics
+
+Pub:
+  id: 45
+  description: pub
+
+Rap Music:
+  id: 46
+  description: rap music
+  
+Rock Climbing:
+  id: 47
+  description: rock climbing
+
+Rock Music:
+  id: 48
+  description: rock music
+
+Sales:
+  id: 49
+  description: sales
+
+Science:
+  id: 50
+  description: science
+
+Skiing:
+  id: 51
+  description: skiing
+
+Snowboarding:
+  id: 52
+  description: snowboarding
+
+Soccer:
+  id: 53
+  description: soccer
+  
+Sorority Party:
+  id: 54
+  description: sorority party
+
+Religion and Spirituality:
+  id: 55
+  description: religion and spirituality
+  
+Sports:
+  id: 56
+  description: sports
+  
+Technology:
+  id: 57
+  description: technology
+
+Tournament:
+  id: 58
+  description: tournament
+
+Top 40 Music:
+  id: 59
+  description: top 40 music
+
+Video Gaming:
+  id: 60
+  description: video gaming

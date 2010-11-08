@@ -1,7 +1,6 @@
 <% content_for :head do %>
   <%= javascript_include_tag 'jquery.tokeninput' %>
   <%= stylesheet_link_tag 'token-input'  %>
-
 <% end %>
 
 <h2>Create a New Event!</h2>
@@ -16,25 +15,30 @@
   <td><%=f.text_area :description, :style => 'height:60px'%></td></tr>
 
   <tr><td><%=f.label :event_date, 'Event Date'%></td>
-  <td><%=f.text_field :event_date%></td></tr>
+  <td><%= f.text_field :event_date %></td></tr>
 
   <tr><td><%=f.label :event_time, 'Event Time'%></td>
-  <td><%=f.text_field :event_time%></td></tr>
+  <td><%=f.time_select :event_time, :minute_step => 15, :twelve_hour => true%></td></tr>
 
   <tr><td><%=f.label :location, 'Event Location'%></td>
   <td><%=f.text_field :location%></td></tr>
 
   <tr><td><%=f.label :formality, 'Dress Code'%></td>
-  <td><%=f.text_field :formality%></td></tr>
+  <td><%=f.select :formality, ['Formal', 'Dressy', 'Dressy-Casual', 'Casual']%></td></tr>
 
   <tr><td><%=f.label :cost, 'Price'%></td><td>
   <%=f.text_field :cost, :size => 10%> &nbsp; Dollars</td></tr>
 
   <tr><td><%=f.label :public, 'Event Privacy'%></td>
-  <td><%=f.text_field :public%></td></tr>
+  <td><%=f.select :public, ['Private', 'Public']%></td></tr>
   
   </table>
+
+  <div id='eventtypes'>
+  </div>
+  <%=link_to_remote 'Add an Event Tag', :url => {:action => 'add_eventtype'}%>
+  <br /><br />
   
-  <%=f.submit "Submit For Approval"%>
+  <%=f.submit "Create Event"%>
 <%end%>
 
