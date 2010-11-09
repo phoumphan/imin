@@ -1,0 +1,30 @@
+<table id="searchTable">
+
+  <thead>
+    <tr>      
+      <th><a href="">Event</a></th>
+      <th><a href="">Location</a></th>
+      <th><a href="">Preference Score</a></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% for result in @results %>
+      <tr>
+        
+        <td>
+          <%= link_to result.name, event_path(result.id) %>
+        </td>
+
+        <td>
+          <%= result.location%>
+        </td>
+        
+        
+      </tr>
+    <%end%>
+  </tbody>
+</table>
+
+

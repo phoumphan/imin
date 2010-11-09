@@ -9,6 +9,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :events
   map.resource :session
   map.resource :eventtypes
+  map.resource :search
 
   # The priority is based upon order of creation: first created -> highest priority.
 

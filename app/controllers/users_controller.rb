@@ -28,6 +28,7 @@ class UsersController < ApplicationController
 
   #render users/profile
   def profile
-
+    @user = current_user
+    puts("----------" + @user.email + "------------")
   end
 end

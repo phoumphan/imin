@@ -1,0 +1,15 @@
+<% form_for :search, {:controller => 'search', :action => 'show'} do |f|%>
+  <%= f.text_field :query %>
+  <%= submit_tag "Search!" %>
+<% end %>
+
+<%if @results.empty?%>
+  <%if @searchfor%>
+    </br>
+    <b>Your Search For '<%=@searchfor%>' Returned 0 Results</b>
+  <%end%>
+<%else%>
+  <div id="table">
+    <%= render :partial => "search_table" %>
+  </div>
+<%end%>
