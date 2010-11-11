@@ -9,6 +9,7 @@ class CreateEvents < ActiveRecord::Migration
       t.integer :cost
       t.string :formality
       t.boolean :public
+      t.integer :owner_id
       t.timestamps
     end
   end

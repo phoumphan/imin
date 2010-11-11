@@ -13,6 +13,8 @@ class User < ActiveRecord::Base
   has_many :user_events
   has_many :events, :through => :user_events
 
+  has_many :owned_events, :class_name => "Event"
+
   #Eventtype associations (many-to-many)
   has_many :user_eventtypes
   has_many :eventtypes, :through => :user_eventtypes

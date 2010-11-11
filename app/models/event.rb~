@@ -11,13 +11,39 @@ class Event < ActiveRecord::Base
   has_many :event_photos
   has_many :photos, :through => :event_photos
 
-  belongs_to :owner, :class_name => "User"
+  def getName
+    @name
+  end
 
-  validates_presence_of :name
-  validates_presence_of :description
-  validates_numericality_of :cost, :greater_than_or_equal_to => 0
+  def getDescription
+    @description
+  end
 
-  define_index do
-    indexes name, :sortable => true
+  def getAdmin
+    @admin
+  end
+
+  def getInvitees
+    @invitees
+  end
+
+  def getOwner
+    @owner
+  end
+
+  def getTime
+    @time
+  end
+
+  def setCost(cost)
+    @cost = cost
+  end
+
+  def getCost
+    @cost
+  end
+
+  def getEventType
+    @eventType
   end
 end

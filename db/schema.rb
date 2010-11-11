@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(:version => 20101025015943) do
     t.integer  "cost"
     t.string   "formality"
     t.boolean  "public"
+    t.integer  "owner_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
