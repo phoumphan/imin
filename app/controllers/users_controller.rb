@@ -3,11 +3,13 @@ class UsersController < ApplicationController
   include AuthenticatedSystem
   
 
-  # render new.rhtml
+  # render new.
+  # called when "register" link is clicked
   def new
     @user = User.new
   end
- 
+
+  # Method to actually create the user, called from the new.rhtml page once the submit button is pressed
   def create
     logout_keeping_session!
     @user = User.new(params[:user])
@@ -28,7 +30,33 @@ class UsersController < ApplicationController
 
   #render users/profile
   def profile
+    @user = current_user    
+  end
+
+  #render users/preferences  
+  def preferences
+    if current_user
+      @user = current_user
+    else
+      redirect_to(login_path)
+    end    
+  end
+
+  #method that will be called from the users/preferences.html.erb page when "update" link is clicked
+  def update
     @user = current_user
-    puts("----------" + @user.email + "------------")
+    
+    if @user.update_attributes(params[:user])
+      flash[:notice] = "Profile Successfully Updated"
+      redirect_to :action => 'profile'
+    else
+      render :action => 'preferences', :id => params[:id]
+    end
+  end
+
+  #method used to change user password.  Called from users/preferences.html.erb page when
+  #"change password" link is clicked
+  def change_password
+
   end
 end

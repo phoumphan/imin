@@ -41,7 +41,10 @@
     <%=link_to 'Events', :class => 'header_link span-4'%>
     <%=link_to 'Friends', :class => 'header_link span-4'%>
     <%=link_to 'Search', {:controller => 'search', :action => 'show'}, :class => 'header_link span-4'%>
-    <%if current_user%><%=link_to 'Create Event', {:controller => 'events', :action => 'new'}, :class => 'header_link span-4'%><%end%>
+    <%if current_user%>
+      <%=link_to 'Create Event', {:controller => 'events', :action => 'new'}, :class => 'header_link span-4'%>
+      <%=link_to 'My Preferences', {:controller => 'users', :action => 'preferences'}, :class => 'header_link span-4'%>
+    <%end%>
         
     </div>
   </div>
