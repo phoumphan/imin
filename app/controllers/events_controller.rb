@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+
   
   #render new.html.erb
   def new
