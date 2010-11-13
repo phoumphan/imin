@@ -76,7 +76,12 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     @action = 'invite_user_exec'
     @action_name = 'Invite a User'
-    @friends = Friendship.find(:all, :conditions => "userA_id = " + current_user.id.to_s)
+#    if current_user.id =~ /[^\d]/ then return
+    friend_objs = Friendship.find(:all, :conditions => 'userA_id = ' + current_user.id.to_s)
+    @friends = {}
+    friend_objs.each do |frnd|
+      @friends[User.find(frnd.userB_id).login] = frnd.userB_id
+    end
     session[:referrer] = 'invite_user'
 
     respond_to do |format|
@@ -89,7 +94,7 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     return unless owner_check
     if params[:friend] == '1'
-      usr = User.find(params[:user_id])
+      usr = User.find(params[:friend])
     else
       usr = User.find_by_login(params[:other_user])
     end
@@ -100,13 +105,15 @@ class EventsController < ApplicationController
       join.user_event_status = "INVITED"
       if join.save
         flash[:notice] = 'User invited'
+        redirect_to :action => 'show', :id => @event.id
       else
         flash[:error] = 'Unknown error'
+        redirect_to :action => 'invite_user', :id => @event.id
       end
     else
       flash[:error] = 'User does not exist'
+      redirect_to :action => 'invite_user', :id => @event.id
     end
-    redirect_to :action => 'show', :id => @event.id
   end
   
 end
