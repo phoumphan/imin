@@ -1,1 +1,9 @@
+<%if current_user%>
+
+  <%if @event.owner.id == current_user.id%>
+    <%=link_to 'Edit', edit_event_path(@event.id)%>
+  <%end%>
+
+  <%=link_to("Back", request.env["HTTP_REFERER"])%>
+<%end%>
 <%= render :partial => "event", :object => @event %>

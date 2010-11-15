@@ -10,6 +10,7 @@ class EventsController < ApplicationController
     @event.cost = 0
   end
 
+  #Action that actually creates the Event once the user Submits the event
   def create
     @event = Event.new(params[:event])
 
@@ -28,6 +29,7 @@ class EventsController < ApplicationController
       params[:event_users].each { |p| @event.event_users << UserEvent.new(p)}
     end
 
+    #owner ID is stored in the Events table
     @event.owner = current_user
 
     #redirect to the event page
@@ -37,12 +39,27 @@ class EventsController < ApplicationController
 
   end
 
+  #
   def show
     @event = Event.find(params[:id])
   end
 
+  #Action that results in rendering the event_eventtypes/_new.html.erb partial
   def add_eventtype
     @event_eventtype = EventEventtype.new()
+  end
+
+  #Renders events/edit.html.erb
+  def edit
+    @event = Event.find(params[:id])
+    @event_eventtype = @event.event_eventtypes.find(:all, :conditions => {:event_id => params[:id]})
+    @event_photo = @event.event_photos.find(:all, :conditions => {:event_id => params[:id]})
+    @event_users = @event.user_events.find(:all, :conditions => {:event_id => params[:id]})
+  end
+
+  #Action that is called once the user is done editing the Event
+  def update_event
+
   end
 
   private
@@ -108,5 +125,6 @@ class EventsController < ApplicationController
     end
     redirect_to :action => 'show', :id => @event.id
   end
+  
   
 end
