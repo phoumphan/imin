@@ -30,6 +30,13 @@ class EventsController < ApplicationController
     end
 
     #owner ID is stored in the Events table
+    #Creator is an admin
+    user_event = UserEvent.new
+    user_event.user_id = current_user.id
+    user_event.user_event_status = "ADMIN"
+    return unless user_event.save
+    @event.user_events << user_event
+
     @event.owner = current_user
 
     #redirect to the event page
@@ -42,6 +49,9 @@ class EventsController < ApplicationController
   #
   def show
     @event = Event.find(params[:id])
+    latlng = @event.location.split(',')
+    @lat = latlng[0]
+    @lng = latlng[1]
   end
 
   #Action that results in rendering the event_eventtypes/_new.html.erb partial
@@ -87,14 +97,36 @@ class EventsController < ApplicationController
     end
   end
 
+  def admin_check
+    if login_check
+      if not UserEvent.find_by_event_id_and_user_event_status(@event.id, "ADMIN")
+        flash[:error] = "You are not an admin"
+        redirect_to(:action => session[:referrer], :id => @event.id)
+        return false
+      end
+      true
+    else
+      false
+    end
+  end
+
+  def set_friends
+    return if current_user.id =~ /[^\d]/
+    friend_objs = Friendship.find(:all, :conditions => 'userA_id = ' + current_user.id.to_s)
+    @friends = {}
+    friend_objs.each do |frnd|
+      @friends[User.find(frnd.userB_id).login] = frnd.userB_id
+    end
+  end
+
   public
 
   def invite_user
     @event = Event.find(params[:id])
-    @action = 'invite_user_exec'
     @action_name = 'Invite a User'
-    @friends = Friendship.find(:all, :conditions => "userA_id = " + current_user.id.to_s)
+    @user_status = 'INVITED'
     session[:referrer] = 'invite_user'
+    set_friends
 
     respond_to do |format|
       format.html { render "add_user_to" }
@@ -102,11 +134,28 @@ class EventsController < ApplicationController
     end
   end
 
-  def invite_user_exec
+  def add_admin
     @event = Event.find(params[:id])
-    return unless owner_check
+    @action_name = 'Add an Admin'
+    @user_status = 'ADMIN'
+    session[:referrer] = 'add_admin'
+    set_friends
+
+    respond_to do |format|
+      format.html { render "add_user_to" }
+      format.xml { head :ok }
+    end
+  end
+
+  def user_add_exec
+    @event = Event.find(params[:id])
+    if params[:user_status] == 'ADMIN'
+      return unless admin_check
+    else
+      return unless owner_check
+    end
     if params[:friend] == '1'
-      usr = User.find(params[:user_id])
+      usr = User.find(params[:friend])
     else
       usr = User.find_by_login(params[:other_user])
     end
@@ -114,17 +163,23 @@ class EventsController < ApplicationController
       join = UserEvent.new
       join.user_id = usr.id
       join.event_id = params[:id]
-      join.user_event_status = "INVITED"
+      return if params[:user_status] != "ADMIN" and params[:user_status] != "INVITED"
+      join.user_event_status = params[:user_status]
       if join.save
-        flash[:notice] = 'User invited'
+        if params[:user_status] == "ADMIN"
+          flash[:notice] = 'Admin added'
+        else
+          flash[:notice] = 'User invited'
+        end
+        redirect_to :action => 'show', :id => @event.id
       else
         flash[:error] = 'Unknown error'
+        redirect_to :action => 'invite_user', :id => @event.id
       end
     else
       flash[:error] = 'User does not exist'
+      redirect_to :action => 'invite_user', :id => @event.id
     end
-    redirect_to :action => 'show', :id => @event.id
   end
-  
-  
+
 end

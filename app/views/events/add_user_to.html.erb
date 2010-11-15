@@ -3,20 +3,21 @@
   <%= stylesheet_link_tag 'token-input'  %>
 <% end %>
 
-<h2><%=@action_name%></h2>
+<h2><%= @action_name %></h2>
 
-<%form_tag(url_for :action => @action, :id => @event.id) do |f|%>
+<%form_tag(url_for :action => 'user_add_exec', :id => @event.id) do |f|%>
   <table>
 
-  <tr><td><%=radio_button_tag(:friend, '1', :checked => true)%> Friend:</td></tr>
+  <tr><td><%=radio_button_tag :friend, '1', :checked => true%> Friend:</td></tr>
 
-  <tr><td><%collection_select("friendship", "userB_id", @friends, "id", "name")%></td></tr>
+  <tr><td><%=select_tag :friend, options_for_select(@friends)%></td></tr>
 
-  <tr><td><br><%=radio_button_tag(:friend, '0')%> Other user:</td></tr>
+  <tr><td><br><%=radio_button_tag :friend, '0' %> Other user:</td></tr>
 
   <tr><td><%=text_field_tag :other_user%></td></tr>
   
   </table>
   
+  <%=hidden_field_tag :user_status, @user_status%>
   <%=submit_tag @action_name%>
 <%end%>

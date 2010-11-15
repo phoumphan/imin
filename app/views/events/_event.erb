@@ -1,3 +1,31 @@
+<%content_for :head do%>
+<script src="http://maps.google.com/maps?file=api&v=2&key=abcdefg&sensor=false"
+        type="text/javascript">
+</script>
+<script src="http://gmaps-utility-library.googlecode.com/svn/trunk/markermanager/release/src/markermanager.js"
+        type="text/javascript">
+</script>
+<script src="/javascripts/MapCommon.js"
+        type="text/javascript">
+</script>
+<script type="text/javascript">
+
+function initialize() {
+  basic_init();
+  
+  pos = new GLatLng(<%= @lat %>, <%= @lng %>);
+  map.addOverlay(new GMarker(pos));
+  map.setCenter(pos, 17);
+}
+
+</script>
+<%end%>
+
+<%content_for :body_attributes do%>
+onLoad="initialize();"
+onUnload="GUnload();"
+<%end%>
+
 <h3><b><%=@event.name%></b></h3>
 
 <br />
@@ -5,7 +33,7 @@
 <%=@event.description%>
 <br />
 <b>Location:</b>
-<%=@event.location%>
+<div id="map_canvas" style="width: 500px; height: 300px"></div>
 <br />
 <b>Date:</b>
 <%=@event.event_date%>
@@ -31,3 +59,6 @@
     </li>
   <%end%>
 </ol>
+
+<%=link_to "Invite a User", :action => 'invite_user', :id => @event.id%><br />
+<%=link_to "Add an Admin", :action => 'add_admin', :id => @event.id%>
