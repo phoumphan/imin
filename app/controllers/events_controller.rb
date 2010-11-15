@@ -65,11 +65,33 @@ class EventsController < ApplicationController
     @event_eventtype = @event.event_eventtypes.find(:all, :conditions => {:event_id => params[:id]})
     @event_photo = @event.event_photos.find(:all, :conditions => {:event_id => params[:id]})
     @event_users = @event.user_events.find(:all, :conditions => {:event_id => params[:id]})
+
+    #location coordinates
+    latlng = @event.location.split(',')
+    @lat = latlng[0]
+    @lng = latlng[1]
   end
 
   #Action that is called once the user is done editing the Event
-  def update_event
+  def update
+    @event = Event.find(params[:id])
 
+    #Updated existing event types, photos, and invitations
+    params[:event_eventtypes_update].each { |key, value| EventEventtype.find( key ).update_attributes(value)} if params[:event_eventtypes_update]
+    params[:event_photos_update].each { |key, value| EventPhoto.find( key ).update_attributes(value) } if params[:event_photos_update]
+    params[:event_users_update].each { |key, value| UserEvent.find( key ).update_attributes(value) } if params[:event_users_update]
+
+    #New event types, photos, invitations that could get sent out
+    params[:event_eventtype].each { |p| @event.event_eventtypes << EventEventtype.new( p ) } if params[:event_eventtype]
+  	params[:event_photo].each { |p| @event.event_photos << EventPhoto.new( p ) } if params[:event_photo]
+    params[:event_users].each { |p| @event.user_events << UserEvent.new( p ) } if params[:event_users]
+
+  	if @event.update_attributes(params[:event])
+      flash[:notice] = "Event Successfully Updated"
+  	  redirect_to :action => 'show', :id => @event.id
+	  else
+      render :action => 'edit', :id => params[:id]
+	  end
   end
 
   private

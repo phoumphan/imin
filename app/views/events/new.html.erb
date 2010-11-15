@@ -81,8 +81,10 @@ onUnload="GUnload();"
   </div>
   <%=link_to_remote 'Add an Event Tag', :url => {:action => 'add_eventtype'}%>
   <br /><br />
+
   
   <%=f.hidden_field :location%>
+
   <input type="button" value="Create Event" onclick="submitForm();">
 <%end%>
 
