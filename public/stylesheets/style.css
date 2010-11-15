@@ -1,5 +1,5 @@
 body {
-	background-color: #92b75b;
+	background-color: #fff;
 /*	background-image: url('../images/background-gradient.png');*/
 /*	background-repeat:repeat-x;*/
 	font-family:Arial, Helvetica, sans-serif;
@@ -11,56 +11,118 @@ body {
 }
 
 #header {
-	width: 100%;
-	height: 50px;
-	background-color:#5e5e5e;
+	width: 100%px;
+	background-color:#222;
+        background-image: url('../images/headerbg.png');
+        background-repeat: repeat;
+        background-attachment: scroll;
+        background-position: 50% 0pt;
 }
 
+
 #header a{
-	color:white;
+
 	text-decoration:none;
 	font-weight:100;
 }
 
 #header a:hover{
-	color:#aadb6d;
+	color:#ccc;
 }
 
 #logo {
 	display:block;
 	float:left;
-	width:104px;
-	height:55px;
+	width:304px;
+	height:89px;
 	background-image:url('../images/logo.png');
 	background-repeat:no-repeat;
+        margin-top: 15px;
+        margin-left: 20px;
 }
 
 .content{
 	width:950px;
 	margin:auto;
 	overflow:hidden;
+
 }
 
-.header_link{
+.main{
+        width: 900px;
+        margin-top: 0pt;
+        margin-right: auto;
+        margin-bottom: 0pt;
+        margin-left: auto;
+        min-height: 400px;
+        padding-top: 25px;
+        padding-right: 25px;
+        padding-bottom: 80px;
+        padding-left: 25px;
+        background-color: #fffffe;
+        background-image: url('../images/bkg_main2.gif');
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: 0pt 0pt;
+        text-align: left;
+        overflow:hidden;
+
+}
+
+.main_container{
+    background:#fbfaf6 url(../images/bkg_main1.gif) 50% 0 no-repeat;
+    margin-top: -30px;
+
+}
+
+.header_link {
 	float:left;
-	width:145px;
-	margin:16px 0 0 0;
+	/*width:145px;*/
+	margin:10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border: 1px solid #333;
+        background-color: #333;
+        font-family: Arial;
+        letter-spacing: -1px;
 	text-decoration:none;
 	text-align:center;
+        color: black;
+}
+
+#user_nav{
+    position: absolute;
+    top: 125px;
+    left:50%;
+    margin-left: -470px;
 }
 
 .user_bar{
+        position: absolute;
+        left: 50%;
+        margin-left: -360px;
+        top:15px;
 	text-align:right;
+
 }
 
 #main_content{
 	margin-top:5px;
 	width:940px;
 	min-height:300px;
-	background-color:#aadb6d;
+	background-color:#bbb;
 	padding:10px;
-	-moz-border-radius: 5px; 
+	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
+}
+
+#main_content h1{
+    font-family: Arial;
+    color: #222;
+    letter-spacing:-2px;
+
 }
 
 div#main_content div#recently_viewed {
@@ -70,14 +132,14 @@ div#main_content div#recently_viewed {
 }
 
 div#main_content div#recently_viewed ul {
-    list-style-type: none; 
-    margin-left:0px; 
-    padding-left: 0px; 
+    list-style-type: none;
+    margin-left:0px;
+    padding-left: 0px;
     font-size: 90%;
-}    
+}
 
 div#main_content div#recently_viewed ul li{
-    float: left; 
+    float: left;
     margin-right: 15px;
 }
 
@@ -85,7 +147,7 @@ div#main_content div#recently_viewed ul li{
 	background-color:#92b75b;
 	overflow:hidden;
 	padding:10px;
-	-moz-border-radius: 5px; 
+	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 }
 /*SECTIONS FOR LIST*/
@@ -230,7 +292,7 @@ li.highlightable a{
 }
 
 #flash_notice{
-	background-color:lightgreen;
+	background-color:white;
 	height:25px;
 }
 
@@ -239,7 +301,7 @@ li.highlightable a{
 /*	margin:auto;*/
 	text-indent:10px;
 	border:1px dotted grey;
-	-moz-border-radius: 5px; 
+	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 }
 
@@ -254,4 +316,33 @@ color: #fff;
 border-bottom: 1px solid #222;
 position: relative;
 cursor: pointer;
+}
+
+
+.user_profile_container{
+    margin: 50px;
+     -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-box-shadow: 0 1px 3px #999;
+    -webkit-box-shadow: 0 1px 3px #999;
+    border: 1px solid #ccc;
+    height: 100%px;
+    background-color: white;
+}
+
+.user_profile{
+    margin: 30px;
+    height: 400px;
+
+}
+
+#user_pic_container{
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-box-shadow: 0 1px 3px #999;
+    -webkit-box-shadow: 0 1px 3px #999;
+    border: 1px solid #222;
+    float: right;
+    height: 250px;
+    width: 250px;
 }
