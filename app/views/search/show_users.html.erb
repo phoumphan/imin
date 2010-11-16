@@ -1,6 +1,6 @@
-<center><h2><b>Find an Event!</b></h2></center>
+<center><h2><b>Find a Friend!</b></h2></center>
 
-<% form_for :search, {:controller => 'search', :action => 'show'} do |f|%>
+<% form_for :search, {:controller => 'search', :action => 'show_users'} do |f|%>
   <center>
     <%= f.text_field :query %>
     <%= submit_tag "Search!" %>
@@ -14,6 +14,6 @@
   <%end%>
 <%else%>
   <div id="table">
-    <%= render :partial => "search_table" %>
+    <%= render :partial => "search_users_table" %>
   </div>
 <%end%>

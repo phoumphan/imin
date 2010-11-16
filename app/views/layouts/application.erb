@@ -63,6 +63,7 @@
         <%if current_user%>
           <%=link_to 'Create Event', {:controller => 'events', :action => 'new'}, :class => 'header_link'%>
           <%=link_to 'My Preferences', {:controller => 'users', :action => 'preferences'}, :class => 'header_link'%>
+          <%=link_to 'Find Friends', {:controller => 'search', :action => 'show_users'}, :class => 'header_link'%>
           <div style="clear:both"></div>
       <%end%>
     </div>

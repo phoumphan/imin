@@ -59,4 +59,14 @@ class UsersController < ApplicationController
   def change_password
 
   end
+
+  def show
+    @user = User.find(params[:id])
+
+    #If a user tries to view himself, it will redirect to his profile page
+    if (@user.id == current_user.id)
+      redirect_to (profile_page_path)
+    end
+    
+  end
 end
