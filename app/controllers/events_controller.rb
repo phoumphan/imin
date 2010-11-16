@@ -46,6 +46,9 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    latlng = @event.location.split(',')
+    @lat = latlng[0]
+    @lng = latlng[1]
   end
 
   def add_eventtype
