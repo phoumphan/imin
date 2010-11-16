@@ -1,0 +1,92 @@
+<%content_for :head do%>
+  <%= javascript_include_tag 'jquery.tokeninput' %>
+  <%= stylesheet_link_tag 'token-input'  %>
+  <script src="http://maps.google.com/maps?file=api&v=2&key=abcdefg&sensor=false"
+          type="text/javascript">
+  </script>
+  <script src="http://gmaps-utility-library.googlecode.com/svn/trunk/markermanager/release/src/markermanager.js"
+          type="text/javascript">
+  </script>
+  <script src="/javascripts/MapCommon.js"
+          type="text/javascript">
+  </script>
+  <script type="text/javascript">
+
+    function placemarker(overlay, latlng, overlaylatlng) {
+      if (!marker) {
+        marker = new GMarker(latlng, { draggable: true });
+        map.addOverlay(marker);
+      } else {
+        marker.setLatLng(latlng);
+      }
+    }
+    function initialize() {
+      basic_init();
+
+      pos = new GLatLng(<%= @lat %>, <%= @lng %>);
+      map.addOverlay(new GMarker(pos));
+      map.setCenter(pos, 17);
+
+      GEvent.addListener(map, "click", placemarker);
+    }
+    function submitForm() {
+      if (marker) {
+        document.getElementById('event_location').value = marker.getLatLng().lat() + ',' + marker.getLatLng().lng();
+        document.form.submit();
+      } else {
+        alert("Please place the location on the map.");
+      }
+    }
+  </script>
+<%end%>
+
+<%content_for :body_attributes do%>
+  onLoad="initialize();"
+  onUnload="GUnload();"
+<%end%>
+
+<h2>Edit Event:  <%=@event.name%> </h2>
+
+<%form_for @event, :action => 'update', :html => { :multipart => true } do |f|%>
+  <%=f.error_messages%>
+
+  <table>
+    <tr><td><%=f.label :name%></td>
+      <td><%=f.text_field :name%></td></tr>
+
+    <tr><td><%=f.label :description, 'Description'%></td>
+      <td><%=f.text_area :description, :style => 'height:60px'%></td></tr>
+
+    <tr><td><%=f.label :event_date, 'Event Date'%></td>
+      <td><%= f.text_field :event_date %></td></tr>
+
+    <tr><td><%=f.label :event_time, 'Event Time'%></td>
+      <td><%=f.time_select :event_time, :minute_step => 15, :twelve_hour => true%></td></tr>
+
+    <tr><td><b>Location:</b></td>
+      <td><div id="map_canvas" style="width: 500px; height: 300px"></div></td></tr>
+
+    <tr><td><%=f.label :formality, 'Dress Code'%></td>
+      <td><%=f.select :formality, ['Formal', 'Dressy', 'Dressy-Casual', 'Casual']%></td></tr>
+
+    <tr><td><%=f.label :cost, 'Price'%></td><td>
+        <%=f.text_field :cost, :size => 10%> &nbsp; Dollars</td></tr>
+
+    <tr><td><%=f.label :public, 'Event Privacy'%></td>
+      <td><%=f.select :public, ['Private', 'Public']%></td></tr>
+
+  </table>
+
+  <%=f.hidden_field :location%>
+
+  <div id='add_eventtypes'></div>
+  <%=link_to_remote 'Add an Event Tag', :url => {:action => 'add_eventtype'}%>
+  <br /><br />
+
+  <%=link_to "Invite a User", :action => 'invite_user', :id => @event.id%>
+  <br /><br />
+  <%=link_to "Add an Admin", :action => 'add_admin', :id => @event.id%>
+
+  <br /><br />
+  <input type="button" value="Save Changes" onclick="submitForm();">
+<%end%>

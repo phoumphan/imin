@@ -1,0 +1,176 @@
+@charset "utf-8";
+/* CSS Document */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body {
+	background-color:#f0f0f0;
+}
+body a {
+	text-decoration:none;
+}
+#wrapper {
+	width:900px;
+	margin-left:auto;
+	margin-right:auto;
+	overflow:visible;
+	margin-top:20px;
+}
+#header {
+	height:130px;
+	width:100%;
+	background-image:url(http://webdesignersdesk.com/wp-content/themes/wdd/images/wdd_02.gif);
+	background-repeat:repeat-x;
+}
+#inheader {
+	width:960px;
+	height:95px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:0;
+	margin-bottom:0;
+}
+#logo {
+	width:450px;
+	height:95px;
+	padding-top:55px;
+	padding-left:55px;
+	float:left;
+}
+#topad {
+	width:465px;
+	height:130px;
+	padding-top:35px;
+	padding-right:20px;
+	float:right;
+}
+#vnav {
+	width:100%;
+	position: absolute;
+        left: 50%;
+	margin-left: -130px;
+        top: 80px;
+
+}
+#des {
+	width:600px;
+	float:right;
+}
+#des h1 {
+	font-size:24px;
+	text-shadow: 0 -1px 1px #CCC;
+	color:#779ec2;
+}
+#vnav li#item1{
+    position: absolute;
+    top:0px;
+    left: 0px;
+    background-color: #990099;
+}
+
+#vnav li#item2{
+    position: absolute;
+    top:0px;
+    left: 150px;
+}
+
+#vnav li#item3{
+    position: absolute;
+    top:0px;
+    left: 300px;
+}
+
+#vnav li#item4{
+    position: absolute;
+    top:0px;
+    left: 450px;
+}
+
+#vnav li#item1, #vnav li#item2, #vnav li#item3, #vnav li#item4 {
+	height:20px;
+	width:110px;
+	overflow:hidden;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 1;
+    font-size: 13pt;
+    letter-spacing: -1px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-box-shadow: 0 1px 3px #999;
+    -webkit-box-shadow: 0 1px 3px #999;
+    text-shadow: 0 -1px 1px #222;
+    border-bottom: 1px solid #222;
+    padding: 7px 10px 6px;
+    margin-top:5px;
+    background-color:#8b08c8;
+    text-align: center;
+}
+
+li#item1 a, li#item2 a, li#item3 a, li#item4 a{
+    color: white;
+}
+
+li#item1 a:hover{
+    color: #666;
+}
+li#item2 a:hover{
+    color: #666;
+}
+li#item3 a:hover{
+    color: #666;
+}
+li#item4 a:hover{
+    color: #666;
+}
+
+li p {
+	margin-top:20px;
+	font-size:12px;
+	color:#6CF;
+        text-align: left;
+}

@@ -10,6 +10,7 @@ class EventsController < ApplicationController
     @event.cost = 0
   end
 
+  #Action that actually creates the Event once the user Submits the event
   def create
     @event = Event.new(params[:event])
 
@@ -28,6 +29,7 @@ class EventsController < ApplicationController
       params[:event_users].each { |p| @event.event_users << UserEvent.new(p)}
     end
 
+    #owner ID is stored in the Events table
     #Creator is an admin
     user_event = UserEvent.new
     user_event.user_id = current_user.id
@@ -44,6 +46,7 @@ class EventsController < ApplicationController
 
   end
 
+  #
   def show
     @event = Event.find(params[:id])
     latlng = @event.location.split(',')
@@ -51,8 +54,44 @@ class EventsController < ApplicationController
     @lng = latlng[1]
   end
 
+  #Action that results in rendering the event_eventtypes/_new.html.erb partial
   def add_eventtype
     @event_eventtype = EventEventtype.new()
+  end
+
+  #Renders events/edit.html.erb
+  def edit
+    @event = Event.find(params[:id])
+    @event_eventtype = @event.event_eventtypes.find(:all, :conditions => {:event_id => params[:id]})
+    @event_photo = @event.event_photos.find(:all, :conditions => {:event_id => params[:id]})
+    @event_users = @event.user_events.find(:all, :conditions => {:event_id => params[:id]})
+
+    #location coordinates
+    latlng = @event.location.split(',')
+    @lat = latlng[0]
+    @lng = latlng[1]
+  end
+
+  #Action that is called once the user is done editing the Event
+  def update
+    @event = Event.find(params[:id])
+
+    #Updated existing event types, photos, and invitations
+    params[:event_eventtypes_update].each { |key, value| EventEventtype.find( key ).update_attributes(value)} if params[:event_eventtypes_update]
+    params[:event_photos_update].each { |key, value| EventPhoto.find( key ).update_attributes(value) } if params[:event_photos_update]
+    params[:event_users_update].each { |key, value| UserEvent.find( key ).update_attributes(value) } if params[:event_users_update]
+
+    #New event types, photos, invitations that could get sent out
+    params[:event_eventtype].each { |p| @event.event_eventtypes << EventEventtype.new( p ) } if params[:event_eventtype]
+  	params[:event_photo].each { |p| @event.event_photos << EventPhoto.new( p ) } if params[:event_photo]
+    params[:event_users].each { |p| @event.user_events << UserEvent.new( p ) } if params[:event_users]
+
+  	if @event.update_attributes(params[:event])
+      flash[:notice] = "Event Successfully Updated"
+  	  redirect_to :action => 'show', :id => @event.id
+	  else
+      render :action => 'edit', :id => params[:id]
+	  end
   end
 
   private
