@@ -1,3 +1,7 @@
+<% def sanitize(s)
+  s.gsub('"', '\\"')
+end %>
+
 <% content_for :head do %>
 <script src="http://maps.google.com/maps?file=api&v=2&key=abcdefg&sensor=false"
         type="text/javascript">
@@ -13,8 +17,19 @@
 var mgr;
 
 //constant
-var markerdata = [[new GLatLng(49.25, -123.24), 1, "Testing", "Testing 3"],
-	[new GLatLng(49.27, -123.25), 2, "Testing 2", "Testing 4"]];
+var markerdata = [
+  <% events = Event.find(:all)
+  first = true
+  events.each do |event|
+    latlng = event.location.split(',')
+    if first
+      first = false
+    else %>
+      ,
+    <% end %>
+    [new GLatLng(<%= latlng[0] %>, <%= latlng[1] %>), <%= event.id %>, "<%= sanitize(event.name) %>", "<%= sanitize(event.description) %>"]
+  <% end %>
+  ];
 
 function initialize() {
   var ii;

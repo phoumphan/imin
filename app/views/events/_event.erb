@@ -23,6 +23,7 @@ function initialize() {
 
 <%content_for :body_attributes do%>
 onLoad="initialize();"
+onUnload="GUnload();"
 <%end%>
 
 <h3><b><%=@event.name%></b></h3>

@@ -164,5 +164,5 @@ class EventsController < ApplicationController
       redirect_to :action => 'invite_user', :id => @event.id
     end
   end
-  
+
 end
