@@ -11,32 +11,23 @@
           type="text/javascript">
   </script>
   <script type="text/javascript">
-
+    <!--
     function placemarker(overlay, latlng, overlaylatlng) {
-      if (!marker) {
-        marker = new GMarker(latlng, { draggable: true });
-        map.addOverlay(marker);
-      } else {
-        marker.setLatLng(latlng);
-      }
+      marker.setLatLng(latlng);
     }
     function initialize() {
       basic_init();
 
       pos = new GLatLng(<%= @lat %>, <%= @lng %>);
-      map.addOverlay(new GMarker(pos));
+      marker = new GMarker(pos, { draggable: true });
+      map.addOverlay(marker);
       map.setCenter(pos, 17);
-
-      GEvent.addListener(map, "click", placemarker);
     }
     function submitForm() {
-      if (marker) {
-        document.getElementById('event_location').value = marker.getLatLng().lat() + ',' + marker.getLatLng().lng();
-        document.form.submit();
-      } else {
-        alert("Please place the location on the map.");
-      }
+      document.getElementById('event_location').value = marker.getLatLng().lat() + ',' + marker.getLatLng().lng();
+      document.form.submit();
     }
+    //-->
   </script>
 <%end%>
 
@@ -47,7 +38,7 @@
 
 <h2>Edit Event:  <%=@event.name%> </h2>
 
-<%form_for @event, :action => 'update', :html => { :multipart => true } do |f|%>
+<%form_for @event, :action => 'update', :html => { :name => 'form', :multipart => true } do |f|%>
   <%=f.error_messages%>
 
   <table>

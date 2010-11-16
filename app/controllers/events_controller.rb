@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-
+  before_filter :login_required, :except => [:show]
   
   #render new.html.erb
   def new
@@ -96,39 +96,23 @@ class EventsController < ApplicationController
 
   private
 
-  def login_check
-    if current_user
-      true
-    else
-      flash[:error] = "Not logged in"
+  def owner_check
+    if @event.owner.id != current_user.id
+      flash[:error] = "You are not the owner"
       redirect_to(:action => session[:referrer], :id => @event.id)
       false
-    end
-  end
-
-  def owner_check
-    if login_check
-      if @event.owner.id != current_user.id
-        flash[:error] = "You are not the owner"
-        redirect_to(:action => session[:referrer], :id => @event.id)
-        return false
-      end
-      true
     else
-      false
+      true
     end
   end
 
   def admin_check
-    if login_check
-      if not UserEvent.find_by_event_id_and_user_event_status(@event.id, "ADMIN")
-        flash[:error] = "You are not an admin"
-        redirect_to(:action => session[:referrer], :id => @event.id)
-        return false
-      end
-      true
-    else
+    if not UserEvent.find_by_event_id_and_user_event_status(@event.id, "ADMIN")
+      flash[:error] = "You are not an admin"
+      redirect_to(:action => session[:referrer], :id => @event.id)
       false
+    else
+      true
     end
   end
 
