@@ -1,0 +1,24 @@
+<table id="searchUsersTable">
+
+  <thead>
+    <tr>
+      <th><a href="">Name</a></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% for result in @results %>
+      <tr>
+
+        <td>
+          <%= link_to result.name, user_path(result.id) %>
+        </td>
+
+        
+      </tr>
+    <%end%>
+  </tbody>
+</table>
+
+
