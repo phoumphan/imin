@@ -1,11 +1,23 @@
 <div class="user_profile_container">
   <div class="user_profile">
-  <%if @user%>
-    <h2>Welcome <%=@user.login%></h2>
-    <div id="user_info_container">     
-    </div>
-    <div id="user_pic_container">
-    </div>
-  <%end%>
+    <%if @user%>
+      <h2>Welcome <%=@user.login%></h2>
+      <div id="user_info_container">
+      </div>
+      <div id="user_pic_container">
+      </div>
+
+      <!-- List any Pending Friend Requests-->
+
+      <h2>Friend Requests</h2>
+      <ul>
+        <%for requester in @user.pending_friend_requests%>
+        <li><%=requester.requester.name%> has requested Friendship!
+        &nbsp &nbsp <%=link_to 'Confirm Friend!', friendships_path(:friend_id => requester.requester), :method => :post%></li>
+        <%end%>
+      </ul>
+
+
+    <%end%>
   </div>
 </div>

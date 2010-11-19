@@ -12,7 +12,9 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :session
   map.resource :eventtypes
   map.resource :search
-
+  map.resource :friendships
+  map.resource :pending_friend_requests
+  
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

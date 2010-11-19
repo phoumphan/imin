@@ -1,0 +1,7 @@
+<center><h2><b>Friends</b></h2>
+  <ul>
+    <%for friend in @user.friends%>
+      <li><%=link_to friend.name, user_path(friend.id)%></li>
+    <%end%>
+  </ul>
+</center>

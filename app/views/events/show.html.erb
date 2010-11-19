@@ -1,4 +1,5 @@
-<%if current_user%>
+<DIV Align = RIGHT>
+  <%if current_user%>
 
   <%if @event.owner.id == current_user.id%>
     <%=link_to 'Edit', edit_event_path(@event.id)%>
@@ -6,4 +7,9 @@
 
   <%=link_to("Back", request.env["HTTP_REFERER"])%>
 <%end%>
+</DIV>
+
+</br>
+</br>
+</br>
 <%= render :partial => "event", :object => @event %>

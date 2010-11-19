@@ -1,6 +1,10 @@
+<div id="friends">
+    <%= render :partial => "list_friends" %>
+</div>
+
 <center><h2><b>Find a Friend!</b></h2></center>
 
-<% form_for :search, {:controller => 'search', :action => 'show_users'} do |f|%>
+<% form_for :search, {:controller => 'friendship', :action => 'display'} do |f|%>
   <center>
     <%= f.text_field :query %>
     <%= submit_tag "Search!" %>

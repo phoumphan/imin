@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101025015943) do
+ActiveRecord::Schema.define(:version => 20101118202635) do
 
   create_table "event_eventtypes", :force => true do |t|
     t.integer  "event_id"
@@ -47,8 +47,15 @@ ActiveRecord::Schema.define(:version => 20101025015943) do
   end
 
   create_table "friendships", :force => true do |t|
-    t.integer  "userA_id"
-    t.integer  "userB_id"
+    t.integer  "user_id"
+    t.integer  "friend_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pending_friend_requests", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "requester_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
