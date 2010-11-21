@@ -17,7 +17,7 @@ class Event < ActiveRecord::Base
   validates_presence_of :description
   validates_numericality_of :cost, :greater_than_or_equal_to => 0
 
-   define_index do
-     indexes name, :sortable => true
-   end
+  # define_index do
+  #   indexes name, :sortable => true
+  # end
 end
