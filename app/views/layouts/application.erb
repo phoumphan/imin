@@ -14,15 +14,6 @@
 
   <script src="jquery.easing.1.3.js" type="text/javascript"><!--mce:0--></script>
 
-   <script type="text/javascript">
-          $().ready(function() {
-                  $('.kwicks').kwicks({
-                          max : 220,
-                          spacing : 5
-                  });
-          });
-  </script>
-
   <script type="text/javascript">
   $(document).ready(function() {
 
@@ -59,14 +50,6 @@
       </ul>
       </div>
 
-      <div id="user_nav">
-        <%if current_user%>
-          <%=link_to 'Create Event', {:controller => 'events', :action => 'new'}, :class => 'header_link'%>
-          <%=link_to 'My Preferences', {:controller => 'users', :action => 'preferences'}, :class => 'header_link'%>
-          <%=link_to 'Friends', {:controller => 'friendships', :action => 'display'}, :class => 'header_link'%>
-          <div style="clear:both"></div>
-      <%end%>
-    </div>
   </div>
  </div>
 </div>

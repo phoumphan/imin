@@ -17,6 +17,7 @@ body {
         background-repeat: repeat;
         background-attachment: scroll;
         background-position: 50% 0pt;
+        height: 160px;
 }
 
 
@@ -75,6 +76,10 @@ body {
 
 }
 
+.content_container{
+    margin: 75px;
+}
+
 .header_link {
 	float:left;
 	/*width:145px;*/
@@ -93,10 +98,22 @@ body {
 }
 
 #user_nav{
-    position: absolute;
-    top: 125px;
+    position: relative;
+    top: 50px;
     left:50%;
-    margin-left: -470px;
+    margin-left: -400px;
+}
+
+a.user_nav_link{
+    font-weight: normal;
+    text-decoration: none;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 1px solid #ccc;
+    height: 30px;
+    width: 120px;
+    padding: 10px;
+    background-color: white;
 }
 
 .user_bar{
@@ -321,13 +338,16 @@ cursor: pointer;
 
 .user_profile_container{
     margin: 50px;
+    margin-top: 65px;
      -moz-border-radius: 15px;
     -webkit-border-radius: 15px;
     -moz-box-shadow: 0 1px 3px #999;
     -webkit-box-shadow: 0 1px 3px #999;
     border: 1px solid #ccc;
     height: 100%px;
+    padding-bottom: 170px;
     background-color: white;
+    
 }
 
 .user_profile{
@@ -336,13 +356,92 @@ cursor: pointer;
 
 }
 
+#user_welcome{
+    font-size: 14pt;
+    border: 1px solid blue;
+    width: 400px;
+}
+
+#user_info_container{
+
+    float: left;
+    width: 400px;
+    height: 100%px;
+    margin-top: 30px;    
+}
+
+#user_left_col{
+    position: absolute;
+    height: 100%px;
+    width: 400px;
+
+}
+
+#user_info{
+    margin-left: 20px;
+}
+
+#user_right_col{
+    position: absolute;
+    left: 50%;
+    margin-left: 120px;
+    top: 275px;
+    height: 100%px;
+    width: 250px;
+    margin-top: -15px;
+}
+
+input.btn{
+     color:#333;
+     font: bold 84% arial;
+     background-color:white;
+     border:1px solid;
+     border-color: #fff #fff #fff #fff;
+}
+
 #user_pic_container{
     -moz-border-radius: 15px;
     -webkit-border-radius: 15px;
     -moz-box-shadow: 0 1px 3px #999;
     -webkit-box-shadow: 0 1px 3px #999;
-    border: 1px solid #222;
+    border: 1px solid gray;
     float: right;
     height: 250px;
     width: 250px;
+}
+
+#map_canvas{
+     width: 450px;
+     height: 250px;
+    -moz-box-shadow: 0 1px 3px #999;
+    -webkit-box-shadow: 0 1px 3px #999;
+    margin-top: 30px;
+}
+
+
+#userlogin{
+     -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-box-shadow: 0 1px 3px #999;
+    -webkit-box-shadow: 0 1px 3px #999;
+    border: 1px solid #777;
+    background-color: #fff;
+    width: 200px;
+    margin: 40px;
+    padding: 40px;
+}
+
+#user_friend_requests{
+    padding: 30px;
+}
+
+a.link{
+    font-weight:normal;
+    font-family: arial;
+    font-size: 9pt;
+}
+
+#edit_user_info{
+    margin:50px;
+    font-weight: normal;
 }

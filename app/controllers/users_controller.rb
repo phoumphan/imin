@@ -33,6 +33,15 @@ class UsersController < ApplicationController
     @user = current_user    
   end
 
+  #render users/edit_info
+  def edit_info
+    if current_user
+      @user = current_user
+    else
+      redirect_to(login_path)
+    end    
+  end
+
   #render users/preferences  
   def preferences
     if current_user
