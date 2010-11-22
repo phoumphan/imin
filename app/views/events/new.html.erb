@@ -46,33 +46,47 @@ onLoad="initialize();"
 onUnload="GUnload();"
 <% end %>
 
-<h2>Create a New Event!</h2>
-
+<div id="user_nav">
+        <%if current_user%>
+          <%=link_to 'Profile', {:controller => 'users', :action => 'profile'}, :class => 'user_nav_link'%>
+          <%=link_to 'Create Event', {:controller => 'events', :action => 'new'}, :class => 'user_nav_link_on'%>
+          <%=link_to 'My Preferences', {:controller => 'users', :action => 'preferences'}, :class => 'user_nav_link'%>
+          <%=link_to 'Friends', {:controller => 'friendships', :action => 'display'}, :class => 'user_nav_link'%>
+           <%=link_to 'Edit', {:controller => 'users', :action => 'edit_info'}, :class => 'user_nav_link'%>
+      <%end%>
+</div>
+<div class="user_profile_container">
+  <div class="user_profile">
+    <div id="wrapper">
 <%form_for @event, :action => 'create', :html => { :multipart => true, :name => "form" } do |f|%>
   <%=f.error_messages%>
-  <table>
-  <tr><td><%=f.label :name, 'Event Name'%></td>
-  <td><%=f.text_field :name%></td></tr>
+  <table id="event_table">
+  <tr>
+    <td>Event Name:</td>
+    <td><%=f.text_field :name%></td>
+  </tr>
 
-  <tr><td><%=f.label :description, 'Event Description'%></td>
+  <tr><td>Event Description:</td>
   <td><%=f.text_area :description, :style => 'height:60px'%></td></tr>
 
-  <tr><td><%=f.label :event_date, 'Event Date'%></td>
+  <tr><td>Date:</td>
   <td><%= f.text_field :event_date %></td></tr>
 
-  <tr><td><%=f.label :event_time, 'Event Time'%></td>
+  <tr><td>Time:</td>
   <td><%=f.time_select :event_time, :minute_step => 15, :twelve_hour => true%></td></tr>
 
-  <tr><td>Location:<br />
-  <div id="map_canvas" style="width: 500px; height: 300px"></div></td></tr>
+  <tr>
+    <td>Location:</td>
+    <td><div id="map_canvas" style="width: 500px; height: 300px; padding: 0; margin: 0; margin-bottom: 15px;"></div></td>
+  </tr>
 
-  <tr><td><%=f.label :formality, 'Dress Code'%></td>
+  <tr><td>Dress Code:</td>
   <td><%=f.select :formality, ['Formal', 'Dressy', 'Dressy-Casual', 'Casual']%></td></tr>
 
-  <tr><td><%=f.label :cost, 'Price'%></td><td>
+  <tr><td>Price:</td><td>
   <%=f.text_field :cost, :size => 10%> &nbsp; Dollars</td></tr>
 
-  <tr><td><%=f.label :public, 'Event Privacy'%></td>
+  <tr><td>Event Privacy:</td>
   <td><%=f.select :public, ['Private', 'Public']%></td></tr>
   
   </table>
@@ -85,6 +99,9 @@ onUnload="GUnload();"
   
   <%=f.hidden_field :location%>
 
-  <input type="button" value="Create Event" onclick="submitForm();">
+  <input type="button" value="Create Event" onclick="submitForm();" />
 <%end%>
+    </div>
+    </div>
+  </div>
 

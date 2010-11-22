@@ -4,6 +4,7 @@
           <%=link_to 'Create Event', {:controller => 'events', :action => 'new'}, :class => 'user_nav_link'%>
           <%=link_to 'My Preferences', {:controller => 'users', :action => 'preferences'}, :class => 'user_nav_link'%>
           <%=link_to 'Friends', {:controller => 'friendships', :action => 'display'}, :class => 'user_nav_link'%>
+          <%=link_to 'Edit', {:controller => 'users', :action => 'edit_info'}, :class => 'user_nav_link_on'%>
       <%end%>
 </div>
 <div class="user_profile_container">
@@ -26,6 +27,9 @@
       Location:
       <%=f.text_field :location %>
       <br /><br />
+
+      <!-- Change Picture -->
+      Picture: <input type="file" name="datafile" size="20" /><br /><br />
 
       <!-- Change password -->
       Password:

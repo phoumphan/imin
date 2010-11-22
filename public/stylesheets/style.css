@@ -116,6 +116,19 @@ a.user_nav_link{
     background-color: white;
 }
 
+a.user_nav_link_on{
+    font-weight: normal;
+    text-decoration: none;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 1px solid #ccc;
+    height: 30px;
+    width: 120px;
+    padding: 10px;
+    background-color: #777;
+    color: white;
+}
+
 .user_bar{
         position: absolute;
         left: 50%;
@@ -345,15 +358,27 @@ cursor: pointer;
     -webkit-box-shadow: 0 1px 3px #999;
     border: 1px solid #ccc;
     height: 100%px;
-    padding-bottom: 170px;
     background-color: white;
     
 }
 
+.user_profile_container1{
+    margin: 50px;
+    margin-top: 65px;
+     -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-box-shadow: 0 1px 3px #999;
+    -webkit-box-shadow: 0 1px 3px #999;
+    border: 1px solid #ccc;
+    height: 100%;
+    padding-bottom: 500px;
+    background-color: white;
+
+}
+
 .user_profile{
     margin: 30px;
-    height: 400px;
-
+    height: 100%px;
 }
 
 #user_welcome{
@@ -377,10 +402,6 @@ cursor: pointer;
 
 }
 
-#user_info{
-    margin-left: 20px;
-}
-
 #user_right_col{
     position: absolute;
     left: 50%;
@@ -389,6 +410,15 @@ cursor: pointer;
     height: 100%px;
     width: 250px;
     margin-top: -15px;
+}
+
+#user_info{
+    margin-left: 20px;
+    font-size: 9pt;
+    position: relative;
+    top:20px;
+    padding-bottom: 25px;
+    border-bottom: 1px dotted gray;
 }
 
 input.btn{
@@ -406,8 +436,10 @@ input.btn{
     -webkit-box-shadow: 0 1px 3px #999;
     border: 1px solid gray;
     float: right;
-    height: 250px;
-    width: 250px;
+    height: 220px;
+    width: 220px;
+    margin-top: 20px;
+    margin-right: 10px;
 }
 
 #map_canvas{
@@ -432,7 +464,10 @@ input.btn{
 }
 
 #user_friend_requests{
-    padding: 30px;
+    font-size: 9pt;
+    position: relative;
+    top:20px;
+    padding-bottom: 25px;
 }
 
 a.link{
@@ -441,7 +476,40 @@ a.link{
     font-size: 9pt;
 }
 
+a.link_right{
+    font-weight:normal;
+    font-family: arial;
+    font-size: 9pt;
+    float: right;
+}
+
 #edit_user_info{
     margin:50px;
     font-weight: normal;
+}
+
+#wrapper{
+    margin-top:35px;
+    margin-left: 20px;
+}
+
+#event_table td{
+    vertical-align: top;
+}
+
+#event_table td input{
+    height: 30px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding:0;
+    margin:0;
+    margin-bottom: 15px;
+}
+
+#event_table td textarea{
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding:0;
+    margin:0;
+    margin-bottom: 15px;
 }

@@ -1,28 +1,26 @@
-<div class="content_container">
-  <h2><%= current_user.name %>'s Preferences</h2>
-
+<div id="user_nav">
+        <%if current_user%>
+          <%=link_to 'Profile', {:controller => 'users', :action => 'profile'}, :class => 'user_nav_link'%>
+          <%=link_to 'Create Event', {:controller => 'events', :action => 'new'}, :class => 'user_nav_link'%>
+          <%=link_to 'My Preferences', {:controller => 'users', :action => 'preferences'}, :class => 'user_nav_link_on'%>
+          <%=link_to 'Friends', {:controller => 'friendships', :action => 'display'}, :class => 'user_nav_link'%>
+           <%=link_to 'Edit', {:controller => 'users', :action => 'edit_info'}, :class => 'user_nav_link'%>
+      <%end%>
+</div>
+<div class="user_profile_container">
+  <div class="user_profile">
+    <div id="wrapper">
 <!-- User's event type preferences -->
+    <%form_for @user, :url => {:action=>'update', :id=>@user.id} do |f|%>
+      <%=f.error_messages%>
 
-
-<%form_for @user, :url => {:action=>'update', :id=>@user.id} do |f|%>
-  <%=f.error_messages%>
-
-  <!-- User's default location -->
-  <%= f.label :location%>
-  <%=f.text_field :location %>
-  <br />
-
-  <!-- User's email -->
-  <%= f.label :email%>
-  <%=f.text_field :email%>
-  <br />
-  
-  <!-- Change password -->
-  <%= f.label :password%>
-  <%=link_to 'Change Password', :action => 'change_password', :id => @user.id%>
-  <br />
-  <%=f.submit%>
-
-<%end%>
-
+      <!-- User's default location -->
+      Location: &nbsp;
+      <%=f.text_field :location %>
+      <br /><br />
+      <%=f.submit%>
+      <!--TODO: Add keyword preferences - ie. kids events etc.-->
+    <%end%>
   </div>
+  </div>
+</div>
