@@ -4,6 +4,7 @@ body {
 /*	background-repeat:repeat-x;*/
 	font-family:Arial, Helvetica, sans-serif;
 	margin:0;
+        padding:0;
 }
 
 .clear{
@@ -11,7 +12,7 @@ body {
 }
 
 #header {
-	width: 100%px;
+	width: 100%;
 	background-color:#222;
         background-image: url('../images/headerbg.png');
         background-repeat: repeat;
@@ -19,7 +20,6 @@ body {
         background-position: 50% 0pt;
         height: 160px;
 }
-
 
 #header a{
 
@@ -38,41 +38,31 @@ body {
 	height:89px;
 	background-image:url('../images/logo.png');
 	background-repeat:no-repeat;
-        margin-top: 15px;
-        margin-left: 20px;
+        position: absolute;
+        top: 15px;
+        left: 250px;
 }
-
-.content{
-	width:950px;
-	margin:auto;
-	overflow:hidden;
+.main_container{
+    background:#fbfaf6 url(../images/bkg_main1.gif) 50% 0 no-repeat;
+    margin-top: -30px;
+    height: 100%px;
 
 }
 
 .main{
-        width: 900px;
-        margin-top: 0pt;
-        margin-right: auto;
-        margin-bottom: 0pt;
-        margin-left: auto;
-        min-height: 400px;
-        padding-top: 25px;
-        padding-right: 25px;
-        padding-bottom: 80px;
-        padding-left: 25px;
-        background-color: #fffffe;
+        width: 950px;
+        height: 100%px;
         background-image: url('../images/bkg_main2.gif');
         background-repeat: no-repeat;
         background-attachment: scroll;
         background-position: 0pt 0pt;
         text-align: left;
         overflow:hidden;
-
-}
-
-.main_container{
-    background:#fbfaf6 url(../images/bkg_main1.gif) 50% 0 no-repeat;
-    margin-top: -30px;
+        position: relative;
+        left:50%;
+        margin-left: -475px;
+        padding:0;
+        
 
 }
 
@@ -101,7 +91,24 @@ body {
     position: relative;
     top: 50px;
     left:50%;
-    margin-left: -400px;
+    margin-left: -424px;
+    width: 100%;
+    font-size:12pt;
+}
+
+
+a.user_nav_link_on{
+    font-weight: normal;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 1px solid #ccc;
+    height: 30px;
+    width: 120px;
+    padding: 10px;
+    background-color: #777;
+    color: white;
+    text-align: center;
+    text-decoration: none;
 }
 
 a.user_nav_link{
@@ -111,22 +118,8 @@ a.user_nav_link{
     -webkit-border-radius: 5px;
     border: 1px solid #ccc;
     height: 30px;
-    width: 120px;
     padding: 10px;
     background-color: white;
-}
-
-a.user_nav_link_on{
-    font-weight: normal;
-    text-decoration: none;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border: 1px solid #ccc;
-    height: 30px;
-    width: 120px;
-    padding: 10px;
-    background-color: #777;
-    color: white;
 }
 
 .user_bar{
@@ -141,7 +134,6 @@ a.user_nav_link_on{
 #main_content{
 	margin-top:5px;
 	width:940px;
-	min-height:300px;
 	background-color:#bbb;
 	padding:10px;
 	-moz-border-radius: 5px;
@@ -352,13 +344,14 @@ cursor: pointer;
 .user_profile_container{
     margin: 50px;
     margin-top: 65px;
-     -moz-border-radius: 15px;
+    -moz-border-radius: 15px;
     -webkit-border-radius: 15px;
     -moz-box-shadow: 0 1px 3px #999;
     -webkit-box-shadow: 0 1px 3px #999;
     border: 1px solid #ccc;
     height: 100%px;
     background-color: white;
+    width: 850px;
     
 }
 
@@ -373,7 +366,7 @@ cursor: pointer;
     height: 100%;
     padding-bottom: 500px;
     background-color: white;
-
+    width: 850px;
 }
 
 .user_profile{
@@ -406,7 +399,7 @@ cursor: pointer;
     position: absolute;
     left: 50%;
     margin-left: 120px;
-    top: 275px;
+    top: 130px;
     height: 100%px;
     width: 250px;
     margin-top: -15px;
@@ -440,6 +433,7 @@ input.btn{
     width: 220px;
     margin-top: 20px;
     margin-right: 10px;
+    position: relative;
 }
 
 #map_canvas{
@@ -493,6 +487,9 @@ a.link_right{
     margin-left: 20px;
 }
 
+#wrapper h2{
+    width: 400px;
+}
 #event_table td{
     vertical-align: top;
 }
