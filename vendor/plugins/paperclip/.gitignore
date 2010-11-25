@@ -1,0 +1,6 @@
+*~
+*.swp
+tmp
+test/s3.yml
+public
+paperclip*.gem

@@ -48,11 +48,11 @@
     <tr><td><%=f.label :description, 'Description'%></td>
       <td><%=f.text_area :description, :style => 'height:60px'%></td></tr>
 
-    <tr><td><%=f.label :event_date, 'Event Date'%></td>
-      <td><%= f.text_field :event_date %></td></tr>
+    <tr><td><%=f.label :start_at, 'Start Time'%></td>
+      <td><%= f.text_field :start_at %></td></tr>
 
-    <tr><td><%=f.label :event_time, 'Event Time'%></td>
-      <td><%=f.time_select :event_time, :minute_step => 15, :twelve_hour => true%></td></tr>
+    <tr><td><%=f.label :end_at, 'End Time'%></td>
+      <td><%= f.text_field :end_at %></td></tr>
 
     <tr><td><b>Location:</b></td>
       <td><div id="map_canvas" style="width: 500px; height: 300px"></div></td></tr>
