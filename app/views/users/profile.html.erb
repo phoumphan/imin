@@ -1,17 +1,3 @@
-<% content_for :head do %>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('#calendar').fullCalendar({
-        height: 150,
-        aspectratio: 1,
-        header: {left: 'title, today, prev, next', center: '', right:''}
-      })
-    });
-  </script>
-<% end %>
-
-
-
 <% content_for :body_attributes do %>
   onLoad="initialize();"
   onUnload="GUnload();"
@@ -39,7 +25,7 @@
 
         <div id="user_info_container">
 
-          <div id='calendar'></div>
+          <%= event_calendar %>
 
           <div id="user_left_col" >
             <input type="submit" class="btn" value="Hide Map &uarr;" id="hide_map" style="position: absolute; top: -50px; left: 370px; z-index: 1000; display: inline; border: none;" />
