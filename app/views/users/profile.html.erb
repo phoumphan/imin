@@ -1,120 +1,81 @@
-<% def sanitize(s)
-  s.gsub('"', '\\"')
-end %>
-
 <% content_for :head do %>
-<script src="http://maps.google.com/maps?file=api&v=2&key=abcdefg&sensor=false"
-        type="text/javascript">
-</script>
-<script src="http://gmaps-utility-library.googlecode.com/svn/trunk/markermanager/release/src/markermanager.js"
-        type="text/javascript">
-</script>
-<script src="/javascripts/MapCommon.js"
-        type="text/javascript">
-</script>
-<script type="text/javascript">
-<!--
+  <script type="text/javascript">
     $(document).ready(function() {
-      $('#hide_map').click( function() {
-        $('#map_canvas').slideUp(400);
-        $('#show_map').show();
-        $('#hide_map').hide();
-      });
-      $('#show_map').click( function() {
-        $('#map_canvas').slideDown(400);
-        $('#hide_map').show();
-         $('#show_map').hide();
-      });
+      $('#calendar').fullCalendar({
+        height: 150,
+        aspectratio: 1,
+        header: {left: 'title, today, prev, next', center: '', right:''}
+      })
     });
-
-var mgr;
-
-//constant
-var markerdata = [
-  <% events = Event.find(:all)
-  first = true
-  events.each do |event|
-    latlng = event.location.split(',')
-    if first
-      first = false
-    else %>
-      ,
-    <% end %>
-    [new GLatLng(<%= latlng[0] %>, <%= latlng[1] %>), <%= event.id %>, "<%= sanitize(event.name) %>", "<%= sanitize(event.description) %>"]
-  <% end %>
-  ];
-
-function initialize() {
-  var ii;
-  var markers = new Array(markerdata.length);
-
-  basic_init();
-
-  for (ii=0;ii<markerdata.length;ii++) {
-    markers[ii] = new GMarker(markerdata[ii][0]);
-    markers[ii].bindInfoWindowHtml('<b><a href="/events/' + markerdata[ii][1] + '">' + markerdata[ii][2] + '</a></b><br />' + markerdata[ii][3]);
-  }
-  mgr = new MarkerManager(map);
-  mgr.addMarkers(markers, 1);
-  mgr.refresh();
-}
-//-->
-</script>
+  </script>
 <% end %>
+
+
 
 <% content_for :body_attributes do %>
-onLoad="initialize();"
-onUnload="GUnload();"
+  onLoad="initialize();"
+  onUnload="GUnload();"
 <% end %>
 
 
 
-  <div id="user_nav">
-        <%if current_user%>
-          <%=link_to 'Profile', {:controller => 'users', :action => 'profile'}, :class => 'user_nav_link_on'%>
-          <%=link_to 'Create Event', {:controller => 'events', :action => 'new'}, :class => 'user_nav_link'%>
-          <%=link_to 'My Preferences', {:controller => 'users', :action => 'preferences'}, :class => 'user_nav_link'%>
-          <%=link_to 'Friends', {:controller => 'friendships', :action => 'display'}, :class => 'user_nav_link'%>
-           <%=link_to 'Edit', {:controller => 'users', :action => 'edit_info'}, :class => 'user_nav_link'%>
-      <%end%>
-    </div>
+<div id="user_nav">
+  <%if current_user%>
+    <%=link_to 'Profile', {:controller => 'users', :action => 'profile'}, :class => 'user_nav_link_on'%>
+    <%=link_to 'Create Event', {:controller => 'events', :action => 'new'}, :class => 'user_nav_link'%>
+    <%=link_to 'My Preferences', {:controller => 'users', :action => 'preferences'}, :class => 'user_nav_link'%>
+    <%=link_to 'Friends', {:controller => 'friendships', :action => 'display'}, :class => 'user_nav_link'%>
+    <%=link_to 'Edit', {:controller => 'users', :action => 'edit_info'}, :class => 'user_nav_link'%>
+  <%end%>
+</div>
+  
 <div class="user_profile_container1">
   <div class="user_profile">
     <div id="wrapper">
-    <%if @user%>
-      <h2>Welcome <%=@user.login%>!</h2>
-      <div id="user_info_container">
-       <div id="user_left_col" >
-          <input type="submit" class="btn" value="Hide Map &uarr;" id="hide_map" style="position: absolute; top: -50px; left: 370px; z-index: 1000; display: inline; border: none;" />
-          <input type="submit" class="btn" value="Show Map &darr;" id="show_map" style="position: absolute; top: -50px; left: 370px; z-index: 1000; display: none;" />
-          <div id="map_canvas" style="margin-top: -20px;"></div>
-          <!-- List any Pending Friend Requests-->
-          
-          <!--user info-->
-            
-          
-       </div>
-      <div id="user_right_col">
-           <div id="user_pic_container">
-           </div>
+      <%if @user%>
+        <h2>Welcome <%=@user.login%>!</h2>
+
         
-           <div id="user_info">
+
+        <div id="user_info_container">
+
+          <div id='calendar'></div>
+
+          <div id="user_left_col" >
+            <input type="submit" class="btn" value="Hide Map &uarr;" id="hide_map" style="position: absolute; top: -50px; left: 370px; z-index: 1000; display: inline; border: none;" />
+            <input type="submit" class="btn" value="Show Map &darr;" id="show_map" style="position: absolute; top: -50px; left: 370px; z-index: 1000; display: none;" />
+            <div id="map_canvas" style="margin-top: -20px;"></div>
+            <!-- List any Pending Friend Requests-->
+            <!--user info-->
+          </div>
+
+          <div id="user_right_col">
+
+            <div id="user_pic_container"></div>
+
+            <div id="user_info">
               <strong>Email:</strong> <%=@user.email%><br /><br />
               <strong>Name:</strong>  <%=@user.name%><br /><br />
               <strong>Login:</strong>  <%=@user.login%><br /><br />
               <strong>Location:</strong>  <%=@user.location%><br />
               <%=link_to 'Edit Info', {:controller => 'users', :action => 'edit_info'}, :class => 'link_right'%>
             </div>
+
             <div id="user_friend_requests">
               <%for requester in @user.pending_friend_requests%>
-              <h3>Friend Requests</h3>
-              <li><%=requester.requester.name%> has requested Friendship!
-              <%=link_to 'Confirm Friend!', friendships_path(:friend_id => requester.requester), :method => :post%></li>
+                <h3>Friend Requests</h3>
+                <li><%=requester.requester.name%> has requested Friendship!
+                  <%=link_to 'Confirm Friend!', friendships_path(:friend_id => requester.requester), :method => :post%></li>
               <%end%>
             </div>
-      </div>
-      </div>
-    <%end%>
-      </div>
+
+          </div>
+
+          
+
+        </div>
+      <%end%>
+
+    </div>
   </div>
 </div>

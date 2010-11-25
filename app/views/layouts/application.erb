@@ -3,17 +3,20 @@
   <%= stylesheet_link_tag 'blueprint/print.css'%>
   <%= stylesheet_link_tag 'Kwicks/main.css'%>
   <%= stylesheet_link_tag 'vmenu/style.css'%>
+  <%= stylesheet_link_tag 'full_calendar/fullcalendar.css'%>
   <%= stylesheet_link_tag 'style'%>
   <%= javascript_include_tag :defaults %>
   <%= javascript_include_tag 'custom.js' %>
-  <%=javascript_include_tag 'jquery.easing.1.3.js'%>
+  <%= javascript_include_tag 'jquery.js'%>
   <%= stylesheet_link_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/redmond/jquery-ui.css", "application" %>
   <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js", "application" %>
+  <%= javascript_include_tag 'fullcalendar', 'gcal'%>
+  <%= javascript_include_tag 'jquery-ui-timepicker-addon.js'%>
   <%= include_colorbox_assets %>
-  <link href="style.css" rel="stylesheet" type="text/css" />
 
-  <script src="jquery.easing.1.3.js" type="text/javascript"><!--mce:0--></script>
-
+  
+    
+  
   <script type="text/javascript">
   $(document).ready(function() {
 
@@ -48,11 +51,8 @@
   </div>
 
   <div class="main_container">
-    <div class="main">
-    <%= render :partial=> 'home/flash_error' unless flash[:error].blank?%>
-    <%= render :partial=> 'home/flash_notice' unless flash[:notice].blank?%>
-      <%=yield%>
-    <%= render :partial => 'home/recently_viewed'%>
+    <div class="main">    
+      <%=yield%>    
     </div>
   </div>
 </body>

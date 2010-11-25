@@ -30,7 +30,9 @@ class UsersController < ApplicationController
 
   #render users/profile
   def profile
-    @user = current_user    
+    @user = current_user       
+
+    
   end
 
   #render users/edit_info

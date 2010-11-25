@@ -37,6 +37,8 @@ function submitForm() {
     alert("Please place the location on the map.");
   }
 }
+
+
 //-->
 </script>
 <% end %>
@@ -69,12 +71,14 @@ onUnload="GUnload();"
   <tr><td>Event Description:</td>
   <td><%=f.text_area :description, :style => 'height:60px'%></td></tr>
 
-  <tr><td>Date:</td>
-  <td><%= f.text_field :event_date %></td></tr>
 
-  <tr><td>Time:</td>
-  <td><%=f.time_select :event_time, :minute_step => 15, :twelve_hour => true%></td></tr>
+  <tr><td><%=f.label :start_at, 'Event Starts At:'%></td>
+  <td><%= f.text_field :start_at %></td></tr>
 
+  <tr><td><%=f.label :end_at, 'Event Ends At:  '%></td>
+  <td><%=f.text_field :end_at%></td></tr>
+
+ 
   <tr>
     <td>Location:</td>
     <td><div id="map_canvas" style="width: 500px; height: 300px; padding: 0; margin: 0; margin-bottom: 15px;"></div></td>
