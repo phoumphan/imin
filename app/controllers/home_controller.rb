@@ -10,4 +10,12 @@ class HomeController < ApplicationController
 
   end
 
+  def closestmap
+    @center = current_user.location
+    respond_to do |form|
+      form.html { render :map }
+      form.xml { head :ok }
+    end
+  end
+
 end

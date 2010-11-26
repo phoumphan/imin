@@ -44,6 +44,10 @@ function initialize() {
   mgr = new MarkerManager(map);
   mgr.addMarkers(markers, 1);
   mgr.refresh();
+  <% if @center
+    latlng = @center.split(',') %>
+    map.setCenter(new GLatLng(<%= latlng[0] %>, <%= latlng[1] %>), 17);
+  <% end %>
 }
 //-->
 </script>
@@ -53,7 +57,5 @@ function initialize() {
 onLoad="initialize();"
 onUnload="GUnload();"
 <% end %>
-
-<h2>Events Map</h2>
 
 <div id="map_canvas" style="width: 500px; height: 300px"></div>
