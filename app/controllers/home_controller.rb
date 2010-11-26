@@ -1,4 +1,6 @@
 class HomeController < ApplicationController
+  before_filter :login_required, :except => [:index, :about, :map]
+
   def index
   end
 
@@ -8,14 +10,6 @@ class HomeController < ApplicationController
 
   def map
 
-  end
-
-  def closestmap
-    @center = current_user.location
-    respond_to do |form|
-      form.html { render :map }
-      form.xml { head :ok }
-    end
   end
 
 end

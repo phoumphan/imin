@@ -39,6 +39,11 @@ class EventsController < ApplicationController
 
     @event.owner = current_user
 
+    #Hash location
+    binvals = UsersController.hash_loc @event.location
+    @event.bin_lat = binvals[0]
+    @event.bin_lng = binvals[1]
+
     #redirect to the event page
     if @event.save
   	   redirect_to :action => 'show', :id => @event.id
@@ -85,6 +90,11 @@ class EventsController < ApplicationController
     params[:event_eventtype].each { |p| @event.event_eventtypes << EventEventtype.new( p ) } if params[:event_eventtype]
   	params[:event_photo].each { |p| @event.event_photos << EventPhoto.new( p ) } if params[:event_photo]
     params[:event_users].each { |p| @event.user_events << UserEvent.new( p ) } if params[:event_users]
+
+    #Hash location
+    binvals = UsersController.hash_loc @event.location
+    @event.bin_lat = binvals[0]
+    @event.bin_lng = binvals[1]
 
   	if @event.update_attributes(params[:event])
       flash[:notice] = "Event Successfully Updated"
