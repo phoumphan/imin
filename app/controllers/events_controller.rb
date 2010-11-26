@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_filter :login_required, :except => [:show]
+  before_filter :login_required, :except => [:show, :showphoto]
   
   #render new.html.erb
   def new

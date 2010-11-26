@@ -1,0 +1,12 @@
+<!-- Based on https://github.com/thoughtbot/paperclip -->
+
+<% form_for :photo, @photo, :url => { :action => 'update' }, :html => { :multipart => true } do |form| %>
+  <%= form.error_messages%>
+  <h2>Edit <%= @photo.photo.original_filename %></h2>
+
+  Old photo:<br />
+  <%= image_tag ("/photos/image/" + @photo.id + "?style=THUMB") %><br /><br />
+
+  <%= form.file_field :photo %><br />
+  <%= form.submit "Add" %>
+<% end %>

@@ -1,0 +1,10 @@
+<!-- Based on https://github.com/thoughtbot/paperclip -->
+
+<h2>Add a New Photo to <%= @first_event.name %></h2>
+
+<% form_for :photo, @photo, :url => { :action => 'create' }, :html => { :multipart => true } do |form| %>
+  <%= form.error_messages%>
+  <%= form.file_field :photo %><br />
+  <%= hidden_field_tag :first_event, @first_event.id %><br />
+  <%= form.submit "Add" %>
+<% end %>

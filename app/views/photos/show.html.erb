@@ -1,0 +1,5 @@
+<!-- Based on https://github.com/thoughtbot/paperclip -->
+
+<h2><%= @photo.photo.original_filename if @photo%></h2>
+
+<%= link_to (image_tag "/photos/image/" + @photo.id + "?style=MEDIUM"), "/photos/image/" + @photo.id + "?style=ORIGINAL" if @photo %>
