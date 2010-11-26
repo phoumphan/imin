@@ -1,5 +1,5 @@
 class PhotosController < ApplicationController
-  before_filter :login_required, :except => [:show, :image]
+  before_filter :login_required, :except => [:show]
 
   def new
     @photo = Photo.new
@@ -10,46 +10,8 @@ class PhotosController < ApplicationController
     @photo = Photo.find(params[:id])
   end
 
-  private
-
-  def photo_access
-    # A photo is available if it belongs to a public event, or if it
-    # belongs to an event of which the user is an invitee/admin
-    if current_user
-      usr_id = current_user.id
-      return false if usr_id =~ /[^X\d]/ # security check
-      usr_id = usr_id.to_s
-    else
-      usr_id = '-1'
-    end
-    return false if params[:id] =~ /[^\d]/ # security check
-    authorizations = ActiveRecord::Base.connection().execute("SELECT * FROM (events JOIN event_photos ON events.id = event_photos.event_id)
-      JOIN user_events ON events.id = user_events.event_id
-      WHERE photo_id = " + params[:id] + " AND (public = 1 OR (user_id = " + usr_id + " AND (user_event_status = 'INVITED' OR user_event_status = 'ADMIN')))")
-    return authorizations.num_rows != 0
-  end
-
-  public
-
   def show
     @photo = Photo.find(params[:id])
-
-    if not photo_access
-      flash[:error] = "This photo is private"
-      @photo = nil
-    end
-  end
-
-  def image
-    @photo = Photo.find(params[:id])
-
-    return if params[:style] != "ORIGINAL" and params[:style] != 'THUMB' and params[:style] != 'MEDIUM'
-    if photo_access
-      send_file (@photo.photo.path params[:size])
-    else
-      flash[:error] = "This photo is private"
-      @photo = nil
-    end
   end
 
   def create
@@ -71,8 +33,8 @@ class PhotosController < ApplicationController
   end
 
   def update
-    @photo = Photo.find(params[:id])
-    if @photo.save	
+    @photo = params[:photo]
+    if @photo.save
       redirect_to :action => 'show', :id => @photo.id
     else
       flash[:error] = "Unknown error"

@@ -5,8 +5,8 @@
   <h2>Edit <%= @photo.photo.original_filename %></h2>
 
   Old photo:<br />
-  <%= image_tag ("/photos/image/" + @photo.id + "?style=THUMB") %><br /><br />
+  <%= image_tag @photo.photo.url(:thumb) %><br /><br />
 
   <%= form.file_field :photo %><br />
-  <%= form.submit "Add" %>
+  <%= form.submit "Replace" %>
 <% end %>
