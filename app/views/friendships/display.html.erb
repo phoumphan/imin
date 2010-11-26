@@ -1,0 +1,36 @@
+<div id="user_nav">
+        <%if current_user%>
+          <%=link_to 'Profile', {:controller => 'users', :action => 'profile'}, :class => 'user_nav_link'%>
+          <%=link_to 'Create Event', {:controller => 'events', :action => 'new'}, :class => 'user_nav_link'%>
+          <%=link_to 'My Preferences', {:controller => 'users', :action => 'preferences'}, :class => 'user_nav_link'%>
+          <%=link_to 'Friends', {:controller => 'friendships', :action => 'display'}, :class => 'user_nav_link_on'%>
+           <%=link_to 'Edit', {:controller => 'users', :action => 'edit_info'}, :class => 'user_nav_link'%>
+      <%end%>
+</div>
+<div class="user_profile_container">
+  <div class="user_profile">
+    <div id="wrapper">
+
+    <div id="friends">
+        <%= render :partial => "list_friends" %>
+    </div>
+
+    <h2>Find a Friend:</h2>
+    <% form_for :search, {:controller => 'friendship', :action => 'display'} do |f|%>
+        <%= f.text_field :query %>
+        <%= submit_tag "Search" %>
+    <% end %>
+
+    <%if @results.empty?%>
+      <%if @searchfor%>
+        <br />
+        <b>Your Search For '<%=@searchfor%>' Returned 0 Results</b>
+      <%end%>
+    <%else%>
+      <div id="table">
+        <%= render :partial => "search_users_table" %>
+      </div>
+    <%end%>
+    </div>
+  </div>
+</div>

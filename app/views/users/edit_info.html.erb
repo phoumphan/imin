@@ -1,0 +1,43 @@
+<div id="user_nav">
+        <%if current_user%>
+          <%=link_to 'Profile', {:controller => 'users', :action => 'profile'}, :class => 'user_nav_link'%>
+          <%=link_to 'Create Event', {:controller => 'events', :action => 'new'}, :class => 'user_nav_link'%>
+          <%=link_to 'My Preferences', {:controller => 'users', :action => 'preferences'}, :class => 'user_nav_link'%>
+          <%=link_to 'Friends', {:controller => 'friendships', :action => 'display'}, :class => 'user_nav_link'%>
+          <%=link_to 'Edit', {:controller => 'users', :action => 'edit_info'}, :class => 'user_nav_link_on'%>
+      <%end%>
+</div>
+<div class="user_profile_container">
+  <div class="user_profile">
+    <div id="edit_user_info">
+    <%form_for @user, :url => {:action=>'update', :id=>@user.id} do |f|%>
+      <%=f.error_messages%>
+
+      <!-- User's email -->
+      Email:
+      <%=f.text_field :email%>
+      <br /><br />
+
+      <!-- User's default location -->
+      Name:
+      <%=f.text_field :name %>
+      <br /><br />
+
+      <!-- User's default location -->
+      Location:
+      <%=f.text_field :location %>
+      <br /><br />
+
+      <!-- Change Picture -->
+      Picture: <input type="file" name="datafile" size="20" /><br /><br />
+
+      <!-- Change password -->
+      Password:
+      <%=link_to 'Change Password', {:action => 'change_password'}, :class=> 'link', :id => @user.id%>
+      <br /><br />
+      <%=f.submit%>
+
+    <%end%>
+    </div>
+  </div>
+</div>

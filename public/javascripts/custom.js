@@ -7,7 +7,7 @@ $(document).ready(function(){
 
     //When Mouse cursor removed from li
     $("li").mouseout(function(){
-        $(this).stop().animate({height:'20px'},{queue:false, duration:600, easing: 'easeOutBounce'})
+        $(this).stop().animate({height:'30px'},{queue:false, duration:600, easing: 'easeOutBounce'})
     });
 
 });

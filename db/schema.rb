@@ -29,8 +29,6 @@ ActiveRecord::Schema.define(:version => 20101126074032) do
   create_table "events", :force => true do |t|
     t.string   "name"
     t.text     "description"
-    t.date     "event_date"
-    t.time     "event_time"
     t.string   "location"
     t.integer  "cost"
     t.string   "formality"
@@ -38,6 +36,8 @@ ActiveRecord::Schema.define(:version => 20101126074032) do
     t.integer  "owner_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "start_at"
+    t.datetime "end_at"
   end
 
   create_table "eventtypes", :force => true do |t|
@@ -47,8 +47,15 @@ ActiveRecord::Schema.define(:version => 20101126074032) do
   end
 
   create_table "friendships", :force => true do |t|
-    t.integer  "userA_id"
-    t.integer  "userB_id"
+    t.integer  "user_id"
+    t.integer  "friend_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pending_friend_requests", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "requester_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

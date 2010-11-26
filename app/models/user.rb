@@ -5,6 +5,10 @@ class User < ActiveRecord::Base
   include Authentication::ByPassword
   include Authentication::ByCookieToken
 
+  #Pending friend request associations
+  has_many :pending_friend_requests
+  has_many :requesters, :through => :pending_friend_requests
+
   #Friendship associations (self - referencing)
   has_many :friendships
   has_many :friends, :through => :friendships

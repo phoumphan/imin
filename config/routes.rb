@@ -6,13 +6,17 @@ ActionController::Routing::Routes.draw do |map|
   map.eventtypes_autocomplete 'eventtypes/select_for_event', :controller => 'eventtypes', :action => 'select_for_event'
   map.profile_page 'users/profile', :controller => 'users', :action => 'profile'
   map.preferences_page 'users/preferences', :controller => 'users', :action => 'preferences'
+  map.edit_info_page 'users/edit_info', :controller => 'users', :action => 'edit_info'
   map.edit_event 'events/edit/:id', :controller => 'events', :action => 'edit'
+  map.calendar '/calendar/:year/:month', :controller => 'calendar', :action => 'index', :requirements => {:year => /\d{4}/, :month => /\d{1,2}/}, :year => nil, :month => nil
   map.resources :users
   map.resources :events
   map.resource :session
   map.resource :eventtypes
   map.resource :search
   map.resource :photos
+  map.resource :friendships
+  map.resource :pending_friend_requests
 
   # The priority is based upon order of creation: first created -> highest priority.
 

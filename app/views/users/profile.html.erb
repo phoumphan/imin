@@ -1,11 +1,81 @@
-<div class="user_profile_container">
-  <div class="user_profile">
-  <%if @user%>
-    <h2>Welcome <%=@user.login%></h2>
-    <div id="user_info_container">     
-    </div>
-    <div id="user_pic_container">
-    </div>
+<% content_for :head do %>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#calendar').fullCalendar({
+        height: 150,
+        aspectratio: 1,
+        header: {left: 'title, today, prev, next', center: '', right:''}
+      })
+    });
+  </script>
+<% end %>
+
+
+
+<% content_for :body_attributes do %>
+  onLoad="initialize();"
+  onUnload="GUnload();"
+<% end %>
+
+
+
+<div id="user_nav">
+  <%if current_user%>
+    <%=link_to 'Profile', {:controller => 'users', :action => 'profile'}, :class => 'user_nav_link_on'%>
+    <%=link_to 'Create Event', {:controller => 'events', :action => 'new'}, :class => 'user_nav_link'%>
+    <%=link_to 'My Preferences', {:controller => 'users', :action => 'preferences'}, :class => 'user_nav_link'%>
+    <%=link_to 'Friends', {:controller => 'friendships', :action => 'display'}, :class => 'user_nav_link'%>
+    <%=link_to 'Edit', {:controller => 'users', :action => 'edit_info'}, :class => 'user_nav_link'%>
   <%end%>
+</div>
+  
+<div class="user_profile_container1">
+  <div class="user_profile">
+    <div id="wrapper">
+      <%if @user%>
+        <h2>Welcome <%=@user.login%>!</h2>
+
+        
+
+        <div id="user_info_container">
+
+          <div id='calendar'></div>
+
+          <div id="user_left_col" >
+            <input type="submit" class="btn" value="Hide Map &uarr;" id="hide_map" style="position: absolute; top: -50px; left: 370px; z-index: 1000; display: inline; border: none;" />
+            <input type="submit" class="btn" value="Show Map &darr;" id="show_map" style="position: absolute; top: -50px; left: 370px; z-index: 1000; display: none;" />
+            <div id="map_canvas" style="margin-top: -20px;"></div>
+            <!-- List any Pending Friend Requests-->
+            <!--user info-->
+          </div>
+
+          <div id="user_right_col">
+
+            <div id="user_pic_container"></div>
+
+            <div id="user_info">
+              <strong>Email:</strong> <%=@user.email%><br /><br />
+              <strong>Name:</strong>  <%=@user.name%><br /><br />
+              <strong>Login:</strong>  <%=@user.login%><br /><br />
+              <strong>Location:</strong>  <%=@user.location%><br />
+              <%=link_to 'Edit Info', {:controller => 'users', :action => 'edit_info'}, :class => 'link_right'%>
+            </div>
+
+            <div id="user_friend_requests">
+              <%for requester in @user.pending_friend_requests%>
+                <h3>Friend Requests</h3>
+                <li><%=requester.requester.name%> has requested Friendship!
+                  <%=link_to 'Confirm Friend!', friendships_path(:friend_id => requester.requester), :method => :post%></li>
+              <%end%>
+            </div>
+
+          </div>
+
+          
+
+        </div>
+      <%end%>
+
+    </div>
   </div>
 </div>
