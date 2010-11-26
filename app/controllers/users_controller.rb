@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   # Be sure to include AuthenticationSystem in Application Controller instead
   include AuthenticatedSystem
-  
 
   # render new.
   # called when "register" link is clicked
@@ -108,4 +107,32 @@ class UsersController < ApplicationController
     end
     
   end
+
+  # hash_* have to be public at the moment
+  def self.hash_coord x
+    (x / 0.005).floor
+  end
+
+  def self.hash_loc loc
+    loc.split(',').map { |x| hash_coord (x.to_f) }
+  end
+
+  def closestevents
+    @center = current_user.location
+
+    # Find events in bins near user's bin 
+    binvals = UsersController.hash_loc current_user.location
+    @closest = []
+    [-1, 0, 1].each do |x|
+      [-1, 0, 1].each do |y|
+        @closest.concat(Event.find(:all, :conditions => {:bin_lat => binvals[0] + y, :bin_lng => binvals[1] + x}))
+      end
+    end
+    userlatlng = current_user.location.split(',').map { |x| x.to_f }
+    @closest = @closest.sort_by do |ev|
+      latlng = ev.location.split(',').map { |x| x.to_f }
+      (latlng[0] - userlatlng[0]) ** 2 + (latlng[1] - userlatlng[1]) ** 2
+    end
+  end
+
 end

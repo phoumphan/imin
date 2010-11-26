@@ -5,6 +5,7 @@ ActionController::Routing::Routes.draw do |map|
   map.signup '/signup', :controller => 'users', :action => 'new'
   map.eventtypes_autocomplete 'eventtypes/select_for_event', :controller => 'eventtypes', :action => 'select_for_event'
   map.profile_page 'users/profile', :controller => 'users', :action => 'profile'
+  map.closestevents_page 'users/closestevents', :controller => 'users', :action => 'closestevents'
   map.preferences_page 'users/preferences', :controller => 'users', :action => 'preferences'
   map.edit_info_page 'users/edit_info', :controller => 'users', :action => 'edit_info'
   map.edit_event 'events/edit/:id', :controller => 'events', :action => 'edit'

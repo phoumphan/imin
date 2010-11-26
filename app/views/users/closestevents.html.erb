@@ -1,0 +1,9 @@
+<h2>Events Closest to You</h2>
+
+<ul>
+<% @closest.each do |event| %>
+<li><%= link_to event.name, :controller => 'events', :action => 'show', :id => event.id %>
+<% end %>
+</ul>
+
+<%= render 'home/map' %>
