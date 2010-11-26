@@ -18,6 +18,4 @@ class AddPhotoColumns < ActiveRecord::Migration
     remove_column :photos, :photo_file_size
     remove_column :photos, :photo_updated_at
   end
-en
-
-d
+end

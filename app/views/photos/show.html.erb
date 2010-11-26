@@ -2,4 +2,6 @@
 
 <h2><%= @photo.photo.original_filename if @photo%></h2>
 
-<%= link_to (image_tag @photo.photo.url(:medium)), "images/" + @photo.photo.url if @photo %>
+<%= link_to (image_tag @photo.photo.url(:medium)), "images/" + @photo.photo.url if @photo %><br /><br />
+
+<%= link_to "Delete this Photo", { :action => 'delete', :id => @photo.id}, :confirm => 'Are you sure?' if current_user.id == @photo.owner.id %>
