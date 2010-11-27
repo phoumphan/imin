@@ -11,7 +11,9 @@ module CalendarHelper
       :event_strips => @event_strips,
       :month_name_text => I18n.localize(@shown_month, :format => "%B %Y"),
       :previous_month_text => "<< " + month_link(@shown_month.last_month),
-      :next_month_text => month_link(@shown_month.next_month) + " >>"    }
+      :next_month_text => month_link(@shown_month.next_month) + " >>",
+      :height => 300,
+      :width => 500    }
   end
 
   def event_calendar

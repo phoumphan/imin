@@ -41,10 +41,9 @@ Rails::Initializer.run do |config|
 
   config.gem(
     'thinking-sphinx',
-    :lib     => 'thinking_sphinx',
-    :version => '1.3.11'
-)
+    :lib     => 'thinking_sphinx'
+    )
 
-  config.gem 'paperclip'
+  
 
 end
