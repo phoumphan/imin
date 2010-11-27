@@ -46,7 +46,7 @@ function initialize() {
   mgr.refresh();
   <% if @center
     latlng = @center.split(',') %>
-    map.setCenter(new GLatLng(<%= latlng[0] %>, <%= latlng[1] %>), 17);
+    map.setCenter(new GLatLng(<%= latlng[0] %>, <%= latlng[1] %>), 14);
   <% end %>
 }
 //-->
