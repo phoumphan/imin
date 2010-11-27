@@ -14,6 +14,8 @@ class Event < ActiveRecord::Base
   has_many :event_photos
   has_many :photos, :through => :event_photos
 
+  has_many :event_ratings
+
   belongs_to :owner, :class_name => "User"
 
   validates_presence_of :name

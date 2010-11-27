@@ -1,8 +1,8 @@
 development:
-  bin_path: "C:/sphinx-0.9.9-win32/bin"
+  bin_path: "C:/Sphinx/bin"
 
 test:
-  bin_path: "C:/sphinx-0.9.9-win32/bin"
+  bin_path: "C:/Sphinx/bin"
 
 production:
-  bin_path: "C:/sphinx-0.9.9-win32/bin"
+  bin_path: "C:/Sphinx/bin"

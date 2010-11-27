@@ -57,6 +57,23 @@ class EventsController < ApplicationController
     latlng = @event.location.split(',')
     @lat = latlng[0]
     @lng = latlng[1]
+
+    @already_rated = false
+    @user_rating = EventRating.all(:conditions => {:event_id => params[:id], :user_id => current_user.id})
+    if (@user_rating.size != 0)
+      @already_rated = true
+    end
+
+    @number_of_ratings = EventRating.all(:conditions => {:event_id => @event.id}).size
+  end
+
+  def rate
+    @event_rating = EventRating.new(:event_id => params[:id], :user_id => current_user.id)
+
+    if @event_rating.save
+      flash[:notice] = "You think this event is good stuff!"
+    end
+    redirect_to :action => 'show', :id => params[:id]
   end
 
   #Action that results in rendering the event_eventtypes/_new.html.erb partial
@@ -197,5 +214,7 @@ class EventsController < ApplicationController
       redirect_to :action => 'invite_user', :id => @event.id
     end
   end
+
+  
 
 end

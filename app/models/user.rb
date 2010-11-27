@@ -24,6 +24,8 @@ class User < ActiveRecord::Base
   has_many :user_eventtypes
   has_many :eventtypes, :through => :user_eventtypes
 
+  has_many :event_ratings
+
   validates_presence_of     :login
   validates_length_of       :login,    :within => 3..40
   validates_uniqueness_of   :login
