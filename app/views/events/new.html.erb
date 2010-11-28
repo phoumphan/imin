@@ -27,6 +27,13 @@ function initialize() {
   basic_init();
 
   GEvent.addListener(map, "click", placemarker);
+
+  //Put back marker that was already in the model
+  if (location.value != "") {
+    latlng = location.split(',');
+    marker = new GMarker(new GLatLng(latlng[0], latlng[1]));
+    map.addOverlay(marker);
+  }
 }
 
 function submitForm() {
@@ -35,9 +42,9 @@ function submitForm() {
   if (marker) {
     document.getElementById('event_location').value = marker.getLatLng().lat() + ',' + marker.getLatLng().lng();
 
-    inv = document.form.invited.options[0].value;
+    inv = document.form.invited.options[0].text;
     for (i=1;i<document.form.invited.options.length;i++) {
-      inv += "," + document.form.invited.options[i].value;
+      inv += "," + document.form.invited.options[i].text;
     }
     document.form.user_events.value = inv;
 
@@ -55,7 +62,7 @@ function addInvitee() {
   } else {
     optn.text = document.form.other_user.value;
   }
-  optn.value = optn.text;
+  //option values are never used
   document.form.invited.add(optn);
 }
 
@@ -140,7 +147,7 @@ onUnload="GUnload();"
   <tr><td>
   <hr />
   Invited:<br />
-  <%= select_tag "invited", "", :multiple => true, :style => 'width: 100px' %>
+  <%= select_tag "invited", (@invited.split(',').map {|nm| "<option>" + nm + "</option>" }).join(""), :multiple => true, :style => 'width: 100px' %>
   </td></tr>
 
   <tr><td><input type="button" value="Remove" onclick="removeInvitee();" /></td></tr>

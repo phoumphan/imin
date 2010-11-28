@@ -9,6 +9,8 @@ class EventsController < ApplicationController
     @event.cost = 0
 
     set_friends
+    # @invited = UserEvent.find(:all, :conditions => { :event_id => @event.id, :user_event_status => "INVITED" }).map {|join| join.user}
+    @invited = ""
   end
 
   #Action that actually creates the Event once the user Submits the event
@@ -24,14 +26,19 @@ class EventsController < ApplicationController
     # if params[:event_photo] != nil
     #   params[:event_photo].each { |p| @event.event_photos << EventPhoto.new( p ) }
     # end
-  	
+
     #Create rows in UserEvents
     #Ids retrieved before creating joins, to stop space leaks
     ids = params[:user_events].split(',').map { |nm|
       usr = User.find_by_login(nm)
       if not usr
         flash[:error] = "No such user: " + nm # TODO flash doesn't show up
-        redirect_to :action => 'new', :id => @event.id
+        new
+        @invited = params[:user_events]
+        respond_to do |form|
+          form.html { render :action => 'new', :id => @event.id } # TODO Fields never get populated
+          form.xml { head :ok }
+        end
         return
       end
       usr.id
