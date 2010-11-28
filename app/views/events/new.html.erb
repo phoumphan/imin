@@ -63,11 +63,13 @@ function addInvitee() {
     optn.text = document.form.other_user.value;
   }
   //option values are never used
-  document.form.invited.add(optn);
+  if (optn.text != '') document.form.invited.add(optn);
 }
 
 function removeInvitee() {
-  document.form.invited.remove(document.form.invited.selectedIndex);
+  if (document.form.invited.selectedIndex >= 0) {
+    document.form.invited.remove(document.form.invited.selectedIndex);
+  }
 }
 
 //-->
@@ -124,36 +126,28 @@ onUnload="GUnload();"
   <tr><td>Event Privacy:</td>
   <td><%=f.select :public, ['Private', 'Public']%></td></tr>
   
+  <tr><td><h3>Invite a Friend</h3></td></tr>
+
+  <tr><td><%=radio_button_tag :friend, '1', :checked => true%> Friend:</td>
+  <td><%=select_tag :friends, options_for_select(@friends)%></td></tr>
+
+  <tr><td><%=radio_button_tag :friend, '0' %> Other user:</td>
+  <td><%=text_field_tag :other_user%></td></tr>
+
+  <tr><td><input type="button" value="Add" onclick="addInvitee();" /></td></tr>
   </table>
+
+  <hr />
+  Invited:<br />
+  <%= select_tag "invited", (@invited.split(',').map {|nm| "<option>" + nm + "</option>" }).join(""), :multiple => true, :style => 'width: 300px' %><br />
+
+  <input type="button" value="Remove" onclick="removeInvitee();" />
+  <hr />
 
   <div id='eventtypes'>
   </div>
   <%=link_to_remote 'Add an Event Tag', :url => {:action => 'add_eventtype'}%>
   <br /><br />
-
-  <table>
-  <tr><td><h3>Invite a Friend</h3></td></tr>
-
-  <tr><td><%=radio_button_tag :friend, '1', :checked => true%> Friend:</td></tr>
-
-  <tr><td><%=select_tag :friends, options_for_select(@friends)%></td></tr>
-
-  <tr><td><br><%=radio_button_tag :friend, '0' %> Other user:</td></tr>
-
-  <tr><td><%=text_field_tag :other_user%></td></tr>
-
-  <tr><td><input type="button" value="Add" onclick="addInvitee();" /></td></tr>
-
-  <tr><td>
-  <hr />
-  Invited:<br />
-  <%= select_tag "invited", (@invited.split(',').map {|nm| "<option>" + nm + "</option>" }).join(""), :multiple => true, :style => 'width: 100px' %>
-  </td></tr>
-
-  <tr><td><input type="button" value="Remove" onclick="removeInvitee();" /></td></tr>
-  </table>
-
-  <hr />
   
   <%=f.hidden_field :location%>
 
