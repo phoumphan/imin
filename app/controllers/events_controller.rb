@@ -5,8 +5,7 @@ class EventsController < ApplicationController
   def new
     @event = Event.new
     @event_eventtype = @event.event_eventtypes.new
-    @event_photo = @event.event_photos.new
-    @event_users = @event.user_events.new
+    # @event_photo = @event.event_photos.new
     @event.cost = 0
 
     set_friends
@@ -21,15 +20,29 @@ class EventsController < ApplicationController
       params[:event_eventtype].each { |p| @event.event_eventtypes << EventEventtype.new( p ) }
     end
     
-    #Create rows in EventPhotos
-    if params[:event_photo] != nil
-      params[:event_photo].each { |p| @event.event_photos << EventPhoto.new( p ) }
-    end
+    # #Create rows in EventPhotos
+    # if params[:event_photo] != nil
+    #   params[:event_photo].each { |p| @event.event_photos << EventPhoto.new( p ) }
+    # end
   	
     #Create rows in UserEvents
-    if params[:event_users] != nil
-      params[:event_users].each { |p| @event.event_users << UserEvent.new(p)}
-    end
+    #Ids retrieved before creating joins, to stop space leaks
+    ids = params[:user_events].split(',').map { |nm|
+      usr = User.find_by_login(nm)
+      if not usr
+        flash[:error] = "No such user: " + nm # TODO flash doesn't show up
+        redirect_to :action => 'new', :id => @event.id
+        return
+      end
+      usr.id
+    }
+    ids.each { |i|
+      user_event = UserEvent.new
+      user_event.user_id = i
+      user_event.user_event_status = "INVITED"
+      return unless user_event.save
+      @event.user_events << user_event
+    }
 
     #owner ID is stored in the Events table
     #Creator is an admin
@@ -53,7 +66,6 @@ class EventsController < ApplicationController
 
   end
 
-  #
   def show
     @event = Event.find(params[:id])
     latlng = @event.location.split(',')

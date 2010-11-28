@@ -34,11 +34,13 @@ function submitForm() {
 
   if (marker) {
     document.getElementById('event_location').value = marker.getLatLng().lat() + ',' + marker.getLatLng().lng();
-    inv = document.form.invited.options[0];
+
+    inv = document.form.invited.options[0].value;
     for (i=1;i<document.form.invited.options.length;i++) {
-      inv += "," + document.form.invited.options[i];
+      inv += "," + document.form.invited.options[i].value;
     }
-    document.form.event_users.value = inv;
+    document.form.user_events.value = inv;
+
     document.form.submit();
   } else {
     alert("Please place the location on the map.");
@@ -148,7 +150,7 @@ onUnload="GUnload();"
   
   <%=f.hidden_field :location%>
 
-  <%=hidden_field_tag :event_users%>
+  <%=hidden_field_tag :user_events%>
 
   <input type="button" value="Create Event" onclick="submitForm();" />
 <%end%>
