@@ -2,6 +2,8 @@ class UsersController < ApplicationController
   # Be sure to include AuthenticationSystem in Application Controller instead
   include AuthenticatedSystem
 
+  before_filter :login_required, :except => [:new, :create]
+
   # render new.
   # called when "register" link is clicked
   def new

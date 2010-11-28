@@ -8,6 +8,8 @@ class EventsController < ApplicationController
     @event_photo = @event.event_photos.new
     @event_users = @event.user_events.new
     @event.cost = 0
+
+    set_friends
   end
 
   #Action that actually creates the Event once the user Submits the event
@@ -128,10 +130,10 @@ class EventsController < ApplicationController
 
   def set_friends
     return if current_user.id =~ /[^\d]/
-    friend_objs = Friendship.find(:all, :conditions => 'userA_id = ' + current_user.id.to_s)
+    friend_objs = Friendship.find(:all, :conditions => 'user_id = ' + current_user.id.to_s)
     @friends = {}
     friend_objs.each do |frnd|
-      @friends[User.find(frnd.userB_id).login] = frnd.userB_id
+      @friends[User.find(frnd.friend_id).login] = frnd.friend_id
     end
   end
 
@@ -196,6 +198,10 @@ class EventsController < ApplicationController
       flash[:error] = 'User does not exist'
       redirect_to :action => 'invite_user', :id => @event.id
     end
+  end
+
+  def invite_user
+
   end
 
 end

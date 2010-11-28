@@ -30,14 +30,36 @@ function initialize() {
 }
 
 function submitForm() {
+  var i;
+
   if (marker) {
     document.getElementById('event_location').value = marker.getLatLng().lat() + ',' + marker.getLatLng().lng();
+    inv = document.form.invited.options[0];
+    for (i=1;i<document.form.invited.options.length;i++) {
+      inv += "," + document.form.invited.options[i];
+    }
+    document.form.event_users.value = inv;
     document.form.submit();
   } else {
     alert("Please place the location on the map.");
   }
 }
 
+function addInvitee() {
+  //Based on http://www.plus2net.com/javascript_tutorial/list-adding.php
+  var optn = document.createElement("OPTION");
+  if (document.form.friend[0].checked) {
+    optn.text = document.form.friends.options[document.form.friends.selectedIndex].text;
+  } else {
+    optn.text = document.form.other_user.value;
+  }
+  optn.value = optn.text;
+  document.form.invited.add(optn);
+}
+
+function removeInvitee() {
+  document.form.invited.remove(document.form.invited.selectedIndex);
+}
 
 //-->
 </script>
@@ -100,8 +122,33 @@ onUnload="GUnload();"
   <%=link_to_remote 'Add an Event Tag', :url => {:action => 'add_eventtype'}%>
   <br /><br />
 
+  <table>
+  <tr><td><h3>Invite a Friend</h3></td></tr>
+
+  <tr><td><%=radio_button_tag :friend, '1', :checked => true%> Friend:</td></tr>
+
+  <tr><td><%=select_tag :friends, options_for_select(@friends)%></td></tr>
+
+  <tr><td><br><%=radio_button_tag :friend, '0' %> Other user:</td></tr>
+
+  <tr><td><%=text_field_tag :other_user%></td></tr>
+
+  <tr><td><input type="button" value="Add" onclick="addInvitee();" /></td></tr>
+
+  <tr><td>
+  <hr />
+  Invited:<br />
+  <%= select_tag "invited", "", :multiple => true, :style => 'width: 100px' %>
+  </td></tr>
+
+  <tr><td><input type="button" value="Remove" onclick="removeInvitee();" /></td></tr>
+  </table>
+
+  <hr />
   
   <%=f.hidden_field :location%>
+
+  <%=hidden_field_tag :event_users%>
 
   <input type="button" value="Create Event" onclick="submitForm();" />
 <%end%>
