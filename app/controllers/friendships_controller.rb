@@ -1,4 +1,5 @@
 class FriendshipsController < ApplicationController
+  before_filter :login_required
     
   #Once a User A clicks on a "Request Friend" link for User B, a notification should appear
   #to User B on his profile page.  See the pending_friend_requests controller.

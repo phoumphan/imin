@@ -83,15 +83,8 @@ onLoad="initialize();"
 onUnload="GUnload();"
 <% end %>
 
-<div id="user_nav">
-        <%if current_user%>
-          <%=link_to 'Profile', {:controller => 'users', :action => 'profile'}, :class => 'user_nav_link'%>
-          <%=link_to 'Create Event', {:controller => 'events', :action => 'new'}, :class => 'user_nav_link_on'%>
-          <%=link_to 'My Preferences', {:controller => 'users', :action => 'preferences'}, :class => 'user_nav_link'%>
-          <%=link_to 'Friends', {:controller => 'friendships', :action => 'display'}, :class => 'user_nav_link'%>
-           <%=link_to 'Edit', {:controller => 'users', :action => 'edit_info'}, :class => 'user_nav_link'%>
-      <%end%>
-</div>
+<%= render :partial => '/users/user_nav' %>
+
 <div class="user_profile_container">
   <div class="user_profile">
     <div id="wrapper">

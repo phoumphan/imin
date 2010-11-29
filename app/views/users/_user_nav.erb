@@ -1,0 +1,24 @@
+<% def lit_link(name, tourl)
+  pageurl = request.env['REQUEST_URI']
+  question_mark = pageurl.index('?')
+  pageurl = pageurl.slice(0, question_mark) if question_mark
+  first_slash = pageurl.index('/')
+  if pageurl.slice(first_slash, pageurl.length - first_slash) == tourl
+    cls = 'user_nav_link_on'
+  else
+    cls = 'user_nav_link'
+  end
+  link_to name, tourl, :class => cls
+end %>
+
+<div id="user_nav">
+      <%if current_user
+          # The urls for these should begin with a slash%>
+          <%=lit_link 'Profile', '/users/profile'%>
+          <%=lit_link 'Create Event', '/events/new'%>
+          <%=lit_link 'Closest Events', '/users/closestevents'%>
+          <%=lit_link 'My Preferences', '/users/preferences'%>
+          <%=lit_link 'Friends', '/friendships/display'%>
+          <%=lit_link 'Edit', '/users/edit_info'%>
+      <%end%>
+</div>
