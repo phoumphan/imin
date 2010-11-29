@@ -67,8 +67,10 @@ function addInvitee() {
 }
 
 function removeInvitee() {
-  if (document.form.invited.selectedIndex >= 0) {
-    document.form.invited.remove(document.form.invited.selectedIndex);
+  idx = document.form.invited.selectedIndex;
+  if (idx >= 0) {
+    document.form.invited.remove(idx);
+    if (idx < document.form.invited.length) document.form.invited.selectedIndex = idx; else document.form.invited.selectedIndex = document.form.invited.length - 1;
   }
 }
 
@@ -139,7 +141,7 @@ onUnload="GUnload();"
 
   <hr />
   Invited:<br />
-  <%= select_tag "invited", (@invited.split(',').map {|nm| "<option>" + nm + "</option>" }).join(""), :multiple => true, :style => 'width: 300px' %><br />
+  <%= select_tag "invited", (@invited.map {|nm| "<option>" + nm + "</option>" }).join(""), :multiple => true, :style => 'width: 300px' %><br />
 
   <input type="button" value="Remove" onclick="removeInvitee();" />
   <hr />
