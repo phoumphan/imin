@@ -12,4 +12,30 @@
 </br>
 </br>
 </br>
+
 <%= render :partial => "event", :object => @event %>
+
+</br>
+</br>
+</br>
+
+<%if current_user %>
+  <%if @already_rated == false%>
+    <%= form_tag :action => "rate", :id => @event.id %>
+    <%= submit_tag "This event is good stuff!" %>
+    <%if @number_of_ratings == 1%>
+      <b><%= @number_of_ratings %> person</b> thinks this event is GOOD STUFF!
+    <%elsif (@number_of_ratings > 1)%>
+      <b><%= @number_of_ratings %> people</b> think this event is GOOD STUFF!
+    <%end%>
+
+  <%else%>
+      <%if (@number_of_ratings == 1)%>
+        You think this event is good stuff!
+      <%elsif (@number_of_ratings == 2)%>
+        You and <b><%= @number_of_ratings - 1 %> other person</b> think this event is GOOD STUFF!
+      <%elsif (@number_of_ratings > 2)%>
+        You and <b><%= @number_of_ratings - 1 %> other people</b> think this event is GOOD STUFF!
+      <%end%>
+  <%end%>
+<%end%>

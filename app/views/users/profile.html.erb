@@ -51,7 +51,12 @@ function initialize() {
 
           <div id="user_right_col">
 
-            <div id="user_pic_container"></div>
+            <!-- Profile picture, you can see where :small is defined by going to the User model file-->
+            <div id="user_pic_container">
+              <% if @user.photo.exists? then %>
+                <%= image_tag @user.photo.url(:small) %>
+              <%end%>
+            </div>
 
             <div id="user_info">
               <strong>Email:</strong> <%=@user.email%><br /><br />
