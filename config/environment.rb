@@ -44,6 +44,9 @@ Rails::Initializer.run do |config|
     :lib     => 'thinking_sphinx'
     )
 
+  config.gem "geokit"
+
+
   
 
 end

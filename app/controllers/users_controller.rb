@@ -66,7 +66,7 @@ class UsersController < ApplicationController
     puts('----------country-----------');
     puts @country
 
-    location_url = "http://where.yahooapis.com/v1/places.q('#@city%20#@province%20#@country')?appid=[PMelBrV34F.SL0PzMHeJo5kYOhR6FDbRAzDZuppSO9gSfK_MM8Hssnw8A3kkoNY57uk]"
+    location_url = "http://where.yahooapis.com/v1/places.q('vancouver%20bc%20canada')?appid=[PMelBrV34F.SL0PzMHeJo5kYOhR6FDbRAzDZuppSO9gSfK_MM8Hssnw8A3kkoNY57uk]"
     location_resp = Net::HTTP.get_response(URI.parse(location_url)) 
     #location_data = location_resp.body
     xml_location_data = Net::HTTP.get_response(URI.parse(location_url)).body
