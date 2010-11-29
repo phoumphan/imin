@@ -85,7 +85,17 @@ class UsersController < ApplicationController
   #method that will be called from the users/preferences.html.erb page when "update" link is clicked
   def update
     @user = current_user
-    
+    puts("-------------------GOT TO UPDATE -----------------------")
+    #Create rows in user_eventtypes
+
+    if params[:tag_ids] !=
+
+     params[:tag_ids].each {|p|
+
+        puts(p.to_s)
+        @user.user_eventtypes << UserEventtype.new( :user_id => current_user.id, :eventtype_id=>p )
+     }
+    end
     if @user.update_attributes(params[:user])
       flash[:notice] = "Profile Successfully Updated"
       redirect_to :action => 'profile'
