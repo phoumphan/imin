@@ -1,7 +1,12 @@
 class UsersController < ApplicationController
   # Be sure to include AuthenticationSystem in Application Controller instead
   include AuthenticatedSystem
-
+  include Geokit::Geocoders
+  require 'yahoo-weather'
+  require 'net/http'
+  require 'rexml/document'
+  require 'geokit'
+  
   before_filter :login_required, :except => [:new, :create]
 
   # render new.
@@ -37,6 +42,66 @@ class UsersController < ApplicationController
     latlng = @user.location.split(',')
     @lat = latlng[0]
     @lng = latlng[1]
+
+    #Information for location
+    res = GoogleGeocoder.reverse_geocode([@lat,@lng])
+    @location = res.full_address
+
+    puts('----------LOCATION-----------');
+    puts @location
+    location_array = @location.split(/, /)
+    puts location_array[0]
+    @city = location_array[0]
+    puts('----------city-----------');
+    puts @city
+
+    puts location_array[1]
+    province_array = location_array[1].split(/ /);
+    @province = province_array[0]
+    puts('----------province-----------');
+    puts @province
+
+    puts location_array[2]
+    @country = location_array[2]
+    puts('----------country-----------');
+    puts @country
+
+    location_url = "http://where.yahooapis.com/v1/places.q('#@city%20#@province%20#@country')?appid=[PMelBrV34F.SL0PzMHeJo5kYOhR6FDbRAzDZuppSO9gSfK_MM8Hssnw8A3kkoNY57uk]"
+    location_resp = Net::HTTP.get_response(URI.parse(location_url)) 
+    #location_data = location_resp.body
+    xml_location_data = Net::HTTP.get_response(URI.parse(location_url)).body
+    location_doc = REXML::Document.new(xml_location_data)
+    woeids = []
+    location_doc.elements.each('places/place/woeid') do |ele|
+       woeids << ele.text
+    end
+    puts('----WOEID----');
+    puts woeids[0]
+    @woeid = woeids[0]
+
+    #Information for Weather
+    puts("-------------------GOT TO WEATHER-----------------------")
+    #url = "http://search.yahooapis.com/WebSearchService/V1/webSearch?appid=YahooDemo&query=#{URI.encode("premshree pillai")}&results=1"
+    url="http://weather.yahooapis.com/forecastrss?w=#@woeid&u=c"
+    resp = Net::HTTP.get_response(URI.parse(url)) # get_response takes an URI object
+    data = resp.body
+    xml_data = Net::HTTP.get_response(URI.parse(url)).body
+
+    doc = REXML::Document.new(xml_data)
+    titles = []
+    links = []
+    doc.elements.each('rss/channel/item/description') do |ele|
+       @description = ele.text
+    end
+    puts('-------Description---------')
+    puts @description;
+
+    doc.elements.each('rss/channel/item/yweather:condition') do |ele|
+       links << ele.text
+       @temperature = ele.attributes["temp"]
+       puts('-------TEMPERATURE---------')
+       puts @temperature
+    end
 
     #Information for Event Calendar
     if (params[:month] && params[:year])
