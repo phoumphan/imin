@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101126205324) do
+ActiveRecord::Schema.define(:version => 20101127043201) do
 
   create_table "event_eventtypes", :force => true do |t|
     t.integer  "event_id"
@@ -26,6 +26,17 @@ ActiveRecord::Schema.define(:version => 20101126205324) do
     t.datetime "updated_at"
   end
 
+<<<<<<< HEAD
+  create_table "event_ratings", :force => true do |t|
+    t.integer  "event_id"
+    t.integer  "user_id"
+    t.integer  "rating"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+=======
+>>>>>>> 5cbdc630595d91d7e50ffec79cf606d1e8b9e12b
   create_table "events", :force => true do |t|
     t.string   "name"
     t.text     "description"
@@ -69,6 +80,10 @@ ActiveRecord::Schema.define(:version => 20101126205324) do
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
+<<<<<<< HEAD
+    t.integer  "owner"
+=======
+>>>>>>> 5cbdc630595d91d7e50ffec79cf606d1e8b9e12b
     t.integer  "owner_id"
   end
 

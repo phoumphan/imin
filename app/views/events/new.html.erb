@@ -30,7 +30,7 @@ function initialize() {
 
   //Put back marker that was already in the model
   if (location.value != "") {
-    latlng = location.value.split(',');
+    latlng = document.getElementById('event_location').value.split(',');
     marker = new GMarker(new GLatLng(latlng[0], latlng[1]));
     map.addOverlay(marker);
   }

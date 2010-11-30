@@ -52,7 +52,8 @@
   </div>
 
   <div class="main_container">
-    <div class="main">    
+    <div class="main">
+      <%= render :partial=> 'home/flash_error' unless flash[:error].blank?%>
       <%=yield%>    
     </div>
   </div>
