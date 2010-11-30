@@ -13,9 +13,15 @@ class EventtypesController < ApplicationController
       
     	@eventtypes_hash = @eventtypes.collect! { |x| {"name" => x.description, "id" => x.id } }
       
-      render :partial => "eventtypes/list_for_select"
-      
-      
+      render :partial => "eventtypes/list_for_select"            
+  end
+
+  def eventtype_id
+
+  end
+
+  def destroy
+
   end
 
 end

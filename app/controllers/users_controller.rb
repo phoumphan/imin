@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   # Be sure to include AuthenticationSystem in Application Controller instead
   include AuthenticatedSystem
   include Geokit::Geocoders
-  require 'yahoo-weather'
+
   require 'net/http'
   require 'rexml/document'
   require 'geokit'
@@ -44,6 +44,7 @@ class UsersController < ApplicationController
     @lng = latlng[1]
 
     #Information for location
+    
     res = GoogleGeocoder.reverse_geocode([@lat,@lng])
     @location = res.full_address
 
@@ -66,7 +67,7 @@ class UsersController < ApplicationController
     puts('----------country-----------');
     puts @country
 
-    location_url = "http://where.yahooapis.com/v1/places.q('#@city%20#@province%20#@country')?appid=[PMelBrV34F.SL0PzMHeJo5kYOhR6FDbRAzDZuppSO9gSfK_MM8Hssnw8A3kkoNY57uk]"
+    location_url = "http://where.yahooapis.com/v1/places.q('vancouver%20bc%20canada')?appid=[PMelBrV34F.SL0PzMHeJo5kYOhR6FDbRAzDZuppSO9gSfK_MM8Hssnw8A3kkoNY57uk]"
     location_resp = Net::HTTP.get_response(URI.parse(location_url)) 
     #location_data = location_resp.body
     xml_location_data = Net::HTTP.get_response(URI.parse(location_url)).body
@@ -81,7 +82,6 @@ class UsersController < ApplicationController
 
     #Information for Weather
     puts("-------------------GOT TO WEATHER-----------------------")
-    #url = "http://search.yahooapis.com/WebSearchService/V1/webSearch?appid=YahooDemo&query=#{URI.encode("premshree pillai")}&results=1"
     url="http://weather.yahooapis.com/forecastrss?w=#@woeid&u=c"
     resp = Net::HTTP.get_response(URI.parse(url)) # get_response takes an URI object
     data = resp.body
@@ -150,17 +150,33 @@ class UsersController < ApplicationController
   #method that will be called from the users/preferences.html.erb page when "update" link is clicked
   def update
     @user = current_user
+
     puts("-------------------GOT TO UPDATE -----------------------")
-    #Create rows in user_eventtypes
+    
 
-    if params[:tag_ids] !=
+    @updated_user_event_tag = UserEventtype.find(:all, :conditions => :user_id == @user.id);
+    puts('----@user_event_tags----')
+    puts @updated_user_event_tag
+   
+    @updated_user_event_tag.each do |event_tag|
+      if (event_tag.eventtype_id != params[:tag_ids])               
+          event_tag.destroy          
+      end
+    end
 
-     params[:tag_ids].each {|p|
-
+    params[:tag_ids].each do |p|
         puts(p.to_s)
         @user.user_eventtypes << UserEventtype.new( :user_id => current_user.id, :eventtype_id=>p )
-     }
     end
+
+    @updated_user_event_tag = UserEventtype.find(:all, :conditions => :user_id == @user.id);
+    i = 0;
+    @updated_tag_ids = {}
+    @updated_user_event_tag.each do |e|
+      @updated_tag_ids[i] = e.eventtype_id
+      i = i+1
+    end
+
     if @user.update_attributes(params[:user])
       flash[:notice] = "Profile Successfully Updated"
       redirect_to :action => 'profile'

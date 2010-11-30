@@ -65,6 +65,9 @@ function initialize() {
               <strong>Location:</strong>  <%=@user.location%><br />
               <%=link_to 'Edit Info', {:controller => 'users', :action => 'edit_info'}, :class => 'link_right'%>
             </div>
+            <div id="weather">
+              <%=@description%>
+            </div>
 
             <div id="user_friend_requests">
               <%for requester in @user.pending_friend_requests%>
