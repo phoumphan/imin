@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   require 'net/http'
   require 'rexml/document'
   require 'geokit'
-  
+
   before_filter :login_required, :except => [:new, :create]
 
   # render new.
@@ -36,7 +36,7 @@ class UsersController < ApplicationController
 
   #render users/profile
   def profile
-    @user = current_user       
+    @user = current_user
 
     #information for Map
     latlng = @user.location.split(',')
@@ -44,7 +44,7 @@ class UsersController < ApplicationController
     @lng = latlng[1]
 
     #Information for location
-    
+
     res = GoogleGeocoder.reverse_geocode([@lat,@lng])
     @location = res.full_address
 
@@ -68,7 +68,7 @@ class UsersController < ApplicationController
     puts @country
 
     location_url = "http://where.yahooapis.com/v1/places.q('vancouver%20bc%20canada')?appid=[PMelBrV34F.SL0PzMHeJo5kYOhR6FDbRAzDZuppSO9gSfK_MM8Hssnw8A3kkoNY57uk]"
-    location_resp = Net::HTTP.get_response(URI.parse(location_url)) 
+    location_resp = Net::HTTP.get_response(URI.parse(location_url))
     #location_data = location_resp.body
     xml_location_data = Net::HTTP.get_response(URI.parse(location_url)).body
     location_doc = REXML::Document.new(xml_location_data)
@@ -112,16 +112,16 @@ class UsersController < ApplicationController
       @month = time.month
       @year = time.year
     end
-    
+
     @shown_month = Date.civil(@year, @month)
     # To restrict what events are included in the result you can pass additional find options like this:
     #
     # @event_strips = Event.event_strips_for_month(@shown_month, :include => :some_relation, :conditions => 'some_relations.some_column = true')
-    
+
     @event_strips = Event.event_strips_for_month(@shown_month)
 
 
-    
+
   end
 
   #render users/edit_info
@@ -135,16 +135,16 @@ class UsersController < ApplicationController
       @lng = latlng[1]
     else
       redirect_to(login_path)
-    end    
+    end
   end
 
-  #render users/preferences  
+  #render users/preferences
   def preferences
     if current_user
       @user = current_user
     else
       redirect_to(login_path)
-    end    
+    end
   end
 
   #method that will be called from the users/preferences.html.erb page when "update" link is clicked
@@ -152,15 +152,15 @@ class UsersController < ApplicationController
     @user = current_user
 
     puts("-------------------GOT TO UPDATE -----------------------")
-    
+
 
     @updated_user_event_tag = UserEventtype.find(:all, :conditions => :user_id == @user.id);
     puts('----@user_event_tags----')
     puts @updated_user_event_tag
-   
+
     @updated_user_event_tag.each do |event_tag|
-      if (event_tag.eventtype_id != params[:tag_ids])               
-          event_tag.destroy          
+      if (event_tag.eventtype_id != params[:tag_ids] && event_tag.user_id == @user.id)
+          event_tag.destroy
       end
     end
 
@@ -198,7 +198,7 @@ class UsersController < ApplicationController
     if (@user.id == current_user.id)
       redirect_to (profile_page_path)
     end
-    
+
   end
 
   # hash_* have to be public at the moment
@@ -213,7 +213,7 @@ class UsersController < ApplicationController
   def closestevents
     @center = current_user.location
 
-    # Find events in bins near user's bin 
+    # Find events in bins near user's bin
     binvals = UsersController.hash_loc current_user.location
     @closest = []
     [-1, 0, 1].each do |x|
