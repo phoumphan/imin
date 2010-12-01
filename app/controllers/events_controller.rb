@@ -31,7 +31,7 @@ class EventsController < ApplicationController
     ids = params[:user_events].split(',').map { |nm|
       usr = User.find_by_login(nm)
       if not usr
-        flash[:error] = "No such user: " + nm # TODO flash doesn't show up
+        flash.now[:error] = "No such user: " + nm
 
         # Reload 'new' form on error message
         set_friends
