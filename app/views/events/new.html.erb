@@ -38,15 +38,17 @@ function initialize() {
 
 function submitForm() {
   var i;
-
+  
   if (marker) {
     document.getElementById('event_location').value = marker.getLatLng().lat() + ',' + marker.getLatLng().lng();
 
-    inv = document.form.invited.options[0].text;
-    for (i=1;i<document.form.invited.options.length;i++) {
-      inv += "," + document.form.invited.options[i].text;
+    if (document.form.invited.options[0] != null){
+      inv = document.form.invited.options[0].text;
+      for (i=1;i<document.form.invited.options.length;i++) {
+        inv += "," + document.form.invited.options[i].text;
+      }
+      document.form.user_events.value = inv;
     }
-    document.form.user_events.value = inv;
 
     document.form.submit();
   } else {
@@ -139,8 +141,7 @@ onUnload="GUnload();"
   <input type="button" value="Remove" onclick="removeInvitee();" />
   <hr />
 
-  <div id='eventtypes'>
-  </div>
+  <div id='eventtypes'></div>
   <%=link_to_remote 'Add an Event Tag', :url => {:action => 'add_eventtype'}%>
   <br /><br />
   

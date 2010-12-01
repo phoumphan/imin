@@ -1,9 +1,30 @@
 <center><h2><b>Find an Event!</b></h2></center>
 
 <% form_for :search, {:controller => 'search', :action => 'show'} do |f|%>
+  
   <center>
     <%= f.text_field :query %>
     <%= submit_tag "Search!" %>
+
+    </br>
+    Advanced Search Options:
+    </br>
+    
+    <select name="search[distance]">
+      <option value="no_distance">Specify Distance...</option>
+      <option value="5km">5 km</option>
+      <option value="10km">10 km</option>
+      <option value="20km">20 km</option>
+      <option value="50km">50 km</option>
+    </select>
+
+    <select name="search[formality]">
+      <option value="no_formality">Specify Formality...</option>
+      <option value="Formal">Formal</option>
+      <option value="Dressy">Dressy</option>
+      <option value="Dressy-Casual">Dressy-Casual</option>
+      <option value="Casual">Casual</option>
+    </select>
   </center>
 <% end %>
 

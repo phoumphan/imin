@@ -11,6 +11,7 @@ class EventsController < ApplicationController
       @event = Event.new
       @invited = []
     end
+    #@event_eventtype = EventEventtype.new()
     @event_eventtype = @event.event_eventtypes.new
     # @event_photo = @event.event_photos.new
     @event.cost = 0
@@ -101,7 +102,7 @@ class EventsController < ApplicationController
   end
 
   #Action that results in rendering the event_eventtypes/_new.html.erb partial
-  def add_eventtype
+  def add_eventtype    
     @event_eventtype = EventEventtype.new()
   end
 

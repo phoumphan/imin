@@ -1,6 +1,7 @@
 <%content_for :head do%>
   <%= javascript_include_tag 'jquery.tokeninput' %>
   <%= stylesheet_link_tag 'token-input'  %>
+
   <script src="http://maps.google.com/maps?file=api&v=2&key=abcdefg&sensor=false"
           type="text/javascript">
   </script>
@@ -24,6 +25,7 @@
       map.setCenter(pos, 17);
     }
     function submitForm() {
+      <%puts ("--------submitting form-------------")%>
       document.getElementById('event_location').value = marker.getLatLng().lat() + ',' + marker.getLatLng().lng();
       document.form.submit();
     }
@@ -38,7 +40,7 @@
 
 <h2>Edit Event:  <%=@event.name%> </h2>
 
-<%form_for @event, :action => 'update', :html => { :name => 'form', :multipart => true } do |f|%>
+<%form_for @event, :action => 'update', :html => { :name => "form", :multipart => true } do |f|%>
   <%=f.error_messages%>
 
   <table>
@@ -70,8 +72,14 @@
 
   <%=f.hidden_field :location%>
 
-  <div id='add_eventtypes'></div>
-  <%=link_to_remote 'Add an Event Tag', :url => {:action => 'add_eventtype'}%>
+  <div id='existing_eventtypes'>
+     <%for event_eventtype in @event.event_eventtypes%>
+      <%= render :partial => 'event_eventtypes/edit', :locals => {:event_eventtype => event_eventtype}%>
+     <%end%>
+  </div>
+
+  <div id='eventtypes'></div>
+    <%=link_to_remote 'Add another Event Tag', :url => {:action => 'add_eventtype'}%>
   <br /><br />
 
   <%=link_to "Invite a User", :action => 'invite_user', :id => @event.id%>

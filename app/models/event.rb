@@ -24,5 +24,6 @@ class Event < ActiveRecord::Base
 
   define_index do
     indexes name, :sortable => true
+    indexes formality
   end
 end

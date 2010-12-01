@@ -8,11 +8,10 @@
       <th></th>
     </tr>
   </thead>
-
   <tbody>
     <% for result in @results %>
+      </br>
       <tr>
-        
         <td>
           <%= link_to result.name, event_path(result.id) %>
         </td>
@@ -20,8 +19,7 @@
         <td>
           <%= result.location%>
         </td>
-        
-        
+                
       </tr>
     <%end%>
   </tbody>
