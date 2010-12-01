@@ -41,7 +41,6 @@ class EventsController < ApplicationController
 
         # Reload 'new' form on error message
         @invited = params[:user_events]
-        @event.update_attributes(params[:event])
         redirect_to 'events/new?event=' + @event.to_s
         return
       end
