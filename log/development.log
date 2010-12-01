@@ -1,0 +1,2598 @@
+# Logfile created on Wed Dec 01 14:04:14 -0800 2010  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-12-01 14:04:21) [GET]
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUser Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+Rendered users/_user_bar (231.0ms)
+Completed in 806ms (View: 378, DB: 7) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:04:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:04:23) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:04:24) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:04:24) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:04:24) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:04:24) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:04:24) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:04:24) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-12-01 14:18:43) [GET]
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mUser Columns (7.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+Rendered users/_user_bar (192.0ms)
+Completed in 208ms (View: 198, DB: 7) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:18:43) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:18:44) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:18:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:18:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:18:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:18:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:18:46) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:18:46) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-12-01 14:18:47) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mUser Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+Redirected to http://localhost:3000/users/profile
+Completed in 160ms (DB: 6) | 302 Found [http://localhost/users/3]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#profile (for 127.0.0.1 at 2010-12-01 14:18:47) [GET]
+  [4;35;1mUser Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [4;35;1mUserEvent Columns (46.0ms)[0m   [0mSHOW FIELDS FROM `user_events`[0m
+  [4;36;1mUserEvent Load (2.0ms)[0m   [0;1mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 3) [0m
+  [4;35;1mEvent Load (25.0ms)[0m   [0mSELECT * FROM `events` WHERE (('2010-11-28 08:00:00' <= end_at) AND (start_at< '2011-01-02 08:00:00')) AND (id IN ('1','2','3','4','5','','','')) ORDER BY start_at ASC[0m
+  [4;36;1mEvent Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendering template within layouts/application
+Rendering users/profile
+Rendered users/_user_nav (2.0ms)
+  [4;35;1mPendingFriendRequest Load (0.0ms)[0m   [0mSELECT * FROM `pending_friend_requests` WHERE (`pending_friend_requests`.user_id = 3) [0m
+Rendered users/_user_bar (1.0ms)
+Completed in 1793ms (View: 85, DB: 85) | 200 OK [http://localhost/users/profile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:18:50) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:18:50) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:18:50) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:18:50) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:18:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:18:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:18:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-12-01 14:18:53) [GET]
+  Parameters: {"id"=>"events"}
+  [4;36;1mUser Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=events):
+  app/controllers/users_controller.rb:254:in `show'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (45.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-12-01 14:20:58) [GET]
+  Parameters: {"id"=>"events"}
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=events):
+  app/controllers/users_controller.rb:254:in `show'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (29.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#events (for 127.0.0.1 at 2010-12-01 14:21:04) [GET]
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [4;36;1mEvent Load (1.0ms)[0m   [0;1mSELECT * FROM `events` [0m
+Rendering template within layouts/application
+Rendering users/events
+Rendered users/_user_nav (1.0ms)
+  [4;35;1mEvent Columns (19.0ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendered users/_user_bar (0.0ms)
+Completed in 261ms (View: 32, DB: 26) | 200 OK [http://localhost/users/events]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:21:04) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:21:05) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:21:05) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:21:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:21:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:21:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:21:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:21:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#closestevents (for 127.0.0.1 at 2010-12-01 14:21:11) [GET]
+  [4;35;1mUser Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [4;35;1mEvent Load (1.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`bin_lat` = 9850 AND `events`.`bin_lng` = -24643) [0m
+  [4;36;1mEvent Load (1.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`bin_lat` = 9851 AND `events`.`bin_lng` = -24643) [0m
+  [4;35;1mEvent Load (1.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`bin_lat` = 9852 AND `events`.`bin_lng` = -24643) [0m
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`bin_lat` = 9850 AND `events`.`bin_lng` = -24642) [0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`bin_lat` = 9851 AND `events`.`bin_lng` = -24642) [0m
+  [4;36;1mEvent Load (1.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`bin_lat` = 9852 AND `events`.`bin_lng` = -24642) [0m
+  [4;35;1mEvent Load (1.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`bin_lat` = 9850 AND `events`.`bin_lng` = -24641) [0m
+  [4;36;1mEvent Load (1.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`bin_lat` = 9851 AND `events`.`bin_lng` = -24641) [0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`bin_lat` = 9852 AND `events`.`bin_lng` = -24641) [0m
+  [4;36;1mEvent Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendering template within layouts/application
+Rendering users/closestevents
+Rendered users/_user_nav (1.0ms)
+  [4;35;1mEvent Load (1.0ms)[0m   [0mSELECT * FROM `events` [0m
+Rendered home/_map (7.0ms)
+Rendered users/_user_bar (1.0ms)
+Completed in 271ms (View: 40, DB: 21) | 200 OK [http://localhost/users/closestevents]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:21:12) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:21:13) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:21:13) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:21:13) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:21:13) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:21:14) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:21:14) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-12-01 14:21:16) [GET]
+  [4;36;1mUser Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [4;36;1mEvent Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mEventEventtype Columns (7.0ms)[0m   [0mSHOW FIELDS FROM `event_eventtypes`[0m
+  [4;36;1mFriendship Load (1.0ms)[0m   [0;1mSELECT * FROM `friendships` WHERE (user_id = 3) [0m
+Rendering template within layouts/application
+Rendering events/new
+Rendered users/_user_nav (1.0ms)
+
+ActionView::TemplateError (undefined method `privacy' for #<Event:0x7e140b8>) on line #124 of app/views/events/new.html.erb:
+121:   <%=f.text_field :cost, :size => 10%> &nbsp; Dollars</td></tr>
+122: 
+123:   <tr><td>Event Privacy:</td>
+124:   <td><%=f.select :privacy, ['Private', 'Public']%></td></tr>
+125:   
+126:   <tr><td><h3>Invite a Friend</h3></td></tr>
+127: 
+
+    app/views/events/new.html.erb:124
+    app/views/events/new.html.erb:93
+    C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (61.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20101024232158)
+Migrating to CreateEvents (20101025014335)
+Migrating to CreateEventtypes (20101025014408)
+Migrating to CreatePhotos (20101025014434)
+Migrating to CreateUserEventtypes (20101025014800)
+Migrating to CreateFriendships (20101025014845)
+Migrating to CreateUserEvents (20101025015601)
+Migrating to CreateEventEventtypes (20101025015905)
+Migrating to CreateEventPhotos (20101025015943)
+Migrating to ChangeFriendshipColumnName (20101118030358)
+Migrating to CreatePendingFriendRequests (20101118202635)
+Migrating to AddPhotoColumns (20101119213951)
+Migrating to ChangeEventsTable (20101125061143)
+Migrating to AddAttachmentsPhotoToUser (20101126000426)
+Migrating to AddPhotoOwner (20101126074032)
+Migrating to AddEventBins (20101126205324)
+Migrating to CreateEventRating (20101127043201)
+Migrating to AddPasswordResetCode (20101201002048)
+  [4;35;1mSQL (204.0ms)[0m   [0mALTER TABLE `users` ADD `password_reset_code` varchar(40)[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101201002048')[0m
+Migrating to AddActivation (20101201022331)
+  [4;35;1mSQL (95.0ms)[0m   [0mALTER TABLE `users` ADD `activation_code` varchar(40)[0m
+  [4;36;1mSQL (43.0ms)[0m   [0;1mALTER TABLE `users` ADD `activated_at` datetime[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101201022331')[0m
+Migrating to ChangeEventPrivacy (20101201210632)
+  [4;36;1mSQL (54.0ms)[0m   [0;1mALTER TABLE `events` DROP `public`[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mALTER TABLE `events` ADD `privacy` varchar(255)[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101201210632')[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mSHOW FIELDS FROM `event_eventtypes`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mdescribe `event_eventtypes`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `event_eventtypes`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mSHOW FIELDS FROM `event_photos`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mdescribe `event_photos`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `event_photos`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mSHOW FIELDS FROM `event_ratings`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mdescribe `event_ratings`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `event_ratings`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mdescribe `events`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `events`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mSHOW FIELDS FROM `eventtypes`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mdescribe `eventtypes`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `eventtypes`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mSHOW FIELDS FROM `friendships`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mdescribe `friendships`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `friendships`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mSHOW FIELDS FROM `pending_friend_requests`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mdescribe `pending_friend_requests`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `pending_friend_requests`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mdescribe `photos`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `photos`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mSHOW FIELDS FROM `user_events`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mdescribe `user_events`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `user_events`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mSHOW FIELDS FROM `user_eventtypes`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mdescribe `user_eventtypes`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `user_eventtypes`[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-12-01 14:22:26) [GET]
+  [4;36;1mUser Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [4;36;1mEvent Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mEventEventtype Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `event_eventtypes`[0m
+  [4;36;1mFriendship Load (0.0ms)[0m   [0;1mSELECT * FROM `friendships` WHERE (user_id = 3) [0m
+Rendering template within layouts/application
+Rendering events/new
+Rendered users/_user_nav (0.0ms)
+Rendered users/_user_bar (3.0ms)
+Completed in 214ms (View: 25, DB: 17) | 200 OK [http://localhost/events/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:22:27) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:22:28) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:22:28) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:22:29) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:22:32) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:22:32) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:22:33) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:22:33) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-12-01 14:23:43) [GET]
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [4;36;1mEvent Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mEventEventtype Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `event_eventtypes`[0m
+  [4;36;1mFriendship Load (0.0ms)[0m   [0;1mSELECT * FROM `friendships` WHERE (user_id = 3) [0m
+Rendering template within layouts/application
+Rendering events/new
+Rendered users/_user_nav (0.0ms)
+Rendered users/_user_bar (3.0ms)
+Completed in 241ms (View: 35, DB: 15) | 200 OK [http://localhost/events/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:23:44) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:23:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:23:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:23:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:23:46) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:23:46) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:23:46) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:23:46) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#preferences (for 127.0.0.1 at 2010-12-01 14:23:50) [GET]
+  [4;36;1mUser Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/preferences
+Rendered users/_user_nav (1.0ms)
+  [4;36;1mEventtype Load (1.0ms)[0m   [0;1mSELECT * FROM `eventtypes` [0m
+  [4;35;1mEventtype Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `eventtypes`[0m
+  [4;36;1mUserEventtype Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `user_eventtypes`[0m
+  [4;35;1mUserEventtype Load (0.0ms)[0m   [0mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 1) LIMIT 1[0m
+  [4;36;1mUserEventtype Load (1.0ms)[0m   [0;1mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 2) LIMIT 1[0m
+  [4;35;1mUserEventtype Load (0.0ms)[0m   [0mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 3) LIMIT 1[0m
+  [4;36;1mUserEventtype Load (0.0ms)[0m   [0;1mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 4) LIMIT 1[0m
+  [4;35;1mUserEventtype Load (0.0ms)[0m   [0mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 5) LIMIT 1[0m
+  [4;36;1mUserEventtype Load (0.0ms)[0m   [0;1mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 6) LIMIT 1[0m
+  [4;35;1mUserEventtype Load (1.0ms)[0m   [0mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 7) LIMIT 1[0m
+  [4;36;1mUserEventtype Load (0.0ms)[0m   [0;1mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 8) LIMIT 1[0m
+  [4;35;1mUserEventtype Load (1.0ms)[0m   [0mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 9) LIMIT 1[0m
+  [4;36;1mUserEventtype Load (1.0ms)[0m   [0;1mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 10) LIMIT 1[0m
+  [4;35;1mUserEventtype Load (1.0ms)[0m   [0mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 11) LIMIT 1[0m
+  [4;36;1mUserEventtype Load (0.0ms)[0m   [0;1mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 12) LIMIT 1[0m
+  [4;35;1mUserEventtype Load (0.0ms)[0m   [0mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 13) LIMIT 1[0m
+  [4;36;1mUserEventtype Load (0.0ms)[0m   [0;1mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 14) LIMIT 1[0m
+  [4;35;1mUserEventtype Load (0.0ms)[0m   [0mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 15) LIMIT 1[0m
+  [4;36;1mUserEventtype Load (0.0ms)[0m   [0;1mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 16) LIMIT 1[0m
+  [4;35;1mUserEventtype Load (0.0ms)[0m   [0mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 17) LIMIT 1[0m
+  [4;36;1mUserEventtype Load (1.0ms)[0m   [0;1mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 18) LIMIT 1[0m
+  [4;35;1mUserEventtype Load (0.0ms)[0m   [0mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 19) LIMIT 1[0m
+  [4;36;1mUserEventtype Load (0.0ms)[0m   [0;1mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 20) LIMIT 1[0m
+  [4;35;1mUserEventtype Load (1.0ms)[0m   [0mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 21) LIMIT 1[0m
+  [4;36;1mUserEventtype Load (1.0ms)[0m   [0;1mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 22) LIMIT 1[0m
+  [4;35;1mUserEventtype Load (1.0ms)[0m   [0mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 23) LIMIT 1[0m
+  [4;36;1mUserEventtype Load (1.0ms)[0m   [0;1mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 24) LIMIT 1[0m
+  [4;35;1mUserEventtype Load (0.0ms)[0m   [0mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 25) LIMIT 1[0m
+  [4;36;1mUserEventtype Load (0.0ms)[0m   [0;1mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 26) LIMIT 1[0m
+  [4;35;1mUserEventtype Load (0.0ms)[0m   [0mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 27) LIMIT 1[0m
+  [4;36;1mUserEventtype Load (1.0ms)[0m   [0;1mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 28) LIMIT 1[0m
+  [4;35;1mUserEventtype Load (0.0ms)[0m   [0mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 29) LIMIT 1[0m
+  [4;36;1mUserEventtype Load (1.0ms)[0m   [0;1mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 30) LIMIT 1[0m
+  [4;35;1mUserEventtype Load (1.0ms)[0m   [0mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 31) LIMIT 1[0m
+  [4;36;1mUserEventtype Load (1.0ms)[0m   [0;1mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 32) LIMIT 1[0m
+  [4;35;1mUserEventtype Load (0.0ms)[0m   [0mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 33) LIMIT 1[0m
+  [4;36;1mUserEventtype Load (0.0ms)[0m   [0;1mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 34) LIMIT 1[0m
+  [4;35;1mUserEventtype Load (0.0ms)[0m   [0mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 35) LIMIT 1[0m
+  [4;36;1mUserEventtype Load (1.0ms)[0m   [0;1mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 36) LIMIT 1[0m
+  [4;35;1mUserEventtype Load (1.0ms)[0m   [0mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 37) LIMIT 1[0m
+  [4;36;1mUserEventtype Load (1.0ms)[0m   [0;1mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 38) LIMIT 1[0m
+  [4;35;1mUserEventtype Load (0.0ms)[0m   [0mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 39) LIMIT 1[0m
+  [4;36;1mUserEventtype Load (0.0ms)[0m   [0;1mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 40) LIMIT 1[0m
+  [4;35;1mUserEventtype Load (0.0ms)[0m   [0mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 41) LIMIT 1[0m
+  [4;36;1mUserEventtype Load (0.0ms)[0m   [0;1mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 42) LIMIT 1[0m
+  [4;35;1mUserEventtype Load (0.0ms)[0m   [0mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 43) LIMIT 1[0m
+  [4;36;1mUserEventtype Load (1.0ms)[0m   [0;1mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 44) LIMIT 1[0m
+  [4;35;1mUserEventtype Load (0.0ms)[0m   [0mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 45) LIMIT 1[0m
+  [4;36;1mUserEventtype Load (0.0ms)[0m   [0;1mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 46) LIMIT 1[0m
+  [4;35;1mUserEventtype Load (0.0ms)[0m   [0mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 47) LIMIT 1[0m
+  [4;36;1mUserEventtype Load (0.0ms)[0m   [0;1mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 48) LIMIT 1[0m
+  [4;35;1mUserEventtype Load (0.0ms)[0m   [0mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 49) LIMIT 1[0m
+  [4;36;1mUserEventtype Load (0.0ms)[0m   [0;1mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 50) LIMIT 1[0m
+  [4;35;1mUserEventtype Load (0.0ms)[0m   [0mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 51) LIMIT 1[0m
+  [4;36;1mUserEventtype Load (0.0ms)[0m   [0;1mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 52) LIMIT 1[0m
+  [4;35;1mUserEventtype Load (0.0ms)[0m   [0mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 53) LIMIT 1[0m
+  [4;36;1mUserEventtype Load (0.0ms)[0m   [0;1mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 54) LIMIT 1[0m
+  [4;35;1mUserEventtype Load (0.0ms)[0m   [0mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 55) LIMIT 1[0m
+  [4;36;1mUserEventtype Load (0.0ms)[0m   [0;1mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 56) LIMIT 1[0m
+  [4;35;1mUserEventtype Load (0.0ms)[0m   [0mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 57) LIMIT 1[0m
+  [4;36;1mUserEventtype Load (0.0ms)[0m   [0;1mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 58) LIMIT 1[0m
+  [4;35;1mUserEventtype Load (0.0ms)[0m   [0mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 59) LIMIT 1[0m
+  [4;36;1mUserEventtype Load (1.0ms)[0m   [0;1mSELECT * FROM `user_eventtypes` WHERE (`user_eventtypes`.`user_id` = 3) AND (`user_eventtypes`.`eventtype_id` = 60) LIMIT 1[0m
+Rendered users/_user_bar (6.0ms)
+Completed in 738ms (View: 474, DB: 37) | 200 OK [http://localhost/users/preferences]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:23:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:23:52) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:23:52) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:23:53) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:23:53) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:23:53) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:23:53) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:23:53) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#closestevents (for 127.0.0.1 at 2010-12-01 14:23:55) [GET]
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`bin_lat` = 9850 AND `events`.`bin_lng` = -24643) [0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`bin_lat` = 9851 AND `events`.`bin_lng` = -24643) [0m
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`bin_lat` = 9852 AND `events`.`bin_lng` = -24643) [0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`bin_lat` = 9850 AND `events`.`bin_lng` = -24642) [0m
+  [4;36;1mEvent Load (1.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`bin_lat` = 9851 AND `events`.`bin_lng` = -24642) [0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`bin_lat` = 9852 AND `events`.`bin_lng` = -24642) [0m
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`bin_lat` = 9850 AND `events`.`bin_lng` = -24641) [0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`bin_lat` = 9851 AND `events`.`bin_lng` = -24641) [0m
+  [4;36;1mEvent Load (1.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`bin_lat` = 9852 AND `events`.`bin_lng` = -24641) [0m
+  [4;35;1mEvent Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendering template within layouts/application
+Rendering users/closestevents
+Rendered users/_user_nav (0.0ms)
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` [0m
+Rendered home/_map (2.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 182ms (View: 19, DB: 13) | 200 OK [http://localhost/users/closestevents]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:23:56) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:23:56) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:23:56) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:23:56) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:23:56) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:23:57) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:23:57) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-12-01 14:23:58) [GET]
+  [4;35;1mUser Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [4;35;1mEvent Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mEventEventtype Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `event_eventtypes`[0m
+  [4;35;1mFriendship Load (1.0ms)[0m   [0mSELECT * FROM `friendships` WHERE (user_id = 3) [0m
+Rendering template within layouts/application
+Rendering events/new
+Rendered users/_user_nav (1.0ms)
+Rendered users/_user_bar (5.0ms)
+Completed in 255ms (View: 35, DB: 20) | 200 OK [http://localhost/events/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:23:59) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:23:59) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:24:00) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:24:00) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:24:00) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:24:00) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:24:00) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#create (for 127.0.0.1 at 2010-12-01 14:24:03) [POST]
+  Parameters: {"authenticity_token"=>"SlSGEMt9uADetCpkQmHiqoBrqCk9gE/Jm6PXlyJAya8=", "event"=>{"name"=>"", "end_at"=>"", "cost"=>"0", "start_at"=>"", "description"=>"", "privacy"=>"Private", "formality"=>"Formal", "location"=>"0,NaN"}, "user_events"=>"", "friend"=>"1", "other_user"=>""}
+  [4;36;1mUser Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [4;36;1mEvent Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mUserEvent Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `user_events`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUserEvent Create (0.0ms)[0m   [0mINSERT INTO `user_events` (`event_id`, `updated_at`, `user_event_status`, `user_id`, `created_at`) VALUES(NULL, '2010-12-01 22:24:03', 'ADMIN', 3, '2010-12-01 22:24:03')[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+
+ActionView::MissingTemplate (Missing template events/create.erb in view path app/views):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:24:53) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:24:53) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:24:53) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:24:53) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-12-01 14:24:54) [GET]
+  [4;35;1mUser Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [4;35;1mEvent Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mEventEventtype Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `event_eventtypes`[0m
+  [4;35;1mFriendship Load (0.0ms)[0m   [0mSELECT * FROM `friendships` WHERE (user_id = 3) [0m
+Rendering template within layouts/application
+Rendering events/new
+Rendered users/_user_nav (1.0ms)
+Rendered users/_user_bar (4.0ms)
+Completed in 261ms (View: 47, DB: 17) | 200 OK [http://localhost/events/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:24:54) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:24:55) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:24:56) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:24:56) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:24:56) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:24:56) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:24:57) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:24:57) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#closestevents (for 127.0.0.1 at 2010-12-01 14:25:08) [GET]
+  [4;35;1mUser Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`bin_lat` = 9850 AND `events`.`bin_lng` = -24643) [0m
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`bin_lat` = 9851 AND `events`.`bin_lng` = -24643) [0m
+  [4;35;1mEvent Load (1.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`bin_lat` = 9852 AND `events`.`bin_lng` = -24643) [0m
+  [4;36;1mEvent Load (1.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`bin_lat` = 9850 AND `events`.`bin_lng` = -24642) [0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`bin_lat` = 9851 AND `events`.`bin_lng` = -24642) [0m
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`bin_lat` = 9852 AND `events`.`bin_lng` = -24642) [0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`bin_lat` = 9850 AND `events`.`bin_lng` = -24641) [0m
+  [4;36;1mEvent Load (1.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`bin_lat` = 9851 AND `events`.`bin_lng` = -24641) [0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`bin_lat` = 9852 AND `events`.`bin_lng` = -24641) [0m
+  [4;36;1mEvent Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendering template within layouts/application
+Rendering users/closestevents
+Rendered users/_user_nav (1.0ms)
+  [4;35;1mEvent Load (1.0ms)[0m   [0mSELECT * FROM `events` [0m
+Rendered home/_map (5.0ms)
+Rendered users/_user_bar (1.0ms)
+Completed in 310ms (View: 44, DB: 15) | 200 OK [http://localhost/users/closestevents]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:25:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:25:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:25:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:25:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:25:11) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:25:11) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:25:11) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:25:11) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#events (for 127.0.0.1 at 2010-12-01 14:25:15) [GET]
+  [4;35;1mUser Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [4;35;1mEvent Load (1.0ms)[0m   [0mSELECT * FROM `events` [0m
+Rendering template within layouts/application
+Rendering users/events
+Rendered users/_user_nav (1.0ms)
+  [4;36;1mEvent Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendered users/_user_bar (1.0ms)
+Completed in 220ms (View: 21, DB: 14) | 200 OK [http://localhost/users/events]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:25:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:25:16) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:25:16) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:25:16) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:25:16) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:25:16) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:25:16) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#show (for 127.0.0.1 at 2010-12-01 14:25:20) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mEvent Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mEvent Load (1.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 5) [0m
+  [4;35;1mUser Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [4;35;1mEventRating Load (0.0ms)[0m   [0mSELECT * FROM `event_ratings` WHERE (`event_ratings`.`user_id` = 3 AND `event_ratings`.`event_id` = '5') [0m
+  [4;36;1mEventRating Load (0.0ms)[0m   [0;1mSELECT * FROM `event_ratings` WHERE (`event_ratings`.`event_id` = 5) [0m
+Rendering template within layouts/application
+Rendering events/show
+Rendered events/_user_nav (3.0ms)
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mEventtype Load (1.0ms)[0m   [0;1mSELECT `eventtypes`.* FROM `eventtypes` INNER JOIN `event_eventtypes` ON `eventtypes`.id = `event_eventtypes`.eventtype_id WHERE ((`event_eventtypes`.event_id = 5)) [0m
+Rendered events/_event (8.0ms)
+Rendered users/_user_bar (5.0ms)
+Completed in 833ms (View: 61, DB: 14) | 200 OK [http://localhost/events/show/5]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:25:21) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:25:21) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:25:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:25:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:25:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:25:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:25:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#profile (for 127.0.0.1 at 2010-12-01 14:25:29) [GET]
+  [4;35;1mUser Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [4;35;1mUserEvent Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `user_events`[0m
+  [4;36;1mUserEvent Load (1.0ms)[0m   [0;1mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 3) [0m
+  [4;35;1mEvent Load (1.0ms)[0m   [0mSELECT * FROM `events` WHERE (('2010-11-28 08:00:00' <= end_at) AND (start_at< '2011-01-02 08:00:00')) AND (id IN ('1','2','3','4','5','','','','')) ORDER BY start_at ASC[0m
+  [4;36;1mEvent Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendering template within layouts/application
+Rendering users/profile
+Rendered users/_user_nav (1.0ms)
+  [4;35;1mPendingFriendRequest Load (0.0ms)[0m   [0mSELECT * FROM `pending_friend_requests` WHERE (`pending_friend_requests`.user_id = 3) [0m
+Rendered users/_user_bar (1.0ms)
+Completed in 1714ms (View: 69, DB: 22) | 200 OK [http://localhost/users/profile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:25:32) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:25:32) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:25:32) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:25:33) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:25:33) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:25:33) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-01 14:25:33) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)

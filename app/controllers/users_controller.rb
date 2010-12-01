@@ -148,6 +148,23 @@ class UsersController < ApplicationController
 
   end
 
+  def events
+    if current_user
+      @user = current_user
+
+      #location coordinates
+      latlng = @user.location.split(',')
+      @lat = latlng[0]
+      @lng = latlng[1]
+    else
+      redirect_to(login_path)
+    end
+
+    @user_events = Event.find(:all, :conditions => :owner == @user.id);
+     puts('----USER EVENTS------');
+
+  end
+
   #render users/edit_info
   def edit_info
     if current_user
@@ -179,34 +196,29 @@ class UsersController < ApplicationController
 
 
     @updated_user_event_tag = UserEventtype.find(:all, :conditions => :user_id == @user.id);
-    puts('----@user_event_tags----')
-    puts @updated_user_event_tag
+    puts("-------------------GOT TO UPDATE -----------------------")
 
-    @updated_user_event_tag.each do |event_tag|
-      if (event_tag.eventtype_id != params[:tag_ids] && event_tag.user_id == @user.id)
-          event_tag.destroy
+      @updated_user_event_tag = UserEventtype.find(:all, :conditions => :user_id == @user.id);
+      puts('----@user_event_tags----')
+      puts @updated_user_event_tag
+      @updated_user_event_tag.each do |event_tag|
+        if (event_tag.eventtype_id != params[:tag_ids] && event_tag.user_id == @user.id)
+            event_tag.destroy
+        end
       end
-    end
 
-    params[:tag_ids].each do |p|
-        puts(p.to_s)
-        @user.user_eventtypes << UserEventtype.new( :user_id => current_user.id, :eventtype_id=>p )
-    end
-
-    @updated_user_event_tag = UserEventtype.find(:all, :conditions => :user_id == @user.id);
-    i = 0;
-    @updated_tag_ids = {}
-    @updated_user_event_tag.each do |e|
-      @updated_tag_ids[i] = e.eventtype_id
-      i = i+1
-    end
-
-    if @user.update_attributes(params[:user])
-      flash[:notice] = "Profile Successfully Updated"
-      redirect_to :action => 'profile'
-    else
-      render :action => 'preferences', :id => params[:id]
-    end
+      #bug here when update info
+      params[:tag_ids].each do |p|
+          puts(p.to_s)
+          @user.user_eventtypes << UserEventtype.new( :user_id => current_user.id, :eventtype_id=>p )
+      end
+      @updated_user_event_tag = UserEventtype.find(:all, :conditions => :user_id == @user.id);
+      i = 0;
+      @updated_tag_ids = {}
+      @updated_user_event_tag.each do |e|
+        @updated_tag_ids[i] = e.eventtype_id
+        i = i+1
+      end
   end
 
   #method used to change user password.  Called from users/edit_info.html.erb page when

@@ -1,23 +1,29 @@
-<DIV Align = RIGHT>
-  <%if current_user%>
+<%= render :partial => 'user_nav' %>
+<div class="user_profile_container">
+  <div class="user_profile">
+    <div id="wrapper">
+      <div id="events_nav">
+        <%if current_user%>
+          <%=link_to 'My Events',{:controller => 'users', :action => 'events'}, :class => 'events_nav_link_on'%>
+          <%=link_to 'Events in your Area',{:controller => 'users', :action => 'closestevents'}, :class => 'events_nav_link'%>
+          <%=link_to 'Create Event', {:controller => 'events', :action => 'new'}, :class => 'events_nav_link'%>
+          <%=link_to 'Event Preferences',{:controller => 'users', :action => 'preferences'}, :class => 'events_nav_link'%>
+      <%end%>
+<div id="show_event">
+  <div style="position: absolute; top: 0px; left: 658px;">
+    <%if current_user%>
 
-  <%if @event.owner.id == current_user.id%>
-    <%=link_to 'Edit', edit_event_path(@event.id)%>
-  <%end%>
+    <%if @event.owner.id == current_user.id%>
+      <%=link_to 'Edit', edit_event_path(@event.id), :class => 'user_nav_link'%>
+    <%end%>
 
-  <%=link_to("Back", request.env["HTTP_REFERER"])%>
-<%end%>
-</DIV>
-
-</br>
-</br>
-</br>
+    <%=link_to("Back", request.env["HTTP_REFERER"], :class => 'user_nav_link')%>
+    <%end%>
+  </div>
 
 <%= render :partial => "event", :object => @event %>
+<br />
 
-</br>
-</br>
-</br>
 
 <%if current_user %>
   <%if @already_rated == false%>
@@ -39,3 +45,9 @@
       <%end%>
   <%end%>
 <%end%>
+        </div>
+</div>
+    </div>
+    </div>
+  </div>
+
