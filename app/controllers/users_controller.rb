@@ -251,12 +251,42 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
-
+    @friend = User.find(params[:id])
+    if current_user
+      @user = current_user
+    else
+      redirect_to(login_path)
+    end
+    
     #If a user tries to view himself, it will redirect to his profile page
-    if (@user.id == current_user.id)
+    if (@friend.id == current_user.id)
       redirect_to (profile_page_path)
     end
+
+    #Information for Event Calendar
+    if (params[:month] && params[:year])
+      @month = params[:month].to_i
+      @year = params[:year].to_i
+    else
+      time = Time.new
+      @month = time.month
+      @year = time.year
+    end
+
+    @shown_month = Date.civil(@year, @month)
+    # To restrict what events are included in the result you can pass additional find options like this:
+    # @event_strips = Event.event_strips_for_month(@shown_month, :include => :some_relation, :conditions => 'some_relations.some_column = true')
+
+    #1.  Need to get all the Event ids that user is attending
+    @user_events = Array.new
+
+    user_event_rows = UserEvent.find_all_by_user_id(@friend.id)
+    for ue in user_event_rows
+      @user_events << ue.event_id.to_s
+    end    
+
+    #@event_strips = Event.event_strips_for_month(@shown_month)
+    @event_strips = Event.event_strips_for_month(@shown_month, :conditions => ["id IN (?)", @user_events])
 
   end
 
