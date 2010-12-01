@@ -28,7 +28,28 @@
   </center>
 <% end %>
 
-<%if @results.empty?%>
+
+<!-- Limit the search results so that:
+  1.  unregistered users can only see public events
+  2.  uninvited users to private events can't see those events
+-->
+<%@shown_results = Array.new%>
+<%if current_user%>
+  <%for result in @results%>
+    <%invited = Array.new(UserEvent.find(:all, :conditions => ["event_id = ? AND user_id = ?", result.id, current_user.id]))%>
+    <%if((result.privacy == 'Private') && (!invited.empty?)) %>
+      <%@shown_results << result%>
+    <%end%>
+  <%end%>
+<%else%>
+  <%for result in @results%>
+    <%if result.privacy == 'Public'%>
+      <%@shown_results << result%>
+    <%end%>
+  <%end%>
+<%end%>
+
+<%if @shown_results.empty?%>
   <%if @searchfor%>
     </br>
     <b>Your Search For '<%=@searchfor%>' Returned 0 Results</b>

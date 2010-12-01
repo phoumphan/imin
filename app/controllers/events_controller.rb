@@ -14,8 +14,9 @@ class EventsController < ApplicationController
 
   #Action that actually creates the Event once the user Submits the event
   def create
+    
     @event = Event.new(params[:event])
-
+        
     #Create rows in EventEventtypes
     if params[:event_eventtype] != nil
       params[:event_eventtype].each { |p| @event.event_eventtypes << EventEventtype.new( p ) }
@@ -132,7 +133,7 @@ class EventsController < ApplicationController
     @event.bin_lat = binvals[0]
     @event.bin_lng = binvals[1]
 
-  	if @event.update_attributes(params[:event])
+  	if @event.update_attributes(params[:event])      
       flash[:notice] = "Event Successfully Updated"
   	  redirect_to :action => 'show', :id => @event.id
 	  else
