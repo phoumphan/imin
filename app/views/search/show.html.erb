@@ -10,14 +10,6 @@
     Advanced Search Options:
     </br>
     
-    <select name="search[distance]">
-      <option value="no_distance">Specify Distance...</option>
-      <option value="5km">5 km</option>
-      <option value="10km">10 km</option>
-      <option value="20km">20 km</option>
-      <option value="50km">50 km</option>
-    </select>
-
     <select name="search[formality]">
       <option value="no_formality">Specify Formality...</option>
       <option value="Formal">Formal</option>
@@ -25,6 +17,10 @@
       <option value="Dressy-Casual">Dressy-Casual</option>
       <option value="Casual">Casual</option>
     </select>
+
+    &nbsp
+    Maximum cost:  $<input type="text" name="search[cost]"/>
+
   </center>
 <% end %>
 
@@ -37,7 +33,7 @@
 <%if current_user%>
   <%for result in @results%>
     <%invited = Array.new(UserEvent.find(:all, :conditions => ["event_id = ? AND user_id = ?", result.id, current_user.id]))%>
-    <%if((result.privacy == 'Private') && (!invited.empty?)) %>
+    <%if(((result.privacy == 'Private') && (!invited.empty?)) || (result.privacy == 'Public')) %>
       <%@shown_results << result%>
     <%end%>
   <%end%>
