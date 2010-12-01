@@ -4,7 +4,6 @@ class EventsController < ApplicationController
   #render new.html.erb
   def new
     @event = Event.new
-    @event_eventtype = EventEventtype.new() # Supposed to be commented?
     @event_eventtype = @event.event_eventtypes.new
     # @event_photo = @event.event_photos.new
     @event.cost = 0
