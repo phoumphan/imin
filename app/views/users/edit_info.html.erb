@@ -45,34 +45,39 @@
     <%form_for @user, :url => {:action=>'update', :id=>@user.id}, :html => { :name => 'form', :multipart => true } do |f|%>
       <%=f.error_messages%>
 
-      <!-- User's email -->
-      Email:
-      <%=f.text_field :email%>
-      <br /><br />
+        <center>
+          <!-- User's email -->
+          Email:
+          <%=f.text_field :email%>
+          <br /><br />
 
-      <!-- User's name -->
-      Name:
-      <%=f.text_field :name %>
-      <br /><br />
+          <!-- User's name -->
+          Name:
+          <%=f.text_field :name %>
+          <br /><br />
 
-      <!-- User's default location -->
-      <b>Location:</b>
-      <div id="map_canvas" style="width: 500px; height: 300px"></div>
-      <br /><br />
+          <!-- User's default location -->
+          <b>Location:</b>
+          <div id="map_canvas" style="width: 500px; height: 300px"></div>
+          <br /><br />
 
-      <!-- Change Picture -->
-      Picture:
-      <%= f.file_field :photo %><br /><br />
+          <!-- Change Picture -->
+          Picture:
+          <%= f.file_field :photo %><br /><br />
 
-      <!-- Change password -->
-      Password:
-      <%=link_to 'Change Password', {:action => 'change_password'}, :class=> 'link', :id => @user.id%>
-      <br /><br />
+          <!-- Change password -->
+
+          <%=f.label :password%>
+          <%=link_to 'Change Password', :action => 'change_password'%>
 
 
-      <%=f.hidden_field :location%>
-      
-      <input type="button" value="Save Changes" onclick="submitForm();">
+          <br /><br />
+
+
+          <%=f.hidden_field :location%>
+
+          <input type="button" value="Save Changes" onclick="submitForm();">
+        </center>
 
     <%end%>
     </div>

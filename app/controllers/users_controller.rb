@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   require 'rexml/document'
   require 'geokit'
 
-  before_filter :login_required, :except => [:new, :create]
+  before_filter :login_required, :except => [:new, :create, :forgot_password]
 
   # render new.
   # called when "register" link is clicked
@@ -31,6 +31,23 @@ class UsersController < ApplicationController
     else
       flash[:error]  = "We couldn't set up that account, sorry.  Please try again, or contact an admin (link is above)."
       render :action => 'new'
+    end
+  end
+
+  def activate
+    logout_keeping_session!
+    user = User.find_by_activation_code(params[:activation_code]) unless params[:activation_code].blank?
+    case
+    when (!params[:activation_code].blank?) && user && !user.active?
+      user.activate!
+      flash[:notice] = "Signup complete! Please sign in to continue."
+      redirect_to '/login'
+    when params[:activation_code].blank?
+      flash[:error] = "The activation code was missing.  Please follow the URL from your email."
+      redirect_back_or_default('/')
+    else
+      flash[:error]  = "We couldn't find a user with that activation code -- check your email? Or maybe you've already activated -- try signing in."
+      redirect_back_or_default('/')
     end
   end
 
@@ -185,10 +202,33 @@ class UsersController < ApplicationController
     end
   end
 
-  #method used to change user password.  Called from users/preferences.html.erb page when
+  #method used to change user password.  Called from users/edit_info.html.erb page when
   #"change password" link is clicked
-  def change_password
+  def update_password
+    @user = current_user
+    if @user.update_attributes(params[:user])
+      flash[:notice] = "Password Successfully Updated"
+      redirect_to :action => 'edit_info', :id => @user.id
+    else
+      render :action => 'change_password', :id => params[:id]
+    end
+  end
 
+  def change_password
+    @user = current_user
+  end
+
+  def forgot_password
+    
+    return unless request.post?
+    if @user = User.find_by_email(params[:user][:email])
+      @user.forgot_password
+      @user.save
+      redirect_back_or_default('/')
+      flash[:notice] = "A password reset link has been sent to your email address"
+    else
+      flash[:alert] = "Could not find a user with that email address"
+    end
   end
 
   def show
@@ -207,7 +247,7 @@ class UsersController < ApplicationController
   end
 
   def self.hash_loc loc
-    loc.split(',').map { |x| hash_coord (x.to_f) }
+    loc.split(',').map { |x| hash_coord(x.to_f) }
   end
 
   def closestevents
