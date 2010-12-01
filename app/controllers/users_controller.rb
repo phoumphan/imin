@@ -2,7 +2,6 @@ class UsersController < ApplicationController
   # Be sure to include AuthenticationSystem in Application Controller instead
   include AuthenticatedSystem
   include Geokit::Geocoders
-  require 'yahoo-weather'
   require 'net/http'
   require 'rexml/document'
   require 'geokit'

@@ -3,20 +3,14 @@ class EventsController < ApplicationController
   
   #render new.html.erb
   def new
-    if params[:event]
-      # Reload 'new' form on error message
-      @event = Event.new(params[:event])
-      @invited = params[:invited].split(',')
-    else
-      @event = Event.new
-      @invited = []
-    end
-    #@event_eventtype = EventEventtype.new()
+    @event = Event.new
+    @event_eventtype = EventEventtype.new() # Supposed to be commented?
     @event_eventtype = @event.event_eventtypes.new
     # @event_photo = @event.event_photos.new
     @event.cost = 0
 
     set_friends
+    @invited = []
   end
 
   #Action that actually creates the Event once the user Submits the event
@@ -41,8 +35,9 @@ class EventsController < ApplicationController
         flash[:error] = "No such user: " + nm # TODO flash doesn't show up
 
         # Reload 'new' form on error message
-        @invited = params[:user_events]
-        redirect_to 'events/new?event=' + @event.to_s
+        set_friends
+        @invited = params[:user_events].split(',')
+        render :action => 'new'
         return
       end
       usr.id
