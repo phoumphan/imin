@@ -39,7 +39,7 @@ checked=false;
 <!-- User's event type preferences -->
       
       <div id="event_preferences" style="margin-left: 50px;">
-        <%form_for @user, :action => 'update', :html => { :id => 'event_tags', :name => 'form', :multipart => true } do |f|%>
+        <%form_for @user, :action => 'update_preferences', :html => { :id => 'event_tags', :name => 'form', :multipart => true } do |f|%>
         <input type='checkbox' name='checkall' onclick='checkedAll(event_tags);' />CHECK ALL<br /><br />
         <div style="margin-left: 30px;">
            <% Eventtype.all.each do |tag| %>

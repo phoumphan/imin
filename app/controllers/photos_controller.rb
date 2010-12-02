@@ -47,6 +47,7 @@ class PhotosController < ApplicationController
   public
 
   def create
+    
     @photo = Photo.new(params[:photo])
     @photo.owner = current_user
 
@@ -54,13 +55,16 @@ class PhotosController < ApplicationController
     return unless admin_check
 
     if @photo.save
+      puts("----------saving photo------------")
       # Add to event
       join = EventPhoto.new
       join.photo_id = @photo.id
       join.event_id = params[:first_event]
       if join.save
+        puts("--------------join.save---------------------")
         redirect_to :action => 'show', :id => @photo.id
       else
+        puts("--------------join.save failed---------------------")
         flash[:error] = "Upload failed"
       end
     else

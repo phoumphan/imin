@@ -42,9 +42,8 @@
 <div class="user_profile_container">
   <div class="user_profile">
     <div id="edit_user_info">
-    <%form_for @user, :url => {:action=>'update', :id=>@user.id}, :html => { :name => 'form', :multipart => true } do |f|%>
+    <%form_for @user, :url => {:action=>'update'}, :html =>{:name => 'form', :multipart => true} do |f|%>
       <%=f.error_messages%>
-
         <center>
           <!-- User's email -->
           Email:
@@ -65,14 +64,6 @@
           Picture:
           <%= f.file_field :photo %><br /><br />
 
-          <!-- Change password -->
-
-          <%=f.label :password%>
-          <%=link_to 'Change Password', :action => 'change_password'%>
-
-
-          <br /><br />
-
 
           <%=f.hidden_field :location%>
 
@@ -80,6 +71,11 @@
         </center>
 
     <%end%>
+
+      <!-- Change password -->
+
+      Password:
+      <%=link_to 'Change Password', :action => 'change_password'%>
     </div>
   </div>
 </div>
