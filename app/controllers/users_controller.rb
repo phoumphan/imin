@@ -195,13 +195,12 @@ class UsersController < ApplicationController
 
   #method that will be called from the users/preferences.html.erb page when "update" link is clicked
   def update_preferences
+    puts('---------------------update preferences----')
     @user = current_user    
     @updated_user_event_tag = UserEventtype.find(:all, :conditions => :user_id == @user.id);
     
 
-    @updated_user_event_tag = UserEventtype.find(:all, :conditions => :user_id == @user.id);
-    puts('----@user_event_tags----')
-    puts @updated_user_event_tag
+    #if it is unchecked, destroy
     @updated_user_event_tag.each do |event_tag|
       if (event_tag.eventtype_id != params[:tag_ids] && event_tag.user_id == @user.id)
         event_tag.destroy
@@ -224,11 +223,12 @@ class UsersController < ApplicationController
 
   def update
     @user = current_user
-    puts(params[:user])
+    
     if @user.update_attributes(params[:user])
-      flash[:notice] = "Profile Successfully Updated"
       redirect_to :action => 'profile'
+      flash[:notice] = "Profile Successfully Updated"
     else
+      @user.errors.full_messages
       redirect_to :action => 'edit_info'
       flash[:error] = "Profile Update failed"
     end

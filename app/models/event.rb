@@ -25,6 +25,7 @@ class Event < ActiveRecord::Base
   define_index do
     indexes name, :sortable => true
     indexes formality
+    indexes eventtypes.description
 
     set_property :delta => true
   end
