@@ -21,7 +21,8 @@ class EventsController < ApplicationController
     if params[:event_eventtype] != nil
       params[:event_eventtype].each { |p| @event.event_eventtypes << EventEventtype.new( p ) }
     end
-    
+
+        
     # #Create rows in EventPhotos
     # if params[:event_photo] != nil
     #   params[:event_photo].each { |p| @event.event_photos << EventPhoto.new( p ) }

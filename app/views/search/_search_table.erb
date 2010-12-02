@@ -1,10 +1,9 @@
-<div id="about">
+<div id="about" style= "width: 700px">
 <table id="searchTable">
 
   <thead>
     <tr>      
-      <th><a href="">Event</a></th>      
-      <th><a href="">Preference Score</a></th>
+      <th><a href="">Event</a></th>            
       <th></th>
     </tr>
   </thead>
@@ -15,7 +14,7 @@
       <tr>
         <td>
 
-          <div style="border-bottom: 1px dotted black; width: 750px;">
+          <div style="border-bottom: 1px dotted black; width: 500px;">
             <br />
            <%= link_to result.name, event_path(result.id) %><br /><br />
            Tags: <%result.eventtypes.each do |et|%>

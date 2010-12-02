@@ -6,6 +6,10 @@ class User < ActiveRecord::Base
   include Authentication::ByCookieToken
 
   #Pending friend request associations
+  has_many :invitations
+  has_many :invites, :through => :invitations
+
+  #Pending friend request associations
   has_many :pending_friend_requests
   has_many :requesters, :through => :pending_friend_requests
 

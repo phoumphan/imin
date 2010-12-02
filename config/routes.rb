@@ -17,8 +17,11 @@ ActionController::Routing::Routes.draw do |map|
   map.save_info 'users/info', :controller => 'users', :action => 'info'
   map.edit_event 'events/edit/:id', :controller => 'events', :action => 'edit'
   map.events_page 'users/events', :controller => 'users', :action => 'events'
+  map.save_event 'events/create', :controller => 'events', :action => 'create'
   map.calendar '/calendar/:year/:month', :controller => 'calendar', :action => 'index', :requirements => {:year => /\d{4}/, :month => /\d{1,2}/}, :year => nil, :month => nil
-  map.resources :users
+  map.resources :users, :member => { :suspend => :put,
+                                        :unsuspend => :put,
+                                        :purge => :delete }
   map.resources :events
   map.resource :session
   map.resource :eventtypes

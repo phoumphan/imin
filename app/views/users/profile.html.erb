@@ -62,7 +62,7 @@ $('#hide_map').click(function() {
             <!-- Profile picture, you can see where :small is defined by going to the User model file-->
             <div id="user_pic_container">
               <% if @user.photo.exists? then %>
-                <%= image_tag @user.photo.url(:small) %>
+                <%= image_tag @user.photo.url(:medium) %>
               <%end%>
             </div>
 
@@ -77,7 +77,7 @@ $('#hide_map').click(function() {
               <%=@description%>
             </div>
 
-            <div id="user_friend_requests">
+            <div id="user_friend_requests" style="margin-top: 40px;">
               <%for requester in @user.pending_friend_requests%>
                 <h3>Friend Requests</h3>
                 <li><%=requester.requester.name%> has requested Friendship!

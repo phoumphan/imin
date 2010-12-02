@@ -1,3 +1,5 @@
+<div id="about">
+ 
 <% content_for :head do %>
   <%= javascript_include_tag 'jquery.tokeninput' %>
   <%= stylesheet_link_tag 'token-input'  %>
@@ -48,7 +50,8 @@ onLoad="initialize();"
 onUnload="GUnload();"
 <% end %>
 
-<h1>Create a new I'm In account!</h1>
+<h1><strong>Create a new I'm In account!</strong></h1><br />
+ <div style="margin-left: 30px">
 <% @user.password = @user.password_confirmation = nil %>
 
 <%= error_messages_for :user %>
@@ -78,3 +81,5 @@ onUnload="GUnload();"
 
 <input type="button" value="Sign up!" onclick="submitUser();" />
 <% end -%>
+  </div>
+</div>
