@@ -74,6 +74,22 @@ function initialize() {
               <%end%>
             </div>
 
+              <h3>Notices</h3>
+              <table id="notice_table">
+              <% for notice in @notices %>
+                 <tr><td><%=
+                   if notice.user_event_status == 'ADMIN'
+                     message = "made you an admin on"
+                   else
+                     message = "invited you to"
+                   end
+                   link_to notice.creator.login, :action => 'show', :id => notice.creator.id %> <%= message %> <%= link_to notice.event.name, :controller => 'events', :action => 'show', :id => notice.event.id
+                   %></td>
+                   <td class="notice_date"><%= notice.created_at.to_date.to_s %></td>
+                 </tr>
+              <% end %>
+              </table>
+
           </div>
 
           

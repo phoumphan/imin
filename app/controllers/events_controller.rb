@@ -73,16 +73,22 @@ class EventsController < ApplicationController
 
     # Check that user is allowed to view this event
     @admin_status = is_admin
-    invite_status = UserEvent.find(:first, :conditions => {:event_id => @event.id, :user_id => current_user.id, :user_event_status => "INVITED"})
+    if current_user
+      invite_status = UserEvent.find(:first, :conditions => {:event_id => @event.id, :user_id => current_user.id, :user_event_status => "INVITED"})
+    else
+      invite_status = nil
+    end
     if @event.public or @admin_status or invite_status
       latlng = @event.location.split(',')
       @lat = latlng[0]
       @lng = latlng[1]
 
-      @already_rated = false
-      @user_rating = EventRating.all(:conditions => {:event_id => params[:id], :user_id => current_user.id})
-      if (@user_rating.size != 0)
-        @already_rated = true
+      if current_user
+        @already_rated = false
+        @user_rating = EventRating.all(:conditions => {:event_id => params[:id], :user_id => current_user.id})
+        if (@user_rating.size != 0)
+          @already_rated = true
+        end
       end
 
       @number_of_ratings = EventRating.find_by_sql('SELECT COUNT(*) FROM event_ratings WHERE event_id = ' + @event.id.to_s)[0]["COUNT(*)"].to_i
@@ -140,12 +146,12 @@ class EventsController < ApplicationController
     @event.bin_lat = binvals[0]
     @event.bin_lng = binvals[1]
 
-  	if @event.update_attributes(params[:event])
-      flash[:notice] = "Event Successfully Updated"
-  	  redirect_to :action => 'show', :id => @event.id
-	  else
+    if @event.update_attributes(params[:event])
+      redirect_to :action => 'show', :id => @event.id
+    else
+      flash.now[:notice] = "Unknown error"
       render :action => 'edit', :id => params[:id]
-	  end
+    end
   end
 
   def deletion
@@ -159,7 +165,7 @@ class EventsController < ApplicationController
   private
 
   def owner_check
-    if @event.owner.id != current_user.id
+    if not current_user or @event.owner.id != current_user.id
       flash[:error] = "You are not the owner"
       redirect_to(:action => session[:referrer], :id => @event.id)
       false
@@ -169,7 +175,11 @@ class EventsController < ApplicationController
   end
 
   def is_admin
-    UserEvent.find(:first, :conditions => {:event_id => @event.id, :user_id => current_user.id, :user_event_status => "ADMIN"})
+    if current_user
+      UserEvent.find(:first, :conditions => {:event_id => @event.id, :user_id => current_user.id, :user_event_status => "ADMIN"})
+    else
+      nil
+    end
   end
 
   def admin_check

@@ -43,8 +43,10 @@ class UsersController < ApplicationController
     @lng = latlng[1]
 
     #Information for location
-    res = GoogleGeocoder.reverse_geocode([@lat,@lng])
-    @location = res.full_address
+    # TODO uncomment
+    @location = "Blahsville, BC Canada"
+    # res = GoogleGeocoder.reverse_geocode([@lat,@lng])
+    # @location = res.full_address
 
     puts('----------LOCATION-----------');
     puts @location
@@ -125,7 +127,7 @@ class UsersController < ApplicationController
     temp = UserEvent.find_by_sql('SELECT * FROM user_events WHERE user_id = ' + current_user.id.to_s + ' ORDER BY created_at DESC LIMIT 15;')
     @notices = []
     temp.each do |notice|
-      @notices << notice if notice.creator
+      @notices << notice if notice.creator_id
     end
   end
 

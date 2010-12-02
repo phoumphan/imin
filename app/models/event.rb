@@ -49,14 +49,14 @@ class Event < ActiveRecord::Base
 
   def self.closest_to(loc)
     # Find events in bins near given point's bin 
-    binvals = UsersController.hash_loc loc
+    binvals = hash_loc loc
     closest = []
     [-1, 0, 1].each do |x|
       [-1, 0, 1].each do |y|
         closest.concat(Event.find(:all, :conditions => {:bin_lat => binvals[0] + y, :bin_lng => binvals[1] + x}))
       end
     end
-    userlatlng = current_user.location.split(',').map { |x| x.to_f }
+    userlatlng = loc.split(',').map { |x| x.to_f }
     return closest.sort_by do |ev|
       latlng = ev.location.split(',').map { |x| x.to_f }
       (latlng[0] - userlatlng[0]) ** 2 + (latlng[1] - userlatlng[1]) ** 2

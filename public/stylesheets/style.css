@@ -510,3 +510,17 @@ a.link_right{
     margin:0;
     margin-bottom: 15px;
 }
+
+#notice_table tr {
+    border-bottom: 1px dotted gray;
+}
+
+#notice_table td {
+    padding: 3px;
+    font-size: 9pt;
+}
+
+td.notice_date {
+    color: gray;
+    width: 40%;
+}
