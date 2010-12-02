@@ -1,4 +1,4 @@
-<% content_for :head do %>
+ <% content_for :head do %>
   <%= javascript_include_tag 'jquery.tokeninput' %>
   <%= stylesheet_link_tag 'token-input'  %>
 <script src="http://maps.google.com/maps?file=api&v=2&key=abcdefg&sensor=false"
@@ -34,6 +34,8 @@ function initialize() {
     marker = new GMarker(new GLatLng(latlng[0], latlng[1]));
     map.addOverlay(marker);
   }
+
+  enableButtons();
 }
 
 function submitForm() {
@@ -65,7 +67,8 @@ function addInvitee() {
     optn.text = document.form.other_user.value;
   }
   //option values are never used
-  if (optn.text != '') document.form.invited.add(optn);
+  document.form.invited.add(optn);
+  enableButtons();
 }
 
 function removeInvitee() {
@@ -73,7 +76,17 @@ function removeInvitee() {
   if (idx >= 0) {
     document.form.invited.remove(idx);
     if (idx < document.form.invited.length) document.form.invited.selectedIndex = idx; else document.form.invited.selectedIndex = document.form.invited.length - 1;
+    enableButtons();
   }
+}
+
+function enableButtons() {
+  if (document.form.friend[0].checked) {
+    document.form.add.disabled = document.form.friends.options.length == 0;
+  } else {
+    document.form.add.disabled = document.form.other_user.value == "";
+  }
+  document.form.remove.disabled = document.form.invited.options.length == 0;
 }
 
 //-->
@@ -125,20 +138,20 @@ onUnload="GUnload();"
   
   <tr><td><h3>Invite a Friend</h3></td></tr>
 
-  <tr><td><%=radio_button_tag :friend, '1', :checked => true%> Friend:</td>
+  <tr><td><%=radio_button_tag :friend, '1', true, :onclick => "enableButtons();"%> Friend:</td>
   <td><%=select_tag :friends, options_for_select(@friends)%></td></tr>
 
-  <tr><td><%=radio_button_tag :friend, '0' %> Other user:</td>
-  <td><%=text_field_tag :other_user%></td></tr>
+  <tr><td><%=radio_button_tag :friend, '0', false, :onclick => "enableButtons();"%> Other user:</td>
+  <td><%=text_field_tag :other_user, "", :onchange => "enableButtons();", :onclick => "if (document.form.friend[1].checked) document.form.add.disabled = false;"%></td></tr>
 
-  <tr><td><input type="button" value="Add" onclick="addInvitee();" /></td></tr>
+  <tr><td><input type="button" name="add" value="Add" onclick="addInvitee();" /></td></tr>
   </table>
 
   <hr />
   Invited:<br />
   <%= select_tag "invited", (@invited.map {|nm| "<option>" + nm + "</option>" }).join(""), :multiple => true, :style => 'width: 300px' %><br />
 
-  <input type="button" value="Remove" onclick="removeInvitee();" />
+  <input type="button" name="remove" value="Remove" onclick="removeInvitee();" />
   <hr />
 
   <div id='eventtypes'></div>
