@@ -193,44 +193,54 @@ class UsersController < ApplicationController
     end
   end
 
-  #method that will be called from the users/preferences.html.erb page when "update" link is clicked
-  def update_preferences
-    puts('---------------------update preferences----')
-    @user = current_user    
-    @updated_user_event_tag = UserEventtype.find(:all, :conditions => :user_id == @user.id);
-    
-
-    #if it is unchecked, destroy
-    @updated_user_event_tag.each do |event_tag|
-      if (event_tag.eventtype_id != params[:tag_ids] && event_tag.user_id == @user.id)
-        event_tag.destroy
-      end
-    end
-
-    #bug here when update info
-    params[:tag_ids].each do |p|
-      puts(p.to_s)
-      @user.user_eventtypes << UserEventtype.new( :user_id => current_user.id, :eventtype_id=>p )
-    end
-    @updated_user_event_tag = UserEventtype.find(:all, :conditions => :user_id == @user.id);
-    i = 0;
-    @updated_tag_ids = {}
-    @updated_user_event_tag.each do |e|
-      @updated_tag_ids[i] = e.eventtype_id
-      i = i+1
+  def info
+    puts('----GOT TO EDIT-----')
+    @user = current_user
+    puts(params[:user])
+    if @user.update_attributes(params[:user])
+      puts('----GOT in if-----')
+      flash[:notice] = "Profile Successfully Updated"
+      redirect_to :action => 'profile'
+    else
+      puts('----GOT in else-----')
+      redirect_to :action => 'edit_info'
+      flash[:error] = "Profile Update failed"
     end
   end
 
+  #method that will be called from the users/preferences.html.erb page when "update" link is clicked
   def update
     @user = current_user
-    
-    if @user.update_attributes(params[:user])
+    puts('-----IN UPDATE PREFERENCES--------')
+    @updated_user_event_tag = UserEventtype.find(:all, :conditions => :user_id == @user.id);
+      puts('----@user_event_tags----')
+      puts @updated_user_event_tag
+      @updated_user_event_tag.each do |event_tag|
+        if (event_tag.eventtype_id != params[:tag_ids] && event_tag.user_id == @user.id)
+            event_tag.destroy
+        end
+      end
+
+      #bug here when update info
+      params[:tag_ids].each do |p|
+          puts(p.to_s)
+          @user.user_eventtypes << UserEventtype.new( :user_id => current_user.id, :eventtype_id=>p )
+      end
+      @updated_user_event_tag = UserEventtype.find(:all, :conditions => :user_id == @user.id);
+      i = 0;
+      @updated_tag_ids = {}
+      @updated_user_event_tag.each do |e|
+        @updated_tag_ids[i] = e.eventtype_id
+        i = i+1
+      end
+      if @user.update_attributes(params[:user])
+      puts('----GOT in if-----')
+      flash[:notice] = "Preferences Successfully Updated"
       redirect_to :action => 'profile'
-      flash[:notice] = "Profile Successfully Updated"
     else
-      @user.errors.full_messages
-      redirect_to :action => 'edit_info'
-      flash[:error] = "Profile Update failed"
+      puts('----GOT in else-----')
+      redirect_to :action => 'preferences'
+      flash[:error] = "Preferences Update failed"
     end
   end
 

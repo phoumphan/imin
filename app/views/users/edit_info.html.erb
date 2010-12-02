@@ -42,9 +42,9 @@
 <div class="user_profile_container">
   <div class="user_profile">
     <div id="edit_user_info">
-    <%form_for @user, :url => {:action=>'update', :id => @user.id}, :html =>{:name => 'form', :multipart => true} do |f|%>
-      <%=f.error_messages%>
-        <center>
+<%form_for @user, :url => {:controller => 'users', :action=>'info'}, :html =>{:name => 'form', :multipart => true} do |f|%>
+      <%=f.error_messages%>    
+       
           <!-- User's email -->
           Email:
           <%=f.text_field :email%>
@@ -68,7 +68,7 @@
           <%=f.hidden_field :location%>
 
           <input type="button" value="Save Changes" onclick="submitForm();" />
-        </center>
+     
 
     <%end%>
 

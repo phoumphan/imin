@@ -470,6 +470,7 @@ input.btn{
     margin-top: 20px;
     margin-right: 10px;
     position: relative;
+    z-index: 0;
 }
 
 #map_canvas{
