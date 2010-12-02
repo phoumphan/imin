@@ -97,7 +97,10 @@ $('#hide_map').click(function() {
                    end
                    link_to notice.creator.login, :action => 'show', :id => notice.creator.id %> <%= message %> <%= link_to notice.event.name, :controller => 'events', :action => 'show', :id => notice.event.id
                    %></td>
-                   <td class="notice_date"><%= notice.created_at.to_date.to_s %></td>
+                   <td class="notice_date"><%= notice.created_at.to_date.to_s %>
+                   <% if notice.user_event_status == 'INVITED' %>
+                     <%= link_to "I'm in!", :action => "coming", :id => notice.event.id %> <%= link_to "I'm out", :action => "not_coming", :id => notice.event.id %>
+                   <% end %></td>
                  </tr>
                   </table>
               </div>

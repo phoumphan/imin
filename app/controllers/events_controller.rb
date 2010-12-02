@@ -126,6 +126,8 @@ class EventsController < ApplicationController
     end
     puts('-------Description---------')
     puts @description;
+
+      @coming = @event.user_events.find(:all, :conditions => {:user_event_status => 'COMING'}).map {|join| join.user}
     else
       flash[:error] = "You are not allowed to view that event"
       redirect_to :controller => 'users', :action => 'profile'
