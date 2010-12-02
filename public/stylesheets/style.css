@@ -51,7 +51,6 @@ body {
 
 .main{
         width: 950px;
-        height: 100%px;
         background-image: url('../images/bkg_main2.gif');
         background-repeat: no-repeat;
         background-attachment: scroll;
@@ -62,6 +61,7 @@ body {
         left:50%;
         margin-left: -475px;
         padding:0;
+        height: 100%px;
         
 
 }
@@ -174,6 +174,16 @@ a.events_nav_link{
 	padding:10px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
+}
+
+#about{
+    margin: 30px;
+    width:810px;
+    background-color: white;
+    padding:35px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
 #main_content h1{
@@ -399,8 +409,8 @@ cursor: pointer;
     -moz-box-shadow: 0 1px 3px #999;
     -webkit-box-shadow: 0 1px 3px #999;
     border: 1px solid #ccc;
-    height: 100%;
-    padding-bottom: 500px;
+    height: 100%px;
+    padding-bottom: 1200px;
     background-color: white;
     width: 850px;
 }
@@ -434,7 +444,7 @@ cursor: pointer;
 #user_right_col{
     position: absolute;
     left: 50%;
-    margin-left: 120px;
+    margin-left: 145px;
     top: 130px;
     height: 100%px;
     width: 250px;

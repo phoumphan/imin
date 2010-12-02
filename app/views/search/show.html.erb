@@ -1,14 +1,16 @@
-<center><h2><b>Find an Event!</b></h2></center>
+<div id="about">
+
+<h2><b>Find an Event!</b></h2>
 
 <% form_for :search, {:controller => 'search', :action => 'show'} do |f|%>
   
-  <center>
+
     <%= f.text_field :query %>
     <%= submit_tag "Search!" %>
 
-    </br>
+    <br />
     Advanced Search Options:
-    </br>
+    <br />
     
     <select name="search[formality]">
       <option value="no_formality">Specify Formality...</option>
@@ -21,7 +23,6 @@
     &nbsp
     Maximum cost:  $<input type="text" name="search[cost]"/>
 
-  </center>
 <% end %>
 
 
@@ -47,11 +48,12 @@
 
 <%if @shown_results.empty?%>
   <%if @searchfor%>
-    </br>
-    <b>Your Search For '<%=@searchfor%>' Returned 0 Results</b>
+    <br />
+    <strong>Your Search For '<%=@searchfor%>' Returned 0 Results</strong>
   <%end%>
 <%else%>
   <div id="table">
     <%= render :partial => "search_table" %>
   </div>
 <%end%>
+</div>
