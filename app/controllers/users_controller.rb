@@ -43,10 +43,8 @@ class UsersController < ApplicationController
     @lng = latlng[1]
 
     #Information for location
-    # TODO uncomment
-    @location = "Blahsville, BC Canada"
-    # res = GoogleGeocoder.reverse_geocode([@lat,@lng])
-    # @location = res.full_address
+    res = GoogleGeocoder.reverse_geocode([@lat,@lng])
+    @location = res.full_address
 
     puts('----------LOCATION-----------');
     puts @location

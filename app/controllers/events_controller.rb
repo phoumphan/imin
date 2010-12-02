@@ -78,7 +78,7 @@ class EventsController < ApplicationController
     else
       invite_status = nil
     end
-    if @event.public or @admin_status or invite_status
+    if @event.public == 'Public' or @admin_status or invite_status
       latlng = @event.location.split(',')
       @lat = latlng[0]
       @lng = latlng[1]
