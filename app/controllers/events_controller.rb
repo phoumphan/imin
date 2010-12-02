@@ -42,11 +42,7 @@ class EventsController < ApplicationController
       usr.id
     }
     ids.each { |i|
-      user_event = UserEvent.new
-      user_event.user_id = i
-      user_event.user_event_status = "INVITED"
-      return unless user_event.save
-      @event.user_events << user_event
+      return @event.create_relationship(i, current_user, "INVITED")
     }
 
     #owner ID is stored in the Events table
@@ -60,7 +56,7 @@ class EventsController < ApplicationController
     @event.owner = current_user
 
     #Hash location
-    binvals = UsersController.hash_loc @event.location
+    binvals = Event.hash_loc @event.location
     @event.bin_lat = binvals[0]
     @event.bin_lng = binvals[1]
 
@@ -72,18 +68,30 @@ class EventsController < ApplicationController
   end
 
   def show
+
     @event = Event.find(params[:id])
-    latlng = @event.location.split(',')
-    @lat = latlng[0]
-    @lng = latlng[1]
 
-    @already_rated = false
-    @user_rating = EventRating.all(:conditions => {:event_id => params[:id], :user_id => current_user.id})
-    if (@user_rating.size != 0)
-      @already_rated = true
+    # Check that user is allowed to view this event
+    @admin_status = is_admin
+    invite_status = UserEvent.find(:first, :conditions => {:event_id => @event.id, :user_id => current_user.id, :user_event_status => "INVITED"})
+    if @event.public or @admin_status or invite_status
+      latlng = @event.location.split(',')
+      @lat = latlng[0]
+      @lng = latlng[1]
+
+      @already_rated = false
+      @user_rating = EventRating.all(:conditions => {:event_id => params[:id], :user_id => current_user.id})
+      if (@user_rating.size != 0)
+        @already_rated = true
+      end
+
+      @number_of_ratings = EventRating.find_by_sql('SELECT COUNT(*) FROM event_ratings WHERE event_id = ' + @event.id.to_s)[0]["COUNT(*)"].to_i
+
+      session[:referrer] = 'show/' + @event.id.to_s
+    else
+      flash[:error] = "You are not allowed to view that event"
+      redirect_to :controller => 'users', :action => 'profile'
     end
-
-    @number_of_ratings = EventRating.all(:conditions => {:event_id => @event.id}).size
   end
 
   def rate
@@ -128,7 +136,7 @@ class EventsController < ApplicationController
     params[:event_users].each { |p| @event.user_events << UserEvent.new( p ) } if params[:event_users]
 
     #Hash location
-    binvals = UsersController.hash_loc @event.location
+    binvals = Event.hash_loc @event.location
     @event.bin_lat = binvals[0]
     @event.bin_lng = binvals[1]
 
@@ -138,6 +146,14 @@ class EventsController < ApplicationController
 	  else
       render :action => 'edit', :id => params[:id]
 	  end
+  end
+
+  def deletion
+    @event = Event.find(params[:id])
+    if owner_check
+      @event.destroy
+      redirect_to :controller => 'users', :action => 'profile'
+    end
   end
 
   private
@@ -152,8 +168,12 @@ class EventsController < ApplicationController
     end
   end
 
+  def is_admin
+    UserEvent.find(:first, :conditions => {:event_id => @event.id, :user_id => current_user.id, :user_event_status => "ADMIN"})
+  end
+
   def admin_check
-    if not UserEvent.find_by_event_id_and_user_event_status(@event.id, "ADMIN")
+    if not is_admin
       flash[:error] = "You are not an admin"
       redirect_to(:action => session[:referrer], :id => @event.id)
       false
@@ -168,6 +188,14 @@ class EventsController < ApplicationController
     @friends = {}
     friend_objs.each do |frnd|
       @friends[User.find(frnd.friend_id).login] = frnd.friend_id
+    end
+  end
+
+  def error_dest(status)
+    if status == 'ADMIN'
+      'add_admin'
+    else
+      'invite_user'
     end
   end
 
@@ -201,23 +229,15 @@ class EventsController < ApplicationController
 
   def user_add_exec
     @event = Event.find(params[:id])
-    if params[:user_status] == 'ADMIN'
-      return unless admin_check
-    else
-      return unless owner_check
-    end
+    return unless admin_check
     if params[:friend] == '1'
       usr = User.find(params[:friend])
     else
       usr = User.find_by_login(params[:other_user])
     end
     if usr
-      join = UserEvent.new
-      join.user_id = usr.id
-      join.event_id = params[:id]
       return if params[:user_status] != "ADMIN" and params[:user_status] != "INVITED"
-      join.user_event_status = params[:user_status]
-      if join.save
+      if @event.create_relationship(usr.id, current_user, params[:user_status])
         if params[:user_status] == "ADMIN"
           flash[:notice] = 'Admin added'
         else
@@ -226,11 +246,11 @@ class EventsController < ApplicationController
         redirect_to :action => 'show', :id => @event.id
       else
         flash[:error] = 'Unknown error'
-        redirect_to :action => 'invite_user', :id => @event.id
+        redirect_to :action => error_dest(params[:user_status]), :id => @event.id
       end
     else
       flash[:error] = 'User does not exist'
-      redirect_to :action => 'invite_user', :id => @event.id
+      redirect_to :action => error_dest(params[:user_status]), :id => @event.id
     end
   end
 

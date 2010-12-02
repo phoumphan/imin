@@ -26,4 +26,40 @@ class Event < ActiveRecord::Base
     indexes name, :sortable => true
     indexes formality
   end
+
+  def create_relationship(usr, creator, status)
+      if not UserEvent.find(:first, :conditions => {:event_id => id, :user_id => usr, :user_event_status => name})
+        user_event = UserEvent.new
+        user_event.user_id = usr
+        user_event.user_event_status = status
+        user_event.creator = creator
+        return false if not user_event.save
+        user_events << user_event
+      end
+      return true
+  end
+
+  def self.hash_coord(x)
+    (x / 0.005).floor
+  end
+
+  def self.hash_loc(loc)
+    loc.split(',').map { |x| hash_coord (x.to_f) }
+  end
+
+  def self.closest_to(loc)
+    # Find events in bins near given point's bin 
+    binvals = UsersController.hash_loc loc
+    closest = []
+    [-1, 0, 1].each do |x|
+      [-1, 0, 1].each do |y|
+        closest.concat(Event.find(:all, :conditions => {:bin_lat => binvals[0] + y, :bin_lng => binvals[1] + x}))
+      end
+    end
+    userlatlng = current_user.location.split(',').map { |x| x.to_f }
+    return closest.sort_by do |ev|
+      latlng = ev.location.split(',').map { |x| x.to_f }
+      (latlng[0] - userlatlng[0]) ** 2 + (latlng[1] - userlatlng[1]) ** 2
+    end
+  end
 end

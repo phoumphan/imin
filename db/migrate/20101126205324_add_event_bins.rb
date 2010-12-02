@@ -7,7 +7,7 @@ class AddEventBins < ActiveRecord::Migration
 
     events = Event.all
     events.each do |ev|
-      binvals = UsersController.hash_loc ev.location
+      binvals = Event.hash_loc ev.location
       ev.bin_lat = binvals[0]
       ev.bin_lng = binvals[1]
       ev.save

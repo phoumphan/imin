@@ -120,7 +120,13 @@ class UsersController < ApplicationController
     @event_strips = Event.event_strips_for_month(@shown_month)
 
 
-    
+    #Notices
+    #Notify the user of newly created statuses in UserEvent
+    temp = UserEvent.find_by_sql('SELECT * FROM user_events WHERE user_id = ' + current_user.id.to_s + ' ORDER BY created_at DESC LIMIT 15;')
+    @notices = []
+    temp.each do |notice|
+      @notices << notice if notice.creator
+    end
   end
 
   #render users/edit_info
@@ -184,31 +190,9 @@ class UsersController < ApplicationController
     
   end
 
-  # hash_* have to be public at the moment
-  def self.hash_coord x
-    (x / 0.005).floor
-  end
-
-  def self.hash_loc loc
-    loc.split(',').map { |x| hash_coord (x.to_f) }
-  end
-
   def closestevents
     @center = current_user.location
-
-    # Find events in bins near user's bin 
-    binvals = UsersController.hash_loc current_user.location
-    @closest = []
-    [-1, 0, 1].each do |x|
-      [-1, 0, 1].each do |y|
-        @closest.concat(Event.find(:all, :conditions => {:bin_lat => binvals[0] + y, :bin_lng => binvals[1] + x}))
-      end
-    end
-    userlatlng = current_user.location.split(',').map { |x| x.to_f }
-    @closest = @closest.sort_by do |ev|
-      latlng = ev.location.split(',').map { |x| x.to_f }
-      (latlng[0] - userlatlng[0]) ** 2 + (latlng[1] - userlatlng[1]) ** 2
-    end
+    @closest = Event.closest_to current_user.location
   end
 
 end
