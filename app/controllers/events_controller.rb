@@ -87,7 +87,7 @@ class EventsController < ApplicationController
 
       @number_of_ratings = EventRating.find_by_sql('SELECT COUNT(*) FROM event_ratings WHERE event_id = ' + @event.id.to_s)[0]["COUNT(*)"].to_i
 
-      session[:referrer] = 'show/' + @event.id.to_s
+      session[:referrer] = 'show'
     else
       flash[:error] = "You are not allowed to view that event"
       redirect_to :controller => 'users', :action => 'profile'
@@ -113,7 +113,7 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     @event_eventtype = @event.event_eventtypes.find(:all, :conditions => {:event_id => params[:id]})
     @event_photo = @event.event_photos.find(:all, :conditions => {:event_id => params[:id]})
-    @event_users = @event.user_events.find(:all, :conditions => {:event_id => params[:id]})
+    #@event_users = @event.user_events.find(:all, :conditions => {:event_id => params[:id]})
 
     #location coordinates
     latlng = @event.location.split(',')
@@ -128,12 +128,12 @@ class EventsController < ApplicationController
     #Updated existing event types, photos, and invitations
     params[:event_eventtypes_update].each { |key, value| EventEventtype.find( key ).update_attributes(value)} if params[:event_eventtypes_update]
     params[:event_photos_update].each { |key, value| EventPhoto.find( key ).update_attributes(value) } if params[:event_photos_update]
-    params[:event_users_update].each { |key, value| UserEvent.find( key ).update_attributes(value) } if params[:event_users_update]
+    #params[:event_users_update].each { |key, value| UserEvent.find( key ).update_attributes(value) } if params[:event_users_update]
 
     #New event types, photos, invitations that could get sent out
     params[:event_eventtype].each { |p| @event.event_eventtypes << EventEventtype.new( p ) } if params[:event_eventtype]
   	params[:event_photo].each { |p| @event.event_photos << EventPhoto.new( p ) } if params[:event_photo]
-    params[:event_users].each { |p| @event.user_events << UserEvent.new( p ) } if params[:event_users]
+    #params[:event_users].each { |p| @event.user_events << UserEvent.new( p ) } if params[:event_users]
 
     #Hash location
     binvals = Event.hash_loc @event.location
@@ -231,7 +231,7 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     return unless admin_check
     if params[:friend] == '1'
-      usr = User.find(params[:friend])
+      usr = User.find(params[:friend_select])
     else
       usr = User.find_by_login(params[:other_user])
     end

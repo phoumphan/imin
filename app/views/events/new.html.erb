@@ -138,10 +138,10 @@ onUnload="GUnload();"
   
   <tr><td><h3>Invite a Friend</h3></td></tr>
 
-  <tr><td><%=radio_button_tag :friend, '1', true, :onclick => "enableButtons();"%> Friend:</td>
+  <tr><td><%=radio_button_tag :friend, '0', true, :onclick => "enableButtons();"%> Friend:</td>
   <td><%=select_tag :friends, options_for_select(@friends)%></td></tr>
 
-  <tr><td><%=radio_button_tag :friend, '0', false, :onclick => "enableButtons();"%> Other user:</td>
+  <tr><td><%=radio_button_tag :friend, '1', false, :onclick => "enableButtons();"%> Other user:</td>
   <td><%=text_field_tag :other_user, "", :onchange => "enableButtons();", :onclick => "if (document.form.friend[1].checked) document.form.add.disabled = false;"%></td></tr>
 
   <tr><td><input type="button" name="add" value="Add" onclick="addInvitee();" /></td></tr>

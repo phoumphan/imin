@@ -8,11 +8,11 @@
 <%form_tag(url_for :action => 'user_add_exec', :id => @event.id) do |f|%>
   <table>
 
-  <tr><td><%=radio_button_tag :friend, '1', :checked => true%> Friend:</td></tr>
+  <tr><td><%=radio_button_tag :friend, '1', true%> Friend:</td></tr>
 
-  <tr><td><%=select_tag :friend, options_for_select(@friends)%></td></tr>
+  <tr><td><%=select_tag :friend_select, options_for_select(@friends)%></td></tr>
 
-  <tr><td><br><%=radio_button_tag :friend, '0' %> Other user:</td></tr>
+  <tr><td><br><%=radio_button_tag :friend, '0', false %> Other user:</td></tr>
 
   <tr><td><%=text_field_tag :other_user%></td></tr>
   
