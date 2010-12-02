@@ -4,7 +4,9 @@ class HomeController < ApplicationController
   end
 
   def about
-    
+    if current_user
+      redirect_to (profile_page_path)
+    end
   end
 
   def map

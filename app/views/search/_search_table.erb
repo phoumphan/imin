@@ -13,7 +13,14 @@
       </br>
       <tr>
         <td>
-          <%= link_to result.name, event_path(result.id) %>
+
+          <div style="border-bottom: 1px dotted black; width: 750px;">
+            <br />
+           <%= link_to result.name, event_path(result.id) %><br /><br />
+           Tags: <%result.eventtypes.each do |et|%>
+                   <%=et.description%>
+                 <%end%><br /><br />
+          </div>
         </td>                        
       </tr>
     <%end%>
