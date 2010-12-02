@@ -11,12 +11,12 @@
   link_to name, tourl, :class => cls
 end %>
 
-<div id="user_nav">
+<div id="events_nav">
       <%if current_user
           # The urls for these should begin with a slash%>
-          <%=lit_link 'Profile', '/users/profile'%>
-          <%=lit_link 'Events', '/users/events'%>
-          <%=lit_link 'Friends', '/friendships/display'%>
-          
+          <%=lit_link 'Create Event', '/events/new'%>
+          <%=lit_link 'Closest Events', '/users/closestevents'%>
+          <%=lit_link 'My Preferences', '/users/preferences'%>
       <%end%>
 </div>
+          

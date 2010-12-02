@@ -148,6 +148,23 @@ class UsersController < ApplicationController
 
   end
 
+  def events
+    if current_user
+      @user = current_user
+
+      #location coordinates
+      latlng = @user.location.split(',')
+      @lat = latlng[0]
+      @lng = latlng[1]
+    else
+      redirect_to(login_path)
+    end
+
+    @user_events = Event.find(:all, :conditions => :owner == @user.id);
+     puts('----USER EVENTS------');
+
+  end
+
   #render users/edit_info
   def edit_info
     if current_user
@@ -179,34 +196,29 @@ class UsersController < ApplicationController
 
 
     @updated_user_event_tag = UserEventtype.find(:all, :conditions => :user_id == @user.id);
-    puts('----@user_event_tags----')
-    puts @updated_user_event_tag
+    puts("-------------------GOT TO UPDATE -----------------------")
 
-    @updated_user_event_tag.each do |event_tag|
-      if (event_tag.eventtype_id != params[:tag_ids] && event_tag.user_id == @user.id)
-          event_tag.destroy
+      @updated_user_event_tag = UserEventtype.find(:all, :conditions => :user_id == @user.id);
+      puts('----@user_event_tags----')
+      puts @updated_user_event_tag
+      @updated_user_event_tag.each do |event_tag|
+        if (event_tag.eventtype_id != params[:tag_ids] && event_tag.user_id == @user.id)
+            event_tag.destroy
+        end
       end
-    end
 
-    params[:tag_ids].each do |p|
-        puts(p.to_s)
-        @user.user_eventtypes << UserEventtype.new( :user_id => current_user.id, :eventtype_id=>p )
-    end
-
-    @updated_user_event_tag = UserEventtype.find(:all, :conditions => :user_id == @user.id);
-    i = 0;
-    @updated_tag_ids = {}
-    @updated_user_event_tag.each do |e|
-      @updated_tag_ids[i] = e.eventtype_id
-      i = i+1
-    end
-
-    if @user.update_attributes(params[:user])
-      flash[:notice] = "Profile Successfully Updated"
-      redirect_to :action => 'profile'
-    else
-      render :action => 'preferences', :id => params[:id]
-    end
+      #bug here when update info
+      params[:tag_ids].each do |p|
+          puts(p.to_s)
+          @user.user_eventtypes << UserEventtype.new( :user_id => current_user.id, :eventtype_id=>p )
+      end
+      @updated_user_event_tag = UserEventtype.find(:all, :conditions => :user_id == @user.id);
+      i = 0;
+      @updated_tag_ids = {}
+      @updated_user_event_tag.each do |e|
+        @updated_tag_ids[i] = e.eventtype_id
+        i = i+1
+      end
   end
 
   #method used to change user password.  Called from users/edit_info.html.erb page when
@@ -239,12 +251,42 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
-
+    @friend = User.find(params[:id])
+    if current_user
+      @user = current_user
+    else
+      redirect_to(login_path)
+    end
+    
     #If a user tries to view himself, it will redirect to his profile page
-    if (@user.id == current_user.id)
+    if (@friend.id == current_user.id)
       redirect_to (profile_page_path)
     end
+
+    #Information for Event Calendar
+    if (params[:month] && params[:year])
+      @month = params[:month].to_i
+      @year = params[:year].to_i
+    else
+      time = Time.new
+      @month = time.month
+      @year = time.year
+    end
+
+    @shown_month = Date.civil(@year, @month)
+    # To restrict what events are included in the result you can pass additional find options like this:
+    # @event_strips = Event.event_strips_for_month(@shown_month, :include => :some_relation, :conditions => 'some_relations.some_column = true')
+
+    #1.  Need to get all the Event ids that user is attending
+    @user_events = Array.new
+
+    user_event_rows = UserEvent.find_all_by_user_id(@friend.id)
+    for ue in user_event_rows
+      @user_events << ue.event_id.to_s
+    end    
+
+    #@event_strips = Event.event_strips_for_month(@shown_month)
+    @event_strips = Event.event_strips_for_month(@shown_month, :conditions => ["id IN (?)", @user_events])
 
   end
 

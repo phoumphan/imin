@@ -90,6 +90,14 @@ onUnload="GUnload();"
 <div class="user_profile_container">
   <div class="user_profile">
     <div id="wrapper">
+      <div id="events_nav">
+        <%if current_user%>
+          <%=link_to 'My Events',{:controller => 'users', :action => 'events'}, :class => 'events_nav_link'%>
+          <%=link_to 'Events in your Area',{:controller => 'users', :action => 'closestevents'}, :class => 'events_nav_link'%>
+          <%=link_to 'Create Event', {:controller => 'events', :action => 'new'}, :class => 'events_nav_link_on'%>
+          <%=link_to 'Event Preferences',{:controller => 'users', :action => 'preferences'}, :class => 'events_nav_link'%>
+      <%end%>
+      </div>
 <%form_for @event, :action => 'create', :html => { :multipart => true, :name => "form" } do |f|%>
   <%=f.error_messages%>
   <table id="event_table">
@@ -134,12 +142,12 @@ onUnload="GUnload();"
   <tr><td><input type="button" value="Add" onclick="addInvitee();" /></td></tr>
   </table>
 
-  <hr />
+  <hr style="width: 750px" />
   Invited:<br />
   <%= select_tag "invited", (@invited.map {|nm| "<option>" + nm + "</option>" }).join(""), :multiple => true, :style => 'width: 300px' %><br />
 
   <input type="button" value="Remove" onclick="removeInvitee();" />
-  <hr />
+  <hr style="width: 750px" />
 
   <div id='eventtypes'></div>
   <%=link_to_remote 'Add an Event Tag', :url => {:action => 'add_eventtype'}%>
