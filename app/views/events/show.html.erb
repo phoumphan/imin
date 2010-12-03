@@ -48,6 +48,13 @@
       <%end%>
   <%end%>
 <%end%>
+
+<h3>Who's Coming</h3>
+<table id="notice_table">
+<%for usr in @coming%>
+  <tr><td><%= link_to usr.login, :controller => 'users', :action => 'show', :id => usr.id %></td></tr>
+<%end%>
+</table>
         </div>
 </div>
     </div>

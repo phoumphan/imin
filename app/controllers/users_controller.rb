@@ -318,4 +318,19 @@ class UsersController < ApplicationController
     @closest = Event.closest_to current_user.location
   end
 
+  def coming
+    if UserEvent.find(:first, :conditions => {:event_id => params[:id], :user_id => current_user.id, :user_event_status => 'INVITED'})
+      Event.find(params[:id]).create_relationship(current_user.id, nil, 'COMING')
+    else
+      flash[:error] = "You were not invited"
+    end
+    redirect_to :controller => 'events', :action => 'show', :id => params[:id]
+  end
+
+  def not_coming
+    join = UserEvent.find(:first, :conditions => {:event_id => params[:id], :user_id => current_user.id, :user_event_status => 'COMING'})
+    join.destroy if join
+    redirect_to :controller => 'events', :action => 'show', :id => params[:id]
+  end
+
 end

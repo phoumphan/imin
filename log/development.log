@@ -34064,3 +34064,3113 @@ ActionController::RoutingError (No route matches "/stylesheets/images/loading.gi
   
 
 Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#show (for 127.0.0.1 at 2010-12-03 14:18:07) [GET]
+  Parameters: {"id"=>"24"}
+Redirected to http://localhost:3000/login
+Filter chain halted as [:session_expiry] rendered_or_redirected.
+Completed in 2574ms (DB: 0) | 302 Found [http://localhost/events/24]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-12-03 14:18:35) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered users/_user_bar (15.6ms)
+Rendered home/_flash_error (0.0ms)
+Completed in 515ms (View: 499, DB: 0) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:18:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (15.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:18:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:18:39) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:18:42) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:18:43) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:18:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:18:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-12-03 14:18:47) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"EPQuCs1hdsDJdoGRPtQvf8ziTPTdbRVBDNehj7bYCg0=", "login"=>"starspangled", "password"=>"password"}
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'starspangled') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+[paperclip] Saving attachments.
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users/profile
+Completed in 608ms (DB: 16) | 302 Found [http://localhost/session]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#profile (for 127.0.0.1 at 2010-12-03 14:18:49) [GET]
+  [4;35;1mUser Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUserEvent Columns (62.4ms)[0m   [0mSHOW FIELDS FROM `user_events`[0m
+  [4;36;1mUserEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 1) [0m
+  [4;35;1mEvent Load (31.2ms)[0m   [0mSELECT * FROM `events` WHERE (('2010-11-28 08:00:00' <= end_at) AND (start_at< '2011-01-02 08:00:00')) AND (id IN ('20','20','21','22','22','24','24')) ORDER BY start_at ASC[0m
+  [4;36;1mUserEvent Load (0.0ms)[0m   [0;1mSELECT * FROM user_events WHERE user_id = 1 ORDER BY created_at DESC LIMIT 15;[0m
+Rendering template within layouts/application
+Rendering users/profile
+Rendered users/_user_nav (0.0ms)
+  [4;35;1mPendingFriendRequest Load (46.8ms)[0m   [0mSELECT * FROM `pending_friend_requests` WHERE (`pending_friend_requests`.user_id = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mEvent Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 24) [0m
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #100 of app/views/users/profile.html.erb:
+97:                    end
+98:                    link_to notice.creator.login, :action => 'show', :id => notice.creator.id %> <%= message %> <%= link_to notice.event.name, :controller => 'events', :action => 'show', :id => notice.event.id %>
+99:                    <% if notice.user_event_status == 'INVITED' %>
+100:                      <%= link_to "I'm in!", :action => "coming", :id => @event.id %> <%= link_to "I'm out", :action => "not_coming", :id => @event.id %>
+101:                    <% end %>
+102:                    </td>
+103:                    <td class="notice_date"><%= notice.created_at.to_date.to_s %></td>
+
+    app/views/users/profile.html.erb:100
+    app/views/users/profile.html.erb:89:in `each'
+    app/views/users/profile.html.erb:89
+
+Rendered rescues/_trace (187.2ms)
+Rendered rescues/_request_and_response (31.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#profile (for 127.0.0.1 at 2010-12-03 14:20:07) [GET]
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUserEvent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `user_events`[0m
+  [4;35;1mUserEvent Load (0.0ms)[0m   [0mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 1) [0m
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (('2010-11-28 08:00:00' <= end_at) AND (start_at< '2011-01-02 08:00:00')) AND (id IN ('20','20','21','22','22','24','24')) ORDER BY start_at ASC[0m
+  [4;35;1mUserEvent Load (0.0ms)[0m   [0mSELECT * FROM user_events WHERE user_id = 1 ORDER BY created_at DESC LIMIT 15;[0m
+Rendering template within layouts/application
+Rendering users/profile
+Rendered users/_user_nav (0.0ms)
+  [4;36;1mPendingFriendRequest Load (0.0ms)[0m   [0;1mSELECT * FROM `pending_friend_requests` WHERE (`pending_friend_requests`.user_id = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mEvent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 24) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 24) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 22) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 22) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 20) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 20) [0m
+Rendered users/_user_bar (0.0ms)
+Completed in 2262ms (View: 281, DB: 16) | 200 OK [http://localhost/users/profile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:20:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:20:11) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:20:12) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:20:16) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:20:17) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:20:18) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:20:19) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#profile (for 127.0.0.1 at 2010-12-03 14:21:02) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUserEvent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `user_events`[0m
+  [4;35;1mUserEvent Load (0.0ms)[0m   [0mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 1) [0m
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (('2010-11-28 08:00:00' <= end_at) AND (start_at< '2011-01-02 08:00:00')) AND (id IN ('20','20','21','22','22','24','24')) ORDER BY start_at ASC[0m
+  [4;35;1mUserEvent Load (0.0ms)[0m   [0mSELECT * FROM user_events WHERE user_id = 1 ORDER BY created_at DESC LIMIT 15;[0m
+Rendering template within layouts/application
+Rendering users/profile
+Rendered users/_user_nav (0.0ms)
+  [4;36;1mPendingFriendRequest Load (0.0ms)[0m   [0;1mSELECT * FROM `pending_friend_requests` WHERE (`pending_friend_requests`.user_id = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mEvent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 24) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 24) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 22) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 22) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 20) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 20) [0m
+Rendered users/_user_bar (0.0ms)
+Completed in 1981ms (View: 281, DB: 0) | 200 OK [http://localhost/users/profile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:21:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:21:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:21:08) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:21:12) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:21:12) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:21:13) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:21:14) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#coming (for 127.0.0.1 at 2010-12-03 14:21:17) [GET]
+  Parameters: {"id"=>"24"}
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mEvent Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 24) [0m
+  [4;36;1mUserEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 1 AND `user_events`.`user_event_status` = 'This rocks' AND `user_events`.`event_id` = 24) LIMIT 1[0m
+  [4;35;1mUserEvent Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `user_events`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUserEvent Create (62.4ms)[0m   [0mINSERT INTO `user_events` (`created_at`, `event_id`, `user_event_status`, `updated_at`, `creator_id`, `user_id`) VALUES('2010-12-03 22:21:18', NULL, 'COMING', '2010-12-03 22:21:18', NULL, 1)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mBEGIN[0m
+  [4;36;1mUserEvent Update (31.2ms)[0m   [0;1mUPDATE `user_events` SET `updated_at` = '2010-12-03 22:21:18', `event_id` = 24 WHERE `id` = 41[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+
+ActionView::MissingTemplate (Missing template users/coming.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#coming (for 127.0.0.1 at 2010-12-03 14:22:37) [GET]
+  Parameters: {"id"=>"24"}
+  [4;35;1mUser Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mEvent Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 24) [0m
+  [4;35;1mUserEvent Load (0.0ms)[0m   [0mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 1 AND `user_events`.`user_event_status` = 'This rocks' AND `user_events`.`event_id` = 24) LIMIT 1[0m
+  [4;36;1mUserEvent Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `user_events`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUserEvent Create (15.6ms)[0m   [0;1mINSERT INTO `user_events` (`created_at`, `event_id`, `user_event_status`, `updated_at`, `creator_id`, `user_id`) VALUES('2010-12-03 22:22:37', NULL, 'COMING', '2010-12-03 22:22:37', NULL, 1)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUserEvent Update (0.0ms)[0m   [0mUPDATE `user_events` SET `updated_at` = '2010-12-03 22:22:37', `event_id` = 24 WHERE `id` = 42[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users/profile
+Completed in 718ms (DB: 62) | 302 Found [http://localhost/users/coming/24]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#profile (for 127.0.0.1 at 2010-12-03 14:22:39) [GET]
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUserEvent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `user_events`[0m
+  [4;35;1mUserEvent Load (0.0ms)[0m   [0mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 1) [0m
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (('2010-11-28 08:00:00' <= end_at) AND (start_at< '2011-01-02 08:00:00')) AND (id IN ('20','20','21','22','22','24','24','24','24')) ORDER BY start_at ASC[0m
+  [4;35;1mUserEvent Load (0.0ms)[0m   [0mSELECT * FROM user_events WHERE user_id = 1 ORDER BY created_at DESC LIMIT 15;[0m
+Rendering template within layouts/application
+Rendering users/profile
+Rendered users/_user_nav (0.0ms)
+  [4;36;1mPendingFriendRequest Load (0.0ms)[0m   [0;1mSELECT * FROM `pending_friend_requests` WHERE (`pending_friend_requests`.user_id = 1) [0m
+  [4;35;1mUser Load (15.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mEvent Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 24) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 24) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 22) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 22) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 20) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 20) [0m
+Rendered users/_user_bar (0.0ms)
+Completed in 1950ms (View: 234, DB: 47) | 200 OK [http://localhost/users/profile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:22:43) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:22:43) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:22:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:22:49) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:22:49) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:22:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:22:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#show (for 127.0.0.1 at 2010-12-03 14:23:00) [GET]
+  Parameters: {"id"=>"24"}
+  [4;36;1mEvent Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 24) [0m
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUserEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 1 AND `user_events`.`user_event_status` = 'ADMIN' AND `user_events`.`event_id` = 24) LIMIT 1[0m
+  [4;35;1mUserEvent Load (0.0ms)[0m   [0mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 1 AND `user_events`.`user_event_status` = 'INVITED' AND `user_events`.`event_id` = 24) LIMIT 1[0m
+  [4;36;1mEventRating Load (78.0ms)[0m   [0;1mSELECT * FROM `event_ratings` WHERE (`event_ratings`.`user_id` = 1 AND `event_ratings`.`event_id` = '24') [0m
+  [4;35;1mEventRating Load (46.8ms)[0m   [0mSELECT COUNT(*) FROM event_ratings WHERE event_id = 24[0m
+  [4;36;1mEventRating Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `event_ratings`[0m
+  [4;35;1mSQL (62.4ms)[0m   [0mSHOW TABLES[0m
+
+NoMethodError (undefined method `find_by_user_event_status' for #<Class:0x66627d8>):
+  C:/Program Files/BitNami RubyStack/ruby/lib/ruby/gems/1.8/gems/thinking-sphinx-1.3.20/lib/thinking_sphinx/active_record/has_many_association.rb:19:in `method_missing'
+  app/controllers/events_controller.rb:129:in `show'
+
+Rendered rescues/_trace (296.4ms)
+Rendered rescues/_request_and_response (15.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#show (for 127.0.0.1 at 2010-12-03 14:24:00) [GET]
+  Parameters: {"id"=>"24"}
+  [4;35;1mEvent Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 24) [0m
+  [4;35;1mUser Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUserEvent Load (0.0ms)[0m   [0mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 1 AND `user_events`.`user_event_status` = 'ADMIN' AND `user_events`.`event_id` = 24) LIMIT 1[0m
+  [4;36;1mUserEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 1 AND `user_events`.`user_event_status` = 'INVITED' AND `user_events`.`event_id` = 24) LIMIT 1[0m
+  [4;35;1mEventRating Load (0.0ms)[0m   [0mSELECT * FROM `event_ratings` WHERE (`event_ratings`.`user_id` = 1 AND `event_ratings`.`event_id` = '24') [0m
+  [4;36;1mEventRating Load (0.0ms)[0m   [0;1mSELECT COUNT(*) FROM event_ratings WHERE event_id = 24[0m
+  [4;35;1mEventRating Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `event_ratings`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mMysql::Error: Unknown column 'users.user_event_status' in 'where clause': SELECT `users`.* FROM `users` INNER JOIN `user_events` ON `users`.id = `user_events`.user_id WHERE ((`user_events`.event_id = 24) AND (`users`.`user_event_status` = 'COMING')) [0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Unknown column 'users.user_event_status' in 'where clause': SELECT `users`.* FROM `users`  INNER JOIN `user_events` ON `users`.id = `user_events`.user_id    WHERE ((`user_events`.event_id = 24) AND (`users`.`user_event_status` = 'COMING')) ):
+  app/controllers/events_controller.rb:129:in `show'
+
+Rendered rescues/_trace (187.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#show (for 127.0.0.1 at 2010-12-03 14:24:57) [GET]
+  Parameters: {"id"=>"24"}
+  [4;36;1mEvent Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mEvent Load (15.6ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 24) [0m
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUserEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 1 AND `user_events`.`user_event_status` = 'ADMIN' AND `user_events`.`event_id` = 24) LIMIT 1[0m
+  [4;35;1mUserEvent Load (0.0ms)[0m   [0mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 1 AND `user_events`.`user_event_status` = 'INVITED' AND `user_events`.`event_id` = 24) LIMIT 1[0m
+  [4;36;1mEventRating Load (0.0ms)[0m   [0;1mSELECT * FROM `event_ratings` WHERE (`event_ratings`.`user_id` = 1 AND `event_ratings`.`event_id` = '24') [0m
+  [4;35;1mEventRating Load (0.0ms)[0m   [0mSELECT COUNT(*) FROM event_ratings WHERE event_id = 24[0m
+  [4;36;1mEventRating Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `event_ratings`[0m
+  [4;35;1mUserEvent Load (0.0ms)[0m   [0mSELECT * FROM `user_events` WHERE (`user_events`.`user_event_status` = 'COMING' AND `user_events`.`event_id` = 24) [0m
+  [4;36;1mUserEvent Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `user_events`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering events/show
+Rendered events/_user_nav (15.6ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mEventtype Load (15.6ms)[0m   [0;1mSELECT `eventtypes`.* FROM `eventtypes` INNER JOIN `event_eventtypes` ON `eventtypes`.id = `event_eventtypes`.eventtype_id WHERE ((`event_eventtypes`.event_id = 24)) [0m
+Rendered events/_event (46.8ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 1732ms (View: 234, DB: 94) | 200 OK [http://localhost/events/show/24]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:25:00) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:25:01) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:25:04) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:25:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:25:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:25:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:25:11) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:25:12) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#show (for 127.0.0.1 at 2010-12-03 14:25:53) [GET]
+  Parameters: {"id"=>"24"}
+  [4;36;1mEvent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 24) [0m
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (15.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUserEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 1 AND `user_events`.`user_event_status` = 'ADMIN' AND `user_events`.`event_id` = 24) LIMIT 1[0m
+  [4;35;1mUserEvent Load (0.0ms)[0m   [0mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 1 AND `user_events`.`user_event_status` = 'INVITED' AND `user_events`.`event_id` = 24) LIMIT 1[0m
+  [4;36;1mEventRating Load (0.0ms)[0m   [0;1mSELECT * FROM `event_ratings` WHERE (`event_ratings`.`user_id` = 1 AND `event_ratings`.`event_id` = '24') [0m
+  [4;35;1mEventRating Load (0.0ms)[0m   [0mSELECT COUNT(*) FROM event_ratings WHERE event_id = 24[0m
+  [4;36;1mEventRating Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `event_ratings`[0m
+  [4;35;1mUserEvent Load (0.0ms)[0m   [0mSELECT * FROM `user_events` WHERE (`user_events`.event_id = 24 AND (`user_events`.`user_event_status` = 'COMING')) [0m
+  [4;36;1mUserEvent Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `user_events`[0m
+  [4;35;1mUser Load (15.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering events/show
+Rendered events/_user_nav (0.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mEventtype Load (0.0ms)[0m   [0;1mSELECT `eventtypes`.* FROM `eventtypes` INNER JOIN `event_eventtypes` ON `eventtypes`.id = `event_eventtypes`.eventtype_id WHERE ((`event_eventtypes`.event_id = 24)) [0m
+Rendered events/_event (15.6ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 1232ms (View: 109, DB: 62) | 200 OK [http://localhost/events/show/24]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:25:56) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:25:57) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:25:59) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:26:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:26:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:26:05) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:26:05) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-12-03 14:26:11) [GET]
+Redirected to http://localhost:3000/
+Completed in 562ms (DB: 0) | 302 Found [http://localhost/logout]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-12-03 14:26:13) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered users/_user_bar (0.0ms)
+Completed in 94ms (View: 94, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:26:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:26:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:26:16) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:26:19) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:26:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:26:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:26:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:26:23) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-12-03 14:26:56) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered users/_user_bar (0.0ms)
+Completed in 62ms (View: 62, DB: 0) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:26:58) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:26:58) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:27:00) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:27:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:27:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:27:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:27:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:27:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-12-03 14:27:08) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"pK8kDyb517aStMl4gN0sUS5n+/vApLH/1wM3dAdHOGM=", "login"=>"starspangled", "password"=>"password"}
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'starspangled') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+[paperclip] Saving attachments.
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users/profile
+Completed in 1045ms (DB: 16) | 302 Found [http://localhost/session]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#profile (for 127.0.0.1 at 2010-12-03 14:27:11) [GET]
+  [4;35;1mUser Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUserEvent Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `user_events`[0m
+  [4;36;1mUserEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 1) [0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (('2010-11-28 08:00:00' <= end_at) AND (start_at< '2011-01-02 08:00:00')) AND (id IN ('20','20','21','22','22','24','24','24','24')) ORDER BY start_at ASC[0m
+  [4;36;1mUserEvent Load (0.0ms)[0m   [0;1mSELECT * FROM user_events WHERE user_id = 1 ORDER BY created_at DESC LIMIT 15;[0m
+Rendering template within layouts/application
+Rendering users/profile
+Rendered users/_user_nav (0.0ms)
+  [4;35;1mPendingFriendRequest Load (15.6ms)[0m   [0mSELECT * FROM `pending_friend_requests` WHERE (`pending_friend_requests`.user_id = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mEvent Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 24) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 24) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 22) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 22) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mEvent Load (15.6ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 20) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 20) [0m
+Rendered users/_user_bar (0.0ms)
+Completed in 2605ms (View: 203, DB: 78) | 200 OK [http://localhost/users/profile]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:27:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:27:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:27:17) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:27:18) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:27:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:27:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:27:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:27:23) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-12-03 14:27:25) [GET]
+Redirected to http://localhost:3000/
+Completed in 546ms (DB: 0) | 302 Found [http://localhost/logout]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-12-03 14:27:27) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered users/_user_bar (0.0ms)
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:27:29) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:27:29) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:27:31) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:27:34) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (15.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:27:36) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:27:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:27:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:27:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-12-03 14:27:39) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered users/_user_bar (0.0ms)
+Completed in 187ms (View: 62, DB: 0) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:27:41) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:27:42) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:27:43) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:27:46) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:27:49) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:27:49) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:27:49) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:27:50) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-12-03 14:27:59) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"aIUwWnmJQcTLPnh/9c2ZtBij1m/63B9P7KIt5Wb3eFA=", "login"=>"slumlyfe", "password"=>"chuckle"}
+  [4;35;1mUser Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`login` = 'slumlyfe') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+[paperclip] Saving attachments.
+  [4;36;1mSQL (15.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users/profile
+Completed in 624ms (DB: 31) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#profile (for 127.0.0.1 at 2010-12-03 14:28:01) [GET]
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mUserEvent Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `user_events`[0m
+  [4;35;1mUserEvent Load (0.0ms)[0m   [0mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 2) [0m
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (('2010-11-28 08:00:00' <= end_at) AND (start_at< '2011-01-02 08:00:00')) AND (id IN ('23','24')) ORDER BY start_at ASC[0m
+  [4;35;1mUserEvent Load (0.0ms)[0m   [0mSELECT * FROM user_events WHERE user_id = 2 ORDER BY created_at DESC LIMIT 15;[0m
+Rendering template within layouts/application
+Rendering users/profile
+Rendered users/_user_nav (15.6ms)
+  [4;36;1mPendingFriendRequest Load (0.0ms)[0m   [0;1mSELECT * FROM `pending_friend_requests` WHERE (`pending_friend_requests`.user_id = 2) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mEvent Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 24) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 23) [0m
+Rendered users/_user_bar (15.6ms)
+Completed in 2371ms (View: 172, DB: 47) | 200 OK [http://localhost/users/profile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:28:05) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:28:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:28:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:28:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:28:13) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:28:14) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:28:14) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:28:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#coming (for 127.0.0.1 at 2010-12-03 14:28:23) [GET]
+  Parameters: {"id"=>"24"}
+  [4;35;1mUser Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mEvent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 24) [0m
+  [4;35;1mUserEvent Load (0.0ms)[0m   [0mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 2 AND `user_events`.`user_event_status` = 'This rocks' AND `user_events`.`event_id` = 24) LIMIT 1[0m
+  [4;36;1mUserEvent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `user_events`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUserEvent Create (15.6ms)[0m   [0;1mINSERT INTO `user_events` (`created_at`, `event_id`, `user_event_status`, `updated_at`, `creator_id`, `user_id`) VALUES('2010-12-03 22:28:23', NULL, 'COMING', '2010-12-03 22:28:23', NULL, 1)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUserEvent Update (0.0ms)[0m   [0mUPDATE `user_events` SET `updated_at` = '2010-12-03 22:28:23', `event_id` = 24 WHERE `id` = 43[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users/profile
+Completed in 671ms (DB: 62) | 302 Found [http://localhost/users/coming/24]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#profile (for 127.0.0.1 at 2010-12-03 14:28:25) [GET]
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mUserEvent Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `user_events`[0m
+  [4;35;1mUserEvent Load (0.0ms)[0m   [0mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 2) [0m
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (('2010-11-28 08:00:00' <= end_at) AND (start_at< '2011-01-02 08:00:00')) AND (id IN ('23','24')) ORDER BY start_at ASC[0m
+  [4;35;1mUserEvent Load (15.6ms)[0m   [0mSELECT * FROM user_events WHERE user_id = 2 ORDER BY created_at DESC LIMIT 15;[0m
+Rendering template within layouts/application
+Rendering users/profile
+Rendered users/_user_nav (0.0ms)
+  [4;36;1mPendingFriendRequest Load (0.0ms)[0m   [0;1mSELECT * FROM `pending_friend_requests` WHERE (`pending_friend_requests`.user_id = 2) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mEvent Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 24) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 23) [0m
+Rendered users/_user_bar (0.0ms)
+Completed in 2496ms (View: 172, DB: 62) | 200 OK [http://localhost/users/profile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:28:29) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:28:29) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:28:31) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:28:34) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:28:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:28:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:28:38) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:28:38) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-12-03 14:28:42) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Redirected to http://localhost:3000/users/profile
+  [4;36;1mUserEvent Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `user_events`[0m
+  [4;35;1mUserEvent Load (0.0ms)[0m   [0mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 2) [0m
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (('2010-11-28 08:00:00' <= end_at) AND (start_at< '2011-01-02 08:00:00')) AND (id IN ('23','24')) ORDER BY start_at ASC[0m
+Completed in 608ms (DB: 16) | 302 Found [http://localhost/users/2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#profile (for 127.0.0.1 at 2010-12-03 14:28:44) [GET]
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mUserEvent Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `user_events`[0m
+  [4;35;1mUserEvent Load (0.0ms)[0m   [0mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 2) [0m
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (('2010-11-28 08:00:00' <= end_at) AND (start_at< '2011-01-02 08:00:00')) AND (id IN ('23','24')) ORDER BY start_at ASC[0m
+  [4;35;1mUserEvent Load (0.0ms)[0m   [0mSELECT * FROM user_events WHERE user_id = 2 ORDER BY created_at DESC LIMIT 15;[0m
+Rendering template within layouts/application
+Rendering users/profile
+Rendered users/_user_nav (0.0ms)
+  [4;36;1mPendingFriendRequest Load (0.0ms)[0m   [0;1mSELECT * FROM `pending_friend_requests` WHERE (`pending_friend_requests`.user_id = 2) [0m
+  [4;35;1mUser Load (15.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mEvent Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 24) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 23) [0m
+Rendered users/_user_bar (0.0ms)
+Completed in 2746ms (View: 281, DB: 62) | 200 OK [http://localhost/users/profile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:28:48) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:28:49) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:28:50) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:28:52) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:28:56) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:28:56) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:28:56) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:28:57) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#not_coming (for 127.0.0.1 at 2010-12-03 14:29:40) [GET]
+  Parameters: {"id"=>"24"}
+  [4;35;1mUser Columns (31.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+
+NameError (undefined local variable or method `event_id' for #<UsersController:0x62e9428>):
+  app/controllers/users_controller.rb:327:in `not_coming'
+
+Rendered rescues/_trace (140.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#not_coming (for 127.0.0.1 at 2010-12-03 14:30:07) [GET]
+  Parameters: {"id"=>"24"}
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mUserEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 2 AND `user_events`.`user_event_status` = 'COMING' AND `user_events`.`event_id` = '24') LIMIT 1[0m
+Redirected to http://localhost:3000/events/show/24
+Completed in 593ms (DB: 16) | 302 Found [http://localhost/users/not_coming/24]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#show (for 127.0.0.1 at 2010-12-03 14:30:09) [GET]
+  Parameters: {"id"=>"24"}
+  [4;36;1mEvent Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 24) [0m
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mUserEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 2 AND `user_events`.`user_event_status` = 'ADMIN' AND `user_events`.`event_id` = 24) LIMIT 1[0m
+  [4;35;1mUserEvent Load (15.6ms)[0m   [0mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 2 AND `user_events`.`user_event_status` = 'INVITED' AND `user_events`.`event_id` = 24) LIMIT 1[0m
+  [4;36;1mEventRating Load (0.0ms)[0m   [0;1mSELECT * FROM `event_ratings` WHERE (`event_ratings`.`user_id` = 2 AND `event_ratings`.`event_id` = '24') [0m
+  [4;35;1mEventRating Load (0.0ms)[0m   [0mSELECT COUNT(*) FROM event_ratings WHERE event_id = 24[0m
+  [4;36;1mEventRating Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `event_ratings`[0m
+  [4;35;1mUserEvent Load (0.0ms)[0m   [0mSELECT * FROM `user_events` WHERE (`user_events`.event_id = 24 AND (`user_events`.`user_event_status` = 'COMING')) [0m
+  [4;36;1mUserEvent Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `user_events`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering events/show
+Rendered events/_user_nav (0.0ms)
+  [4;36;1mEventtype Load (0.0ms)[0m   [0;1mSELECT `eventtypes`.* FROM `eventtypes` INNER JOIN `event_eventtypes` ON `eventtypes`.id = `event_eventtypes`.eventtype_id WHERE ((`event_eventtypes`.event_id = 24)) [0m
+Rendered events/_event (0.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 1279ms (View: 94, DB: 78) | 200 OK [http://localhost/events/show/24]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:30:12) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:30:12) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:30:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:30:18) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:30:19) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:30:21) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:30:21) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:30:26) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:30:27) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:30:27) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:30:28) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#coming (for 127.0.0.1 at 2010-12-03 14:30:32) [GET]
+  Parameters: {"id"=>"24"}
+  [4;35;1mUser Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mEvent Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mEvent Load (15.6ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 24) [0m
+  [4;35;1mUserEvent Load (0.0ms)[0m   [0mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 2 AND `user_events`.`user_event_status` = 'This rocks' AND `user_events`.`event_id` = 24) LIMIT 1[0m
+  [4;36;1mUserEvent Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `user_events`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUserEvent Create (0.0ms)[0m   [0;1mINSERT INTO `user_events` (`created_at`, `event_id`, `user_event_status`, `updated_at`, `creator_id`, `user_id`) VALUES('2010-12-03 22:30:33', NULL, 'COMING', '2010-12-03 22:30:33', NULL, 1)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUserEvent Update (0.0ms)[0m   [0mUPDATE `user_events` SET `updated_at` = '2010-12-03 22:30:33', `event_id` = 24 WHERE `id` = 44[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/events/show/24
+Completed in 718ms (DB: 62) | 302 Found [http://localhost/users/coming/24]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#show (for 127.0.0.1 at 2010-12-03 14:30:34) [GET]
+  Parameters: {"id"=>"24"}
+  [4;36;1mEvent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 24) [0m
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mUserEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 2 AND `user_events`.`user_event_status` = 'ADMIN' AND `user_events`.`event_id` = 24) LIMIT 1[0m
+  [4;35;1mUserEvent Load (0.0ms)[0m   [0mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 2 AND `user_events`.`user_event_status` = 'INVITED' AND `user_events`.`event_id` = 24) LIMIT 1[0m
+  [4;36;1mEventRating Load (0.0ms)[0m   [0;1mSELECT * FROM `event_ratings` WHERE (`event_ratings`.`user_id` = 2 AND `event_ratings`.`event_id` = '24') [0m
+  [4;35;1mEventRating Load (0.0ms)[0m   [0mSELECT COUNT(*) FROM event_ratings WHERE event_id = 24[0m
+  [4;36;1mEventRating Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `event_ratings`[0m
+  [4;35;1mUserEvent Load (0.0ms)[0m   [0mSELECT * FROM `user_events` WHERE (`user_events`.event_id = 24 AND (`user_events`.`user_event_status` = 'COMING')) [0m
+  [4;36;1mUserEvent Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `user_events`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering events/show
+Rendered events/_user_nav (15.6ms)
+  [4;35;1mEventtype Load (0.0ms)[0m   [0mSELECT `eventtypes`.* FROM `eventtypes` INNER JOIN `event_eventtypes` ON `eventtypes`.id = `event_eventtypes`.eventtype_id WHERE ((`event_eventtypes`.event_id = 24)) [0m
+Rendered events/_event (15.6ms)
+Rendered users/_user_bar (15.6ms)
+Completed in 1264ms (View: 94, DB: 31) | 200 OK [http://localhost/events/show/24]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:30:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:30:38) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:30:39) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:30:42) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:30:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:30:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:30:46) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (15.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:30:46) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:31:02) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:31:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:31:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (15.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:31:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#coming (for 127.0.0.1 at 2010-12-03 14:36:58) [GET]
+  Parameters: {"id"=>"24"}
+  [4;35;1mUser Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mUserEvent Load (0.0ms)[0m   [0mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 2 AND `user_events`.`user_event_status` = 'COMING' AND `user_events`.`event_id` = '24') LIMIT 1[0m
+Redirected to http://localhost:3000/events/show/24
+Completed in 624ms (DB: 31) | 302 Found [http://localhost/users/coming/24]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#show (for 127.0.0.1 at 2010-12-03 14:37:00) [GET]
+  Parameters: {"id"=>"24"}
+  [4;35;1mEvent Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 24) [0m
+  [4;35;1mUser Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mUserEvent Load (0.0ms)[0m   [0mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 2 AND `user_events`.`user_event_status` = 'ADMIN' AND `user_events`.`event_id` = 24) LIMIT 1[0m
+  [4;36;1mUserEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 2 AND `user_events`.`user_event_status` = 'INVITED' AND `user_events`.`event_id` = 24) LIMIT 1[0m
+  [4;35;1mEventRating Load (0.0ms)[0m   [0mSELECT * FROM `event_ratings` WHERE (`event_ratings`.`user_id` = 2 AND `event_ratings`.`event_id` = '24') [0m
+  [4;36;1mEventRating Load (0.0ms)[0m   [0;1mSELECT COUNT(*) FROM event_ratings WHERE event_id = 24[0m
+  [4;35;1mEventRating Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `event_ratings`[0m
+  [4;36;1mUserEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `user_events` WHERE (`user_events`.event_id = 24 AND (`user_events`.`user_event_status` = 'COMING')) [0m
+  [4;35;1mUserEvent Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `user_events`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering events/show
+Rendered events/_user_nav (0.0ms)
+  [4;36;1mEventtype Load (0.0ms)[0m   [0;1mSELECT `eventtypes`.* FROM `eventtypes` INNER JOIN `event_eventtypes` ON `eventtypes`.id = `event_eventtypes`.eventtype_id WHERE ((`event_eventtypes`.event_id = 24)) [0m
+Rendered events/_event (0.0ms)
+Rendered users/_user_bar (0.0ms)
+Rendered home/_flash_error (0.0ms)
+Completed in 1264ms (View: 109, DB: 62) | 200 OK [http://localhost/events/show/24]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:37:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:37:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:37:04) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:37:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:37:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:37:11) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (15.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:37:11) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:37:12) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:37:53) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:37:54) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:37:54) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:37:54) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#coming (for 127.0.0.1 at 2010-12-03 14:37:57) [GET]
+  Parameters: {"id"=>"24"}
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mUserEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 2 AND `user_events`.`user_event_status` = 'INVITED' AND `user_events`.`event_id` = '24') LIMIT 1[0m
+  [4;35;1mEvent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 24) [0m
+  [4;35;1mUserEvent Load (0.0ms)[0m   [0mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 2 AND `user_events`.`user_event_status` = 'This rocks' AND `user_events`.`event_id` = 24) LIMIT 1[0m
+  [4;36;1mUserEvent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `user_events`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUserEvent Create (15.6ms)[0m   [0;1mINSERT INTO `user_events` (`created_at`, `event_id`, `user_event_status`, `updated_at`, `creator_id`, `user_id`) VALUES('2010-12-03 22:37:57', NULL, 'COMING', '2010-12-03 22:37:57', NULL, 1)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUserEvent Update (0.0ms)[0m   [0mUPDATE `user_events` SET `updated_at` = '2010-12-03 22:37:57', `event_id` = 24 WHERE `id` = 45[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/events/show/24
+Completed in 624ms (DB: 31) | 302 Found [http://localhost/users/coming/24]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#show (for 127.0.0.1 at 2010-12-03 14:37:58) [GET]
+  Parameters: {"id"=>"24"}
+  [4;36;1mEvent Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 24) [0m
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mUserEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 2 AND `user_events`.`user_event_status` = 'ADMIN' AND `user_events`.`event_id` = 24) LIMIT 1[0m
+  [4;35;1mUserEvent Load (0.0ms)[0m   [0mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 2 AND `user_events`.`user_event_status` = 'INVITED' AND `user_events`.`event_id` = 24) LIMIT 1[0m
+  [4;36;1mEventRating Load (0.0ms)[0m   [0;1mSELECT * FROM `event_ratings` WHERE (`event_ratings`.`user_id` = 2 AND `event_ratings`.`event_id` = '24') [0m
+  [4;35;1mEventRating Load (0.0ms)[0m   [0mSELECT COUNT(*) FROM event_ratings WHERE event_id = 24[0m
+  [4;36;1mEventRating Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `event_ratings`[0m
+  [4;35;1mUserEvent Load (0.0ms)[0m   [0mSELECT * FROM `user_events` WHERE (`user_events`.event_id = 24 AND (`user_events`.`user_event_status` = 'COMING')) [0m
+  [4;36;1mUserEvent Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `user_events`[0m
+  [4;35;1mUser Load (15.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering events/show
+Rendered events/_user_nav (0.0ms)
+  [4;36;1mEventtype Load (0.0ms)[0m   [0;1mSELECT `eventtypes`.* FROM `eventtypes` INNER JOIN `event_eventtypes` ON `eventtypes`.id = `event_eventtypes`.eventtype_id WHERE ((`event_eventtypes`.event_id = 24)) [0m
+Rendered events/_event (15.6ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 1264ms (View: 94, DB: 78) | 200 OK [http://localhost/events/show/24]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:38:02) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:38:02) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:38:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:38:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:38:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:38:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:38:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:38:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:39:29) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:39:29) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:39:30) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:39:30) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#coming (for 127.0.0.1 at 2010-12-03 14:39:32) [GET]
+  Parameters: {"id"=>"24"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mUserEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 2 AND `user_events`.`user_event_status` = 'INVITED' AND `user_events`.`event_id` = '24') LIMIT 1[0m
+  [4;35;1mEvent Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 24) [0m
+  [4;35;1mUserEvent Load (0.0ms)[0m   [0mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 2 AND `user_events`.`user_event_status` = 'This rocks' AND `user_events`.`event_id` = 24) LIMIT 1[0m
+  [4;36;1mUserEvent Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `user_events`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUserEvent Create (0.0ms)[0m   [0;1mINSERT INTO `user_events` (`created_at`, `event_id`, `user_event_status`, `updated_at`, `creator_id`, `user_id`) VALUES('2010-12-03 22:39:33', NULL, 'COMING', '2010-12-03 22:39:33', NULL, 2)[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUserEvent Update (0.0ms)[0m   [0mUPDATE `user_events` SET `updated_at` = '2010-12-03 22:39:33', `event_id` = 24 WHERE `id` = 46[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/events/show/24
+Completed in 640ms (DB: 47) | 302 Found [http://localhost/users/coming/24]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#show (for 127.0.0.1 at 2010-12-03 14:39:35) [GET]
+  Parameters: {"id"=>"24"}
+  [4;36;1mEvent Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 24) [0m
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mUserEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 2 AND `user_events`.`user_event_status` = 'ADMIN' AND `user_events`.`event_id` = 24) LIMIT 1[0m
+  [4;35;1mUserEvent Load (0.0ms)[0m   [0mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 2 AND `user_events`.`user_event_status` = 'INVITED' AND `user_events`.`event_id` = 24) LIMIT 1[0m
+  [4;36;1mEventRating Load (0.0ms)[0m   [0;1mSELECT * FROM `event_ratings` WHERE (`event_ratings`.`user_id` = 2 AND `event_ratings`.`event_id` = '24') [0m
+  [4;35;1mEventRating Load (0.0ms)[0m   [0mSELECT COUNT(*) FROM event_ratings WHERE event_id = 24[0m
+  [4;36;1mEventRating Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `event_ratings`[0m
+  [4;35;1mUserEvent Load (0.0ms)[0m   [0mSELECT * FROM `user_events` WHERE (`user_events`.event_id = 24 AND (`user_events`.`user_event_status` = 'COMING')) [0m
+  [4;36;1mUserEvent Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `user_events`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering events/show
+Rendered events/_user_nav (0.0ms)
+  [4;35;1mEventtype Load (0.0ms)[0m   [0mSELECT `eventtypes`.* FROM `eventtypes` INNER JOIN `event_eventtypes` ON `eventtypes`.id = `event_eventtypes`.eventtype_id WHERE ((`event_eventtypes`.event_id = 24)) [0m
+Rendered events/_event (0.0ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 1201ms (View: 109, DB: 31) | 200 OK [http://localhost/events/show/24]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:39:38) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:39:38) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:39:39) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:39:41) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:39:44) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:39:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:39:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:39:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:39:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:39:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:39:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:39:52) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#not_coming (for 127.0.0.1 at 2010-12-03 14:40:00) [GET]
+  Parameters: {"id"=>"24"}
+  [4;35;1mUser Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mUserEvent Load (0.0ms)[0m   [0mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 2 AND `user_events`.`user_event_status` = 'COMING' AND `user_events`.`event_id` = '24') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUserEvent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `user_events`[0m
+  [4;36;1mUserEvent Destroy (15.6ms)[0m   [0;1mDELETE FROM `user_events` WHERE `id` = 46[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/events/show/24
+Completed in 546ms (DB: 31) | 302 Found [http://localhost/users/not_coming/24]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#show (for 127.0.0.1 at 2010-12-03 14:40:02) [GET]
+  Parameters: {"id"=>"24"}
+  [4;35;1mEvent Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mEvent Load (15.6ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 24) [0m
+  [4;35;1mUser Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mUserEvent Load (0.0ms)[0m   [0mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 2 AND `user_events`.`user_event_status` = 'ADMIN' AND `user_events`.`event_id` = 24) LIMIT 1[0m
+  [4;36;1mUserEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 2 AND `user_events`.`user_event_status` = 'INVITED' AND `user_events`.`event_id` = 24) LIMIT 1[0m
+  [4;35;1mEventRating Load (0.0ms)[0m   [0mSELECT * FROM `event_ratings` WHERE (`event_ratings`.`user_id` = 2 AND `event_ratings`.`event_id` = '24') [0m
+  [4;36;1mEventRating Load (0.0ms)[0m   [0;1mSELECT COUNT(*) FROM event_ratings WHERE event_id = 24[0m
+  [4;35;1mEventRating Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `event_ratings`[0m
+  [4;36;1mUserEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `user_events` WHERE (`user_events`.event_id = 24 AND (`user_events`.`user_event_status` = 'COMING')) [0m
+  [4;35;1mUserEvent Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `user_events`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering events/show
+Rendered events/_user_nav (0.0ms)
+  [4;35;1mEventtype Load (0.0ms)[0m   [0mSELECT `eventtypes`.* FROM `eventtypes` INNER JOIN `event_eventtypes` ON `eventtypes`.id = `event_eventtypes`.eventtype_id WHERE ((`event_eventtypes`.event_id = 24)) [0m
+Rendered events/_event (15.6ms)
+Rendered users/_user_bar (0.0ms)
+Completed in 1232ms (View: 187, DB: 62) | 200 OK [http://localhost/events/show/24]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:40:05) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:40:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:40:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:40:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#profile (for 127.0.0.1 at 2010-12-03 14:40:13) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mUserEvent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `user_events`[0m
+  [4;36;1mUserEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 2) [0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (('2010-11-28 08:00:00' <= end_at) AND (start_at< '2011-01-02 08:00:00')) AND (id IN ('23','24')) ORDER BY start_at ASC[0m
+  [4;36;1mUserEvent Load (0.0ms)[0m   [0;1mSELECT * FROM user_events WHERE user_id = 2 ORDER BY created_at DESC LIMIT 15;[0m
+Rendering template within layouts/application
+Rendering users/profile
+Rendered users/_user_nav (0.0ms)
+  [4;35;1mPendingFriendRequest Load (0.0ms)[0m   [0mSELECT * FROM `pending_friend_requests` WHERE (`pending_friend_requests`.user_id = 2) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mEvent Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mEvent Load (15.6ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 24) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 23) [0m
+Rendered users/_user_bar (0.0ms)
+Completed in 2730ms (View: 187, DB: 31) | 200 OK [http://localhost/users/profile]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-12-03 14:40:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mUser Load (15.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mUserEvent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `user_events`[0m
+  [4;36;1mUserEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 1) [0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (('2010-11-28 08:00:00' <= end_at) AND (start_at< '2011-01-02 08:00:00')) AND (id IN ('20','20','21','22','22','24','24','24','24','24','24','24')) ORDER BY start_at ASC[0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered users/_user_bar (15.6ms)
+Completed in 1014ms (View: 172, DB: 31) | 200 OK [http://localhost/users/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:40:19) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:40:19) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:40:21) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:40:24) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:40:27) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:40:27) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:40:27) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:40:28) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#show (for 127.0.0.1 at 2010-12-03 14:40:41) [GET]
+  Parameters: {"id"=>"23"}
+  [4;35;1mEvent Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 23) [0m
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mUserEvent Load (0.0ms)[0m   [0mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 2 AND `user_events`.`user_event_status` = 'ADMIN' AND `user_events`.`event_id` = 23) LIMIT 1[0m
+  [4;36;1mUserEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 2 AND `user_events`.`user_event_status` = 'INVITED' AND `user_events`.`event_id` = 23) LIMIT 1[0m
+  [4;35;1mEventRating Load (0.0ms)[0m   [0mSELECT * FROM `event_ratings` WHERE (`event_ratings`.`user_id` = 2 AND `event_ratings`.`event_id` = '23') [0m
+  [4;36;1mEventRating Load (0.0ms)[0m   [0;1mSELECT COUNT(*) FROM event_ratings WHERE event_id = 23[0m
+  [4;35;1mEventRating Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `event_ratings`[0m
+  [4;36;1mUserEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `user_events` WHERE (`user_events`.event_id = 23 AND (`user_events`.`user_event_status` = 'COMING')) [0m
+Rendering template within layouts/application
+Rendering events/show
+Rendered events/_user_nav (0.0ms)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mEventtype Load (0.0ms)[0m   [0;1mSELECT `eventtypes`.* FROM `eventtypes` INNER JOIN `event_eventtypes` ON `eventtypes`.id = `event_eventtypes`.eventtype_id WHERE ((`event_eventtypes`.event_id = 23)) [0m
+Rendered events/_event (15.6ms)
+Rendered users/_user_bar (15.6ms)
+Completed in 1186ms (View: 94, DB: 31) | 200 OK [http://localhost/events/23]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:40:44) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:40:44) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:40:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:40:47) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:40:50) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:40:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:40:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:40:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-12-03 14:40:56) [GET]
+Redirected to http://localhost:3000/
+Completed in 468ms (DB: 0) | 302 Found [http://localhost/logout]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-12-03 14:40:58) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered users/_user_bar (0.0ms)
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:41:00) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:41:00) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:41:01) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:41:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:41:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:41:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:41:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:41:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:42:31) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:42:31) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (15.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:42:32) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:42:32) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#show (for 127.0.0.1 at 2010-12-03 14:42:37) [GET]
+  Parameters: {"id"=>"24"}
+  [4;36;1mEvent Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 24) [0m
+Redirected to http://localhost:3000/users/profile
+Completed in 593ms (DB: 16) | 302 Found [http://localhost/events/24]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#profile (for 127.0.0.1 at 2010-12-03 14:42:39) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/users/profile]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-12-03 14:42:40) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered users/_user_bar (0.0ms)
+Rendered home/_flash_error (0.0ms)
+Completed in 94ms (View: 78, DB: 0) | 200 OK [http://localhost/session/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:42:42) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:42:42) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:42:44) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:42:46) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:42:49) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:42:49) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:42:50) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:42:50) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-12-03 14:42:55) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"5k1u3WOr0E7ZNJP4gfrxqPcinW+D2Rnc4aLmCIeNc2s=", "login"=>"starspangled", "password"=>"password"}
+  [4;35;1mUser Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`login` = 'starspangled') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+[paperclip] Saving attachments.
+  [4;36;1mSQL (15.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users/profile
+Completed in 515ms (DB: 31) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#profile (for 127.0.0.1 at 2010-12-03 14:42:57) [GET]
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUserEvent Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `user_events`[0m
+  [4;35;1mUserEvent Load (0.0ms)[0m   [0mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 1) [0m
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (('2010-11-28 08:00:00' <= end_at) AND (start_at< '2011-01-02 08:00:00')) AND (id IN ('20','20','21','22','22','24','24','24','24','24','24','24')) ORDER BY start_at ASC[0m
+  [4;35;1mUserEvent Load (0.0ms)[0m   [0mSELECT * FROM user_events WHERE user_id = 1 ORDER BY created_at DESC LIMIT 15;[0m
+Rendering template within layouts/application
+Rendering users/profile
+Rendered users/_user_nav (0.0ms)
+  [4;36;1mPendingFriendRequest Load (0.0ms)[0m   [0;1mSELECT * FROM `pending_friend_requests` WHERE (`pending_friend_requests`.user_id = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mEvent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 24) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 24) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 22) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 22) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 20) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 20) [0m
+Rendered users/_user_bar (0.0ms)
+Completed in 2075ms (View: 343, DB: 31) | 200 OK [http://localhost/users/profile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:43:01) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:43:01) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:43:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:43:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:43:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:43:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:43:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:43:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#profile (for 127.0.0.1 at 2010-12-03 14:44:20) [GET]
+  [4;35;1mUser Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUserEvent Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `user_events`[0m
+  [4;36;1mUserEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 1) [0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (('2010-11-28 08:00:00' <= end_at) AND (start_at< '2011-01-02 08:00:00')) AND (id IN ('20','20','21','22','22','24','24','24','24','24','24','24')) ORDER BY start_at ASC[0m
+  [4;36;1mUserEvent Load (0.0ms)[0m   [0;1mSELECT * FROM user_events WHERE user_id = 1 ORDER BY created_at DESC LIMIT 15;[0m
+Rendering template within layouts/application
+Rendering users/profile
+Rendered users/_user_nav (0.0ms)
+  [4;35;1mPendingFriendRequest Load (0.0ms)[0m   [0mSELECT * FROM `pending_friend_requests` WHERE (`pending_friend_requests`.user_id = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mEvent Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 24) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 24) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 22) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 22) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 20) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 20) [0m
+Rendered users/_user_bar (0.0ms)
+Completed in 1997ms (View: 265, DB: 31) | 200 OK [http://localhost/users/profile]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:44:24) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:44:24) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:44:27) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:44:30) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:44:31) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:44:33) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:44:33) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#profile (for 127.0.0.1 at 2010-12-03 14:45:36) [GET]
+  [4;35;1mUser Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (15.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUserEvent Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `user_events`[0m
+  [4;36;1mUserEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 1) [0m
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (('2010-11-28 08:00:00' <= end_at) AND (start_at< '2011-01-02 08:00:00')) AND (id IN ('20','20','21','22','22','24','24','24','24','24','24','24')) ORDER BY start_at ASC[0m
+  [4;36;1mUserEvent Load (0.0ms)[0m   [0;1mSELECT * FROM user_events WHERE user_id = 1 ORDER BY created_at DESC LIMIT 15;[0m
+Rendering template within layouts/application
+Rendering users/profile
+Rendered users/_user_nav (0.0ms)
+  [4;35;1mPendingFriendRequest Load (0.0ms)[0m   [0mSELECT * FROM `pending_friend_requests` WHERE (`pending_friend_requests`.user_id = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mEvent Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 24) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 24) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 22) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 22) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 20) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 20) [0m
+Rendered users/_user_bar (0.0ms)
+Completed in 2293ms (View: 265, DB: 62) | 200 OK [http://localhost/users/profile]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:45:40) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:45:41) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:45:43) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:45:46) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:45:46) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:45:48) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:45:49) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#profile (for 127.0.0.1 at 2010-12-03 14:47:12) [GET]
+  [4;35;1mUser Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUserEvent Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `user_events`[0m
+  [4;36;1mUserEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `user_events` WHERE (`user_events`.`user_id` = 1) [0m
+  [4;35;1mEvent Load (15.6ms)[0m   [0mSELECT * FROM `events` WHERE (('2010-11-28 08:00:00' <= end_at) AND (start_at< '2011-01-02 08:00:00')) AND (id IN ('20','20','21','22','22','24','24','24','24','24','24','24')) ORDER BY start_at ASC[0m
+  [4;36;1mUserEvent Load (0.0ms)[0m   [0;1mSELECT * FROM user_events WHERE user_id = 1 ORDER BY created_at DESC LIMIT 15;[0m
+Rendering template within layouts/application
+Rendering users/profile
+Rendered users/_user_nav (0.0ms)
+  [4;35;1mPendingFriendRequest Load (15.6ms)[0m   [0mSELECT * FROM `pending_friend_requests` WHERE (`pending_friend_requests`.user_id = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mEvent Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 24) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 24) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 22) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 22) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 20) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 20) [0m
+Rendered users/_user_bar (0.0ms)
+Completed in 1981ms (View: 250, DB: 78) | 200 OK [http://localhost/users/profile]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:47:16) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/Kwicks/main.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:47:16) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/full_calendar/fullcalendar.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:47:18) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/application.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:47:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/controls.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:47:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/border.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:47:24) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-03 14:47:24) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/images/loading_background.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
