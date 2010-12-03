@@ -1,11 +1,26 @@
 <%= render :partial => 'user_nav' %>
+<div class="user_profile_container">
+  <div class="user_profile">
+    <div id="wrapper">
+      <div id="events_nav">
+        <%if current_user%>
+          <%=link_to 'My Events',{:controller => 'users', :action => 'events'}, :class => 'events_nav_link'%>
+          <%=link_to 'Events in your Area',{:controller => 'users', :action => 'closestevents'}, :class => 'events_nav_link_on'%>
+          <%=link_to 'Create Event', {:controller => 'events', :action => 'new'}, :class => 'events_nav_link'%>
+          <%=link_to 'Event Preferences',{:controller => 'users', :action => 'preferences'}, :class => 'events_nav_link'%>
+      <%end%>
+      </div>
+      <div style="margin-top: 10px; margin-bottom:30px;">
+       
+        <% @closest.each do |event| %>
+          <%= link_to event.name, :controller => 'events', :action => 'show', :id => event.id %><br />
+        <% end %>
+        
 
-<h2>Events Closest to You</h2>
+        <%= render 'home/map' %>
+      </div>
+    </div>
+  </div>
+</div>
 
-<ul>
-<% @closest.each do |event| %>
-<li><%= link_to event.name, :controller => 'events', :action => 'show', :id => event.id %>
-<% end %>
-</ul>
 
-<%= render 'home/map' %>

@@ -1,0 +1,25 @@
+<%= render :partial => 'user_nav' %>
+
+<div class="user_profile_container">
+  <div class="user_profile">
+    <div id="wrapper">
+      <div id="events_nav">
+        <%if current_user%>
+          <%=link_to 'My Events',{:controller => 'users', :action => 'events'}, :class => 'events_nav_link_on'%>
+          <%=link_to 'Events in your Area',{:controller => 'users', :action => 'closestevents'}, :class => 'events_nav_link'%>
+          <%=link_to 'Create Event', {:controller => 'events', :action => 'new'}, :class => 'events_nav_link'%>    
+          <%=link_to 'Event Preferences',{:controller => 'users', :action => 'preferences'}, :class => 'events_nav_link'%>
+      <%end%>
+      </div>
+      <div id="user_created_events">
+        <%@user_events.each do |e|%>
+        <div style="border-bottom: 1px dotted black; width: 750px;">
+            <br />
+           Event: <%=link_to e.name, show_path(:id => e.id)%><br /><br />
+           Description: <%=e.description%><br /><br />
+        </div>
+        <%end%>
+      </div>
+  </div>
+</div>
+</div>

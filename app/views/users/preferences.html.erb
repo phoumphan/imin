@@ -23,31 +23,39 @@ checked=false;
 </script>
 <%end%>
 
-<div id="user_nav">
-        <%if current_user%>
-          <%=link_to 'Profile', {:controller => 'users', :action => 'profile'}, :class => 'user_nav_link'%>
-          <%=link_to 'Create Event', {:controller => 'events', :action => 'new'}, :class => 'user_nav_link'%>
-          <%=link_to 'Event Preferences', {:controller => 'users', :action => 'preferences'}, :class => 'user_nav_link_on'%>
-          <%=link_to 'Friends', {:controller => 'friendships', :action => 'display'}, :class => 'user_nav_link'%>
-          <%=link_to 'Edit', {:controller => 'users', :action => 'edit_info'}, :class => 'user_nav_link'%>
-      <%end%>
-</div>
+<%= render :partial => 'user_nav' %>
+
 <div class="user_profile_container">
   <div class="user_profile">
     <div id="wrapper">
+      <div id="events_nav">
+        <%if current_user%>
+          <%=link_to 'My Events',{:controller => 'users', :action => 'events'}, :class => 'events_nav_link'%>
+          <%=link_to 'Events in your Area',{:controller => 'users', :action => 'closestevents'}, :class => 'events_nav_link'%>
+          <%=link_to 'Create Event', {:controller => 'events', :action => 'new'}, :class => 'events_nav_link'%>
+          <%=link_to 'Event Preferences',{:controller => 'users', :action => 'preferences'}, :class => 'events_nav_link_on'%>
+      <%end%>
+      </div>
 <!-- User's event type preferences -->
-<h3>- Event Preferences -</h3>
-<br />
-      <input type='checkbox' name='checkall' onclick='checkedAll(event_tags);' />CHECK ALL<br /><br />
+      
       <div id="event_preferences" style="margin-left: 50px;">
         <%form_for @user, :action => 'update', :html => { :id => 'event_tags', :name => 'form', :multipart => true } do |f|%>
-
+        <input type='checkbox' name='checkall' onclick='checkedAll(event_tags);' />CHECK ALL<br /><br />
+        <div style="margin-left: 30px;">
            <% Eventtype.all.each do |tag| %>
-             <%= check_box_tag "tag_ids[]", tag.id %><%= tag.description %><br />
+            <%@checked = false%>
+              <%if UserEventtype.find_by_eventtype_id(tag.id, :conditions => {:user_id => current_user.id}) %>
+              <%puts ("--------GOT HERE-----" + tag.id.to_s)%>
+              <%@checked=true%>
+             <%end%>
+             <%= check_box_tag "tag_ids[]", tag.id , @checked%><%= tag.description %><br />
            <% end %>
-           <input type='checkbox' name='checkall' onclick='checkedAll();' />CHECK ALL<br />
+         </div><br />
+           
+           <input type='checkbox' name='checkall' onclick='checkedAll();' />CHECK ALL<br /><br />
            <input type="submit" value="Save Preferences" onclick="submitForm();" />
         <%end%>
+           
       </div><br /><br />
 
     </div>

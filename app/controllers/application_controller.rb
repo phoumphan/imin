@@ -6,9 +6,11 @@ class ApplicationController < ActionController::Base
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
   include AuthenticatedSystem
 
+  #Session expiry code taken from http://blog.tmisoft.com/2009/09/restful-authentication-session-timeout.html
   before_filter :session_expiry, :except => [:login, :logout]
   before_filter :update_activity_time, :except => [:login, :logout]
 
+  #Session expiry code taken from http://blog.tmisoft.com/2009/09/restful-authentication-session-timeout.html
   def session_expiry
     unless session[:expires_at].nil?
       @time_left = (session[:expires_at] - Time.now).to_i
@@ -20,8 +22,9 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  #Session expiry code taken from http://blog.tmisoft.com/2009/09/restful-authentication-session-timeout.html 
   def update_activity_time
-    session[:expires_at] = 1.minutes.from_now
+    session[:expires_at] = 15.minutes.from_now
   end
 
 

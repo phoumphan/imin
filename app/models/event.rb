@@ -3,18 +3,18 @@ class Event < ActiveRecord::Base
   has_event_calendar
 
   #User associations (many-to-many)
-  has_many :user_events
+  has_many :user_events, :dependent => :destroy
   has_many :users, :through => :user_events
 
   #eventtype associations (many-to-many)
-  has_many :event_eventtypes
+  has_many :event_eventtypes, :dependent => :destroy
   has_many :eventtypes, :through => :event_eventtypes
 
   #photo associations (many-to-many)
-  has_many :event_photos
+  has_many :event_photos, :dependent => :destroy
   has_many :photos, :through => :event_photos
 
-  has_many :event_ratings
+  has_many :event_ratings, :dependent => :destroy
 
   belongs_to :owner, :class_name => "User"
 

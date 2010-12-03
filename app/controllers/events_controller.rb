@@ -14,8 +14,9 @@ class EventsController < ApplicationController
 
   #Action that actually creates the Event once the user Submits the event
   def create
+    
     @event = Event.new(params[:event])
-
+        
     #Create rows in EventEventtypes
     if params[:event_eventtype] != nil
       params[:event_eventtype].each { |p| @event.event_eventtypes << EventEventtype.new( p ) }
@@ -78,7 +79,7 @@ class EventsController < ApplicationController
     else
       invite_status = nil
     end
-    if @event.public == 'Public' or @admin_status or invite_status
+    if @event.privacy == 'Public' or @admin_status or invite_status
       latlng = @event.location.split(',')
       @lat = latlng[0]
       @lng = latlng[1]
@@ -94,6 +95,36 @@ class EventsController < ApplicationController
       @number_of_ratings = EventRating.find_by_sql('SELECT COUNT(*) FROM event_ratings WHERE event_id = ' + @event.id.to_s)[0]["COUNT(*)"].to_i
 
       session[:referrer] = 'show'
+
+    #-----------WEATHER-------------
+    location_url = "http://where.yahooapis.com/v1/places.q('vancouver%20bc%20canada')?appid=[PMelBrV34F.SL0PzMHeJo5kYOhR6FDbRAzDZuppSO9gSfK_MM8Hssnw8A3kkoNY57uk]"
+    location_resp = Net::HTTP.get_response(URI.parse(location_url))
+    #location_data = location_resp.body
+    xml_location_data = Net::HTTP.get_response(URI.parse(location_url)).body
+    location_doc = REXML::Document.new(xml_location_data)
+    woeids = []
+    location_doc.elements.each('places/place/woeid') do |ele|
+       woeids << ele.text
+    end
+    puts('----WOEID----');
+    puts woeids[0]
+    @woeid = woeids[0]
+
+    #Information for Weather
+    puts("-------------------GOT TO WEATHER-----------------------")
+    url="http://weather.yahooapis.com/forecastrss?w=#@woeid&u=c"
+    resp = Net::HTTP.get_response(URI.parse(url)) # get_response takes an URI object
+    data = resp.body
+    xml_data = Net::HTTP.get_response(URI.parse(url)).body
+
+    doc = REXML::Document.new(xml_data)
+    titles = []
+    links = []
+    doc.elements.each('rss/channel/item/description') do |ele|
+       @description = ele.text
+    end
+    puts('-------Description---------')
+    puts @description;
     else
       flash[:error] = "You are not allowed to view that event"
       redirect_to :controller => 'users', :action => 'profile'

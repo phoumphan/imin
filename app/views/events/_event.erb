@@ -12,7 +12,7 @@
 
 function initialize() {
   basic_init();
-  
+
   pos = new GLatLng(<%= @lat %>, <%= @lng %>);
   map.addOverlay(new GMarker(pos));
   map.setCenter(pos, 17);
@@ -26,32 +26,36 @@ onLoad="initialize();"
 onUnload="GUnload();"
 <%end%>
 
-<h3><b><%=@event.name%></b></h3>
+<h3><strong>Name:</strong>
+<%=@event.name%></h3>
 
 <br />
-<b>Description:</b>
+<strong>Description:</strong>
 <%=@event.description%>
-<br />
-<b>Location:</b>
-<div id="map_canvas" style="width: 500px; height: 300px"></div>
-<br />
-<b>Starts:</b>
+<br /><br />
+<div id="weather" style="position: absolute; top:100px; left: 490px;">
+    <%=@description%>
+</div>
+<strong>Location:</strong>
+<div id="map_canvas" style="width: 400px; height: 300px"></div>
+<br /><br />
+<strong>Starts:</strong>
 <%=@event.start_at%>
-<br />
-<b>Ends:</b>
+<br /><br />
+<strong>Ends:</strong>
 <%=@event.end_at%>
-<br />
-<b>Cost:</b>
+<br /><br />
+<strong>Cost:</strong>
 <%=@event.cost%>
-<br />
-<b>Dress Code:</b>
+<br /><br />
+<strong>Dress Code:</strong>
 <%=@event.formality%>
-<br />
-<b>This is a <%=@event.formality%> event</b>
-<br />
+<br /><br />
+This is a <%=@event.formality%> event
+<br /><br />
 
 
-<h4><b>Event types</b></h4>
+<h4><strong>Event types</strong></h4>
 <ol>
   <%for type in @event.eventtypes%>
     <li>

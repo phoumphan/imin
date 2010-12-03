@@ -3,14 +3,22 @@ ActionController::Routing::Routes.draw do |map|
   map.login '/login', :controller => 'sessions', :action => 'new'
   map.register '/register', :controller => 'users', :action => 'create'
   map.signup '/signup', :controller => 'users', :action => 'new'
+  map.activate '/activate/:activation_code', :controller => 'users', :action => 'activate', :activation_code => nil
+  map.forgot_password '/forgot_password', :controller => 'users', :action => 'forgot_password'
+  map.change_password '/change_password', :controller => 'users', :action => 'change_password'
   map.eventtypes_autocomplete 'eventtypes/select_for_event', :controller => 'eventtypes', :action => 'select_for_event'
+  map.edit_info_page 'users/edit_info', :controller => 'users', :action => 'edit_info'
+  map.show 'events/show/:id', :controller => 'events', :action => 'show'
   map.profile_page 'users/profile', :controller => 'users', :action => 'profile'
   map.closestevents_page 'users/closestevents', :controller => 'users', :action => 'closestevents'
   map.preferences_page 'users/preferences', :controller => 'users', :action => 'preferences'
   map.edit_info_page 'users/edit_info', :controller => 'users', :action => 'edit_info'
   map.edit_event 'events/edit/:id', :controller => 'events', :action => 'edit'
+  map.events_page 'users/events', :controller => 'users', :action => 'events'
   map.calendar '/calendar/:year/:month', :controller => 'calendar', :action => 'index', :requirements => {:year => /\d{4}/, :month => /\d{1,2}/}, :year => nil, :month => nil
-  map.resources :users
+  map.resources :users, :member => { :suspend => :put,
+                                        :unsuspend => :put,
+                                        :purge => :delete }
   map.resources :events
   map.resource :session
   map.resource :eventtypes

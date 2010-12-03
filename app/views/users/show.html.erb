@@ -1,1 +1,38 @@
-<h2>Profile page for:  <%=@user.name%></h2>
+
+
+
+<div class="user_profile_container1">
+  <div class="user_profile">
+    <div id="wrapper">
+        <h2>Welcome to <%=@friend.name%>'s profile</h2>
+
+        <div id="user_info_container">
+
+          <%= event_calendar %>
+          <div id="user_left_col" >
+
+          </div>
+
+          <div id="user_right_col">
+
+            <!-- Profile picture, you can see where :small is defined by going to the User model file-->
+            <div id="user_pic_container">
+              <% if @friend.photo.exists? then %>
+                <%= image_tag @friend.photo.url(:small) %>
+              <%end%>
+            </div>
+
+            <div id="user_info">
+              <strong>Email:</strong> <%=@friend.email%><br /><br />
+              <strong>Name:</strong>  <%=@friend.name%><br /><br />
+              <strong>Login:</strong>  <%=@friend.login%><br /><br />
+                       
+            </div>
+            
+          </div>
+
+        </div>
+
+    </div>
+  </div>
+</div>

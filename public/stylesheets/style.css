@@ -122,6 +122,42 @@ a.user_nav_link{
     background-color: white;
 }
 
+#events_nav{
+    position: relative;
+    top: 0px;
+    left:50%;
+    margin-left: -464px;
+    width: 100%;
+    font-size:12pt;
+    margin-bottom: 40px;
+}
+
+
+a.events_nav_link_on{
+    font-weight: normal;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 1px solid #ccc;
+    height: 30px;
+    width: 120px;
+    padding: 10px;
+    background-color: #ff99ff;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+a.events_nav_link{
+    font-weight: normal;
+    text-decoration: none;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 1px solid #ccc;
+    height: 30px;
+    padding: 10px;
+    background-color: #ffccff;
+}
+
 .user_bar{
         position: absolute;
         left: 50%;
@@ -498,6 +534,8 @@ a.link_right{
     height: 30px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
+    -moz-box-shadow: 0 1px 3px #999;
+    -webkit-box-shadow: 0 1px 3px #999;
     padding:0;
     margin:0;
     margin-bottom: 15px;
@@ -506,6 +544,8 @@ a.link_right{
 #event_table td textarea{
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
+    -moz-box-shadow: 0 1px 3px #999;
+    -webkit-box-shadow: 0 1px 3px #999;
     padding:0;
     margin:0;
     margin-bottom: 15px;
@@ -523,4 +563,31 @@ a.link_right{
 td.notice_date {
     color: gray;
     width: 40%;
+}
+
+#events_nav{
+    
+}
+
+#show_event{
+    margin-top: 40px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 25px;
+    width: 720px;
+}
+
+#weather{
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    font-weight: normal;
+    font-size: 10pt;
+}
+
+#weather a{
+    font-weight: normal;
+    font-size: 10pt;
 }
