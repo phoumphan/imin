@@ -9,7 +9,7 @@ class Photo < ActiveRecord::Base
   has_attached_file :photo,
     :path => ':rails_root/public/images/photos/:id/:style_:basename.:extension',
     :url => ':class/:id/:style_:basename.:extension',
-    :styles => { :medium => "400x400>" }
+    :styles => { :thumb => "100x100>", :medium => "400x400>" }
 
   # This code taken from http://railscasts.com/episodes/134-paperclip
   validates_attachment_presence :photo

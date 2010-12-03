@@ -1,0 +1,18 @@
+<%=link_to 'Add a Photo', {:action => 'new', :id => @event.id}, :class => 'user_nav_link'%>
+<%=link_to 'Back', request.env['HTTP_REFERER'], :class => 'user_nav_link'%>
+
+<h2>Photos for <%= @event.name %></h2>
+
+<%ph = 0
+more_photos = true
+while more_photos
+  (1..5).each do |i|
+    if ph >= @event.photos.count
+      more_photos = false
+      break
+    end%>
+    <%= link_to (image_tag @event.photos[ph].photo.url(:thumb)), :action => 'show', :id => @event.photos[ph].id %>
+    <%ph += 1
+  end%>
+  <br/>
+<%end%>

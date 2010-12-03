@@ -14,12 +14,12 @@
     <%=link_to 'Edit', edit_event_path(@event.id), :class => 'user_nav_link'%>
     <%=link_to 'Invite a User', {:action => 'invite_user', :id => @event.id}, :class => 'user_nav_link'%>
     <%=link_to 'Add an Admin', {:action => 'add_admin', :id => @event.id}, :class => 'user_nav_link'%>
-    <%=link_to 'Add a Photo', {:controller => 'photos', :action => 'new', :id => @event.id}, :class => 'user_nav_link'%>
     <%if current_user.id == @event.owner.id%>
       <%= link_to 'Delete', {:action => 'deletion', :id => @event.id}, :confirm => "Are you sure you want to delete this event?", :class => 'user_nav_link'%>
     <%end%>
   <%end%>
 
+  <%=link_to("Photos", {:controller => 'photos', :action => 'eventshow', :id => @event.id}, :class => 'user_nav_link')%>
   <%=link_to("Back", request.env["HTTP_REFERER"], :class => 'user_nav_link')%>
   </div>
 <div id="show_event">
