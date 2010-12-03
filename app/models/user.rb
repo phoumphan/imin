@@ -52,6 +52,8 @@ class User < ActiveRecord::Base
   define_index do
     indexes login, :sortable => true
     indexes name, :sortable => true
+
+    set_property :delta => true
   end
 
   # Authenticates a user by their login name and unencrypted password.  Returns the user or nil.

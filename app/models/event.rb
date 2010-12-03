@@ -25,6 +25,8 @@ class Event < ActiveRecord::Base
   define_index do
     indexes name, :sortable => true
     indexes formality
+
+    set_property :delta => true
   end
 
   def create_relationship(usr, creator, status)
