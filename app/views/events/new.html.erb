@@ -67,15 +67,15 @@ function addInvitee() {
     optn.text = document.form.other_user.value;
   }
   //option values are never used
-  document.form.invited.add(optn);
+  document.form.invited.options.add(optn);
   enableButtons();
 }
 
 function removeInvitee() {
-  idx = document.form.invited.selectedIndex;
+  idx = document.form.invited.options.selectedIndex;
   if (idx >= 0) {
     document.form.invited.remove(idx);
-    if (idx < document.form.invited.length) document.form.invited.selectedIndex = idx; else document.form.invited.selectedIndex = document.form.invited.length - 1;
+    if (idx < document.form.invited.length) document.form.invited.options.selectedIndex = idx; else document.form.invited.options.selectedIndex = document.form.invited.length - 1;
     enableButtons();
   }
 }
