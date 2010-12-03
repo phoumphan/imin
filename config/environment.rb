@@ -46,7 +46,7 @@ Rails::Initializer.run do |config|
     )
 
   config.gem "geokit"
-  config.gem "paperclip"
+  #config.gem "paperclip"
   
 
 end

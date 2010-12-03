@@ -11,14 +11,14 @@ ActionController::Routing::Routes.draw do |map|
   map.show 'events/show/:id', :controller => 'events', :action => 'show'
   map.profile_page 'users/profile', :controller => 'users', :action => 'profile'
   map.closestevents_page 'users/closestevents', :controller => 'users', :action => 'closestevents'
-  map.preferences_page 'users/preferences', :controller => 'users', :action => 'preferences'
+  map.preferences_page 'users/preferences', :controller => 'users', :action => 'preferences'  
   map.edit_info_page 'users/edit_info', :controller => 'users', :action => 'edit_info'
+  map.save_preferences 'users/update', :controller => 'users', :action => 'update'
+  map.save_info 'users/info', :controller => 'users', :action => 'info'
   map.edit_event 'events/edit/:id', :controller => 'events', :action => 'edit'
   map.events_page 'users/events', :controller => 'users', :action => 'events'
   map.calendar '/calendar/:year/:month', :controller => 'calendar', :action => 'index', :requirements => {:year => /\d{4}/, :month => /\d{1,2}/}, :year => nil, :month => nil
-  map.resources :users, :member => { :suspend => :put,
-                                        :unsuspend => :put,
-                                        :purge => :delete }
+  map.resources :users
   map.resources :events
   map.resource :session
   map.resource :eventtypes

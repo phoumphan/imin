@@ -17,8 +17,15 @@ function initialize() {
   map.addOverlay(new GMarker(pos));
   map.setCenter(pos, 17);
 }
-
 </script>
+<script type="text/javascript">
+$('#hide_map').click(function() {
+    $('#map_canvas').show('slow');
+    return false;
+  });
+</script>
+
+
 <%end%>
 
 <% content_for :body_attributes do %>
@@ -40,13 +47,14 @@ function initialize() {
 
         <div id="user_info_container">
 
-          <%= event_calendar %>
+         
           <div id="user_left_col" >
-            <input type="submit" class="btn" value="Hide Map &uarr;" id="hide_map" style="position: absolute; top: -50px; left: 370px; z-index: 1000; display: inline; border: none;" />
-            <input type="submit" class="btn" value="Show Map &darr;" id="show_map" style="position: absolute; top: -50px; left: 370px; z-index: 1000; display: none;" />
-            <div id="map_canvas" style="margin-top: -20px;"></div>
+            <!--<input type="submit" class="btn" value="Hide Map &uarr;" id="hide_map" style="position: absolute; top: -50px; left: 370px; z-index: 1000; display: inline; border: none;" />
+            <input type="submit" class="btn" value="Show Map &darr;" id="show_map" style="position: absolute; top: -50px; left: 370px; z-index: 1000; display: none;" />-->
+            <div id="map_canvas" style="margin-top: -20px;"></div><br /><br />
             <!-- List any Pending Friend Requests-->
             <!--user info-->
+             <%= event_calendar %>
           </div>
 
           <div id="user_right_col">
@@ -65,7 +73,7 @@ function initialize() {
               <strong>Location:</strong>  <%=@user.location%><br />
               <%=link_to 'Edit Info', {:controller => 'users', :action => 'edit_info'}, :class => 'link_right'%>
             </div>
-            <div id="weather">
+            <div id="weather" style="position: relative; top: 50px; left: 15px;">
               <%=@description%>
             </div>
 
@@ -77,9 +85,10 @@ function initialize() {
               <%end%>
             </div>
 
-              <h3>Notices</h3>
-              <table id="notice_table">
+            
               <% for notice in @notices %>
+              <div id="notices" style="margin-top: 30px; margin-left: 10px;"><h3>Notices</h3>
+              <table id="notice_table">
                  <tr><td><%=
                    if notice.user_event_status == 'ADMIN'
                      message = "made you an admin on"
@@ -90,8 +99,10 @@ function initialize() {
                    %></td>
                    <td class="notice_date"><%= notice.created_at.to_date.to_s %></td>
                  </tr>
+                  </table>
+              </div>
               <% end %>
-              </table>
+             
 
           </div>
 

@@ -193,17 +193,26 @@ class UsersController < ApplicationController
     end
   end
 
+  def info
+    puts('----GOT TO EDIT-----')
+    @user = current_user
+    puts(params[:user])
+    if @user.update_attributes(params[:user])
+      puts('----GOT in if-----')
+      flash[:notice] = "Profile Successfully Updated"
+      redirect_to :action => 'profile'
+    else
+      puts('----GOT in else-----')
+      redirect_to :action => 'edit_info'
+      flash[:error] = "Profile Update failed"
+    end
+  end
+
   #method that will be called from the users/preferences.html.erb page when "update" link is clicked
   def update
     @user = current_user
-
-    puts("-------------------GOT TO UPDATE -----------------------")
-
-
+    puts('-----IN UPDATE PREFERENCES--------')
     @updated_user_event_tag = UserEventtype.find(:all, :conditions => :user_id == @user.id);
-    puts("-------------------GOT TO UPDATE -----------------------")
-
-      @updated_user_event_tag = UserEventtype.find(:all, :conditions => :user_id == @user.id);
       puts('----@user_event_tags----')
       puts @updated_user_event_tag
       @updated_user_event_tag.each do |event_tag|
@@ -224,6 +233,15 @@ class UsersController < ApplicationController
         @updated_tag_ids[i] = e.eventtype_id
         i = i+1
       end
+      if @user.update_attributes(params[:user])
+      puts('----GOT in if-----')
+      flash[:notice] = "Preferences Successfully Updated"
+      redirect_to :action => 'profile'
+    else
+      puts('----GOT in else-----')
+      redirect_to :action => 'preferences'
+      flash[:error] = "Preferences Update failed"
+    end
   end
 
   #method used to change user password.  Called from users/edit_info.html.erb page when

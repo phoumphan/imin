@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101202201726) do
+ActiveRecord::Schema.define(:version => 20101202063854) do
 
   create_table "event_eventtypes", :force => true do |t|
     t.integer  "event_id"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(:version => 20101202201726) do
     t.integer  "bin_lat"
     t.integer  "bin_lng"
     t.string   "privacy"
+    t.boolean  "delta",       :default => true, :null => false
   end
 
   create_table "eventtypes", :force => true do |t|
@@ -77,7 +78,6 @@ ActiveRecord::Schema.define(:version => 20101202201726) do
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
-    t.integer  "owner"
     t.integer  "owner_id"
   end
 
@@ -116,6 +116,7 @@ ActiveRecord::Schema.define(:version => 20101202201726) do
     t.string   "password_reset_code",       :limit => 40
     t.string   "activation_code",           :limit => 40
     t.datetime "activated_at"
+    t.boolean  "delta",                                    :default => true, :null => false
   end
 
   add_index "users", ["login"], :name => "index_users_on_login", :unique => true

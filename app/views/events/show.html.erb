@@ -9,7 +9,7 @@
           <%=link_to 'Create Event', {:controller => 'events', :action => 'new'}, :class => 'events_nav_link'%>
           <%=link_to 'Event Preferences',{:controller => 'users', :action => 'preferences'}, :class => 'events_nav_link'%>
       <%end%>
-  <div>
+  <div style="position: relative; top: 23px;">
   <%if @admin_status%>
     <%=link_to 'Edit', edit_event_path(@event.id), :class => 'user_nav_link'%>
     <%=link_to 'Invite a User', {:action => 'invite_user', :id => @event.id}, :class => 'user_nav_link'%>
