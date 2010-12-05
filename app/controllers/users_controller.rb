@@ -65,7 +65,9 @@ class UsersController < ApplicationController
 
     #Information for location
 
+    #retrieving the address using the latitude and longitude
     res = GoogleGeocoder.reverse_geocode([@lat,@lng])
+    #parsing the full address to retrieve separated names for city, province, country etc
     @location = res.full_address    
     location_array = @location.split(/, /)    
     @city = location_array[0]    
@@ -73,12 +75,13 @@ class UsersController < ApplicationController
     @province = province_array[0]    
     @country = location_array[2]    
 
+    #retrieve the location data for Vancouver
     location_url = "http://where.yahooapis.com/v1/places.q('vancouver%20bc%20canada')?appid=[PMelBrV34F.SL0PzMHeJo5kYOhR6FDbRAzDZuppSO9gSfK_MM8Hssnw8A3kkoNY57uk]"
     location_resp = Net::HTTP.get_response(URI.parse(location_url))
-    #location_data = location_resp.body
     xml_location_data = Net::HTTP.get_response(URI.parse(location_url)).body
     location_doc = REXML::Document.new(xml_location_data)
     woeids = []
+    #parse xml and get the WOEID for Vancouver
     location_doc.elements.each('places/place/woeid') do |ele|
        woeids << ele.text
     end
@@ -86,22 +89,23 @@ class UsersController < ApplicationController
     @woeid = woeids[0]
 
     #Information for Weather
-    puts("-------------------GOT TO WEATHER-----------------------")
+    #retrieve weather details by WOEID for Vancouver - found above
     url="http://weather.yahooapis.com/forecastrss?w=#@woeid&u=c"
-    resp = Net::HTTP.get_response(URI.parse(url)) # get_response takes an URI object
+    resp = Net::HTTP.get_response(URI.parse(url))
     data = resp.body
     xml_data = Net::HTTP.get_response(URI.parse(url)).body
 
+    #get the weather description
     doc = REXML::Document.new(xml_data)
-    titles = []
-    links = []
+    weather = []
     doc.elements.each('rss/channel/item/description') do |ele|
        @description = ele.text
     end
     
 
+    #get the temperature
     doc.elements.each('rss/channel/item/yweather:condition') do |ele|
-       links << ele.text
+       weather << ele.text
        @temperature = ele.attributes["temp"]       
     end
 
@@ -152,7 +156,6 @@ class UsersController < ApplicationController
     end
 
     @user_events = Event.find(:all, :conditions => :owner == @user.id);
-     puts('----USER EVENTS------');
   end
 
   #render users/edit_info
@@ -178,7 +181,7 @@ class UsersController < ApplicationController
     end
   end
 
-  #renders the page where the user can edit their information
+  #updates the user info - called from users/edit_info.html.erb upon submitting user info changes
   def info    
     @user = current_user
     puts(params[:user])
@@ -194,17 +197,15 @@ class UsersController < ApplicationController
   #method that will be called from the users/preferences.html.erb page when "update" link is clicked
   def update
     @user = current_user
-    puts('-----IN UPDATE PREFERENCES--------')
+    #get all use event tag objects from db for the logged in user
     @updated_user_event_tag = UserEventtype.find(:all, :conditions => :user_id == @user.id);
-      puts('----@user_event_tags----')
-      puts @updated_user_event_tag
       @updated_user_event_tag.each do |event_tag|
         if (event_tag.eventtype_id != params[:tag_ids] && event_tag.user_id == @user.id)
-            event_tag.destroy
+            event_tag.destroy #destroy records that are not part of the update
         end
       end
 
-      #bug here when update info
+      #put new records into db
       params[:tag_ids].each do |p|
           puts(p.to_s)
           @user.user_eventtypes << UserEventtype.new( :user_id => current_user.id, :eventtype_id=>p )
@@ -216,12 +217,11 @@ class UsersController < ApplicationController
         @updated_tag_ids[i] = e.eventtype_id
         i = i+1
       end
+      #notify user of success/failure of update
       if @user.update_attributes(params[:user])
-      puts('----GOT in if-----')
       flash[:notice] = "Preferences Successfully Updated"
       redirect_to :action => 'profile'
-    else
-      puts('----GOT in else-----')
+    else    
       redirect_to :action => 'preferences'
       flash[:error] = "Preferences Update failed"
     end

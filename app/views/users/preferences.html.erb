@@ -1,6 +1,7 @@
 <% content_for :head do %>
   <script type="text/javascript">
     checked=false;
+    //function to set select all check boxes
     function checkedAll () {
       var x= document.getElementById('event_tags');
       if (checked == false)
@@ -36,8 +37,8 @@
           <%=link_to 'Event Preferences',{:controller => 'users', :action => 'preferences'}, :class => 'events_nav_link_on'%>
         <%end%>
       </div>
+      
       <!-- User's event type preferences -->
-
       <div id="event_preferences" style="margin-left: 50px;">
          <%form_for @user, :url => {:controller => 'users', :action=>'update'}, :html => { :id => 'event_tags', :name => 'form', :multipart => true } do |f|%>
           <input type='checkbox' name='checkall' onclick='checkedAll(event_tags);' />CHECK ALL<br /><br />
