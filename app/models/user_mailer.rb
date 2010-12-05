@@ -1,3 +1,5 @@
+#Class used to setup email services
+
 class UserMailer < ActionMailer::Base
   def signup_notification(user)
     setup_email(user)

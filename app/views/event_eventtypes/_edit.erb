@@ -1,3 +1,6 @@
+<!-- This view is displayed during an Edit Event.  See the event_eventtypes/_new.html.erb partial.
+We need to prepoulate the autocomplete fields, and link them up to the eventtypes_autocomplete_path-->
+
 <%fields_for "event_eventtype_update[#{event_eventtype.id}]" do |t|%>
       <% rand = rand(100)%>
       <script>

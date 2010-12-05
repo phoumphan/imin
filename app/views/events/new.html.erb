@@ -1,4 +1,9 @@
- <% content_for :head do %>
+<!-- This page is for creating a new Event.  The page consists of a form that allows the user to
+enter event details.
+The page also has a link to render the add_eventtype partial, used for adding event tags to the event
+From here, the user can also invite users when creating a new event.-->
+
+<% content_for :head do %>
   <%= javascript_include_tag 'jquery.tokeninput' %>
   <%= stylesheet_link_tag 'token-input'  %>
 <script src="http://maps.google.com/maps?file=api&v=2&key=abcdefg&sensor=false"

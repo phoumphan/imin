@@ -1,5 +1,6 @@
 class Event < ActiveRecord::Base
-  
+
+  #this is necessary for the event_calendar plugin to be used with our Event model
   has_event_calendar
 
   #User associations (many-to-many)
@@ -14,6 +15,7 @@ class Event < ActiveRecord::Base
   has_many :event_photos, :dependent => :destroy
   has_many :photos, :through => :event_photos
 
+  #Event rating associations
   has_many :event_ratings, :dependent => :destroy
 
   belongs_to :owner, :class_name => "User"
@@ -22,6 +24,8 @@ class Event < ActiveRecord::Base
   validates_presence_of :description
   validates_numericality_of :cost, :greater_than_or_equal_to => 0
 
+  #The defined indexes are used in in the search engine:  Thinking_Sphinx.
+  #Whatever is listed as indexed will be searchable
   define_index do
     indexes name, :sortable => true
     indexes formality

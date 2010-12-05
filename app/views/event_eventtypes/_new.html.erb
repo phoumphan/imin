@@ -1,3 +1,6 @@
+<!-- This view is used when creating a new event, and the user clicks "Add event tag".
+This partial is eventually rendered, applying the jQuery tokenInput plugin to allow for autocomplete functionality.-->
+
 <%fields_for 'event_eventtype[]' do |t|%>
       <% rand = rand(100)%>
       <script>
