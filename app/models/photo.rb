@@ -6,6 +6,7 @@ class Photo < ActiveRecord::Base
 
   belongs_to :owner, :class_name => "User"
 
+  # Paperclip photo attribute
   has_attached_file :photo,
     :path => ':rails_root/public/images/photos/:id/:style_:basename.:extension',
     :url => ':class/:id/:style_:basename.:extension',

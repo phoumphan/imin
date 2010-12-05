@@ -44,6 +44,7 @@ function submitForm() {
   if (marker) {
     document.getElementById('event_location').value = marker.getLatLng().lat() + ',' + marker.getLatLng().lng();
 
+    //invitations sent as comma-separated string
     if (document.form.invited.options[0] != null){
       inv = document.form.invited.options[0].text;
       for (i=1;i<document.form.invited.options.length;i++) {
