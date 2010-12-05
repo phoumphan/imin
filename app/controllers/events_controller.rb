@@ -42,7 +42,7 @@ class EventsController < ApplicationController
       usr.id
     }
     ids.each { |i|
-      return @event.create_relationship(i, current_user, "INVITED") # TODO should not return
+      return unless @event.create_relationship(i, current_user, "INVITED")
     }
 
     #owner ID is stored in the Events table
