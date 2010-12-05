@@ -34,6 +34,7 @@ class UsersController < ApplicationController
     end
   end
 
+  #this method was automatically generated through use of the RESTful authentication plugin for Rails
   def activate
     logout_keeping_session!
     user = User.find_by_activation_code(params[:activation_code]) unless params[:activation_code].blank?
@@ -52,6 +53,8 @@ class UsersController < ApplicationController
   end
 
   #render users/profile
+  #This action will control everything that is used to display information on the user's own profile page
+  #The user's profile page contains a map, calendar, weather, etc...
   def profile
     @user = current_user
 
@@ -63,26 +66,12 @@ class UsersController < ApplicationController
     #Information for location
 
     res = GoogleGeocoder.reverse_geocode([@lat,@lng])
-    @location = res.full_address
-
-    puts('----------LOCATION-----------');
-    puts @location
-    location_array = @location.split(/, /)
-    puts location_array[0]
-    @city = location_array[0]
-    puts('----------city-----------');
-    puts @city
-
-    puts location_array[1]
+    @location = res.full_address    
+    location_array = @location.split(/, /)    
+    @city = location_array[0]    
     province_array = location_array[1].split(/ /);
-    @province = province_array[0]
-    puts('----------province-----------');
-    puts @province
-
-    puts location_array[2]
-    @country = location_array[2]
-    puts('----------country-----------');
-    puts @country
+    @province = province_array[0]    
+    @country = location_array[2]    
 
     location_url = "http://where.yahooapis.com/v1/places.q('vancouver%20bc%20canada')?appid=[PMelBrV34F.SL0PzMHeJo5kYOhR6FDbRAzDZuppSO9gSfK_MM8Hssnw8A3kkoNY57uk]"
     location_resp = Net::HTTP.get_response(URI.parse(location_url))
@@ -93,8 +82,7 @@ class UsersController < ApplicationController
     location_doc.elements.each('places/place/woeid') do |ele|
        woeids << ele.text
     end
-    puts('----WOEID----');
-    puts woeids[0]
+    
     @woeid = woeids[0]
 
     #Information for Weather
@@ -110,14 +98,11 @@ class UsersController < ApplicationController
     doc.elements.each('rss/channel/item/description') do |ele|
        @description = ele.text
     end
-    puts('-------Description---------')
-    puts @description;
+    
 
     doc.elements.each('rss/channel/item/yweather:condition') do |ele|
        links << ele.text
-       @temperature = ele.attributes["temp"]
-       puts('-------TEMPERATURE---------')
-       puts @temperature
+       @temperature = ele.attributes["temp"]       
     end
 
     #Information for Event Calendar
@@ -130,19 +115,19 @@ class UsersController < ApplicationController
       @year = time.year
     end
 
+    #Get the current month to display
     @shown_month = Date.civil(@year, @month)
-    # To restrict what events are included in the result you can pass additional find options like this:
-    # @event_strips = Event.event_strips_for_month(@shown_month, :include => :some_relation, :conditions => 'some_relations.some_column = true')
-    
-    #1.  Need to get all the Event ids that user is attending
+
+    #@user_events is an array of conditionals that specify what events in the database the user is associated with
     @user_events = Array.new
-    
+
+    #Search through the database and find the events, where there the current user is associated with
     user_event_rows = UserEvent.find_all_by_user_id(current_user.id)
     for ue in user_event_rows
       @user_events << ue.event_id.to_s
     end    
 
-    #@event_strips = Event.event_strips_for_month(@shown_month)
+    #pass in the conditionals array, and filter the shown events
     @event_strips = Event.event_strips_for_month(@shown_month, :conditions => ["id IN (?)", @user_events])
 
     #Notices
@@ -193,16 +178,14 @@ class UsersController < ApplicationController
     end
   end
 
-  def info
-    puts('----GOT TO EDIT-----')
+  #renders the page where the user can edit their information
+  def info    
     @user = current_user
     puts(params[:user])
-    if @user.update_attributes(params[:user])
-      puts('----GOT in if-----')
+    if @user.update_attributes(params[:user])      
       flash[:notice] = "Profile Successfully Updated"
       redirect_to :action => 'profile'
-    else
-      puts('----GOT in else-----')
+    else      
       redirect_to :action => 'edit_info'
       flash[:error] = "Profile Update failed"
     end
@@ -273,6 +256,8 @@ class UsersController < ApplicationController
     end
   end
 
+  #this method controls the actions that that display a user's page.  If the current  user tries
+  #view their own event page, redirect to their profile page.
   def show
     @friend = User.find(params[:id])
     if current_user

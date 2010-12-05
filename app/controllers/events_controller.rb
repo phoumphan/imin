@@ -4,8 +4,7 @@ class EventsController < ApplicationController
   #render new.html.erb
   def new
     @event = Event.new
-    @event_eventtype = @event.event_eventtypes.new
-    # @event_photo = @event.event_photos.new
+    @event_eventtype = @event.event_eventtypes.new    
     @event.cost = 0
 
     # set up friend choices for invitations
@@ -25,11 +24,6 @@ class EventsController < ApplicationController
     end
 
         
-    # #Create rows in EventPhotos
-    # if params[:event_photo] != nil
-    #   params[:event_photo].each { |p| @event.event_photos << EventPhoto.new( p ) }
-    # end
-
     #Create rows in UserEvents
     #Ids retrieved before creating joins, to stop space leaks
     ids = params[:user_events].split(',').map { |nm|
@@ -71,8 +65,8 @@ class EventsController < ApplicationController
 
   end
 
+  #This action renders the events/show/<eventID> page
   def show
-
     @event = Event.find(params[:id])
 
     # Check that user is allowed to view this event
@@ -87,7 +81,10 @@ class EventsController < ApplicationController
       @lat = latlng[0]
       @lng = latlng[1]
 
+      #Event "like" system.  
       if current_user
+        #this already_rated boolean will be used to determine whether to display an option for the user to "like" the event
+        #if the user has already "liked" the event, don't allow them to do it again.
         @already_rated = false
         @user_rating = EventRating.all(:conditions => {:event_id => params[:id], :user_id => current_user.id})
         if (@user_rating.size != 0)
@@ -95,6 +92,7 @@ class EventsController < ApplicationController
         end
       end
 
+      #get the total number of "likes" for this particular event so that we can display it
       @number_of_ratings = EventRating.find_by_sql('SELECT COUNT(*) FROM event_ratings WHERE event_id = ' + @event.id.to_s)[0]["COUNT(*)"].to_i
 
       # Referrer is for redirects on admin_check and owner_check errors
@@ -137,6 +135,8 @@ class EventsController < ApplicationController
     end
   end
 
+  #action used once a user clicks the "like" link found on an event page.  This action simply creates
+  #a new row in the EventRating table.
   def rate
     @event_rating = EventRating.new(:event_id => params[:id], :user_id => current_user.id)
 
@@ -153,10 +153,14 @@ class EventsController < ApplicationController
 
   #Renders events/edit.html.erb
   def edit
+    #Retrieve the current event
     @event = Event.find(params[:id])
+
+    #determine all the eventtypes associated with the event by looking in the database
     @event_eventtype = @event.event_eventtypes.find(:all, :conditions => {:event_id => params[:id]})
-    @event_photo = @event.event_photos.find(:all, :conditions => {:event_id => params[:id]})
-    #@event_users = @event.user_events.find(:all, :conditions => {:event_id => params[:id]})
+
+    #determine the photos associated with the event by looking in DB
+    @event_photo = @event.event_photos.find(:all, :conditions => {:event_id => params[:id]})    
 
     #location coordinates
     latlng = @event.location.split(',')
@@ -191,6 +195,7 @@ class EventsController < ApplicationController
     end
   end
 
+  #action that allows owner to delete the event
   def deletion
     @event = Event.find(params[:id])
     if owner_check
@@ -211,6 +216,7 @@ class EventsController < ApplicationController
         end
   end
 
+  #helper method that determines if the current user viewing the event is the owner
   def owner_check
     if not current_user or @event.owner.id != current_user.id
       flash[:error] = "You are not the owner"
@@ -221,6 +227,7 @@ class EventsController < ApplicationController
     end
   end
 
+  #determines whether the current user is an administrator
   def is_admin
     if current_user
       UserEvent.find(:first, :conditions => {:event_id => @event.id, :user_id => current_user.id, :user_event_status => "ADMIN"})

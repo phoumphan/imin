@@ -1,6 +1,8 @@
 class PendingFriendRequestsController < ApplicationController
 
   #This will be called when an "Request Friendship" link is clicked
+  #As users are not friend immediately after a request, we need to store the pending friend requests somewhere
+  #This action will just create a new row in the PendingFriendRequests table
   def create
 
     @user = User.find(params[:user_id])    

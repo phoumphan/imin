@@ -6,7 +6,9 @@ class EventtypesController < ApplicationController
     @event_eventtypes = eventtype.event_eventtypes.new    
   end
 
-  
+  #This action gets called to populate the autocomplete when an event administrator is adding an event tag to an event.
+  #The action simply queries the database for whatever the user is typing, and renders a JSON object to be passed to the
+  #autocomplete plugin
   def select_for_event
       
     	@eventtypes = Eventtype.find(:all, :conditions => [ 'LOWER(description) LIKE ?', '%' + params[:q].downcase + '%' ],  :order => 'description ASC', :limit => 8)
