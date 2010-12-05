@@ -6,6 +6,7 @@
 <%ph = 0
 more_photos = true
 while more_photos
+  # Row of images
   (1..5).each do |i|
     if ph >= @event.photos.count
       more_photos = false

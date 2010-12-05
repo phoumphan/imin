@@ -46,11 +46,13 @@ class PhotosController < ApplicationController
 
   public
 
+  # Is run when uploading a new photo
   def create
     
     @photo = Photo.new(params[:photo])
     @photo.owner = current_user
 
+    # User needs to be an admin on the event to add a photo to it
     @event = Event.find(params[:first_event])
     return unless admin_check
 

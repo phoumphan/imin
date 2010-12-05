@@ -8,7 +8,9 @@ class EventsController < ApplicationController
     # @event_photo = @event.event_photos.new
     @event.cost = 0
 
+    # set up friend choices for invitations
     set_friends
+
     @invited = []
   end
 
@@ -34,16 +36,13 @@ class EventsController < ApplicationController
       if not usr
         flash.now[:error] = "No such user: " + nm
 
-        # Reload 'new' form on error message
-        set_friends
-        @invited = params[:user_events].split(',')
-        render :action => 'new'
+        reload_new_form
         return
       end
       usr.id
     }
     ids.each { |i|
-      return @event.create_relationship(i, current_user, "INVITED")
+      return @event.create_relationship(i, current_user, "INVITED") # TODO should not return
     }
 
     #owner ID is stored in the Events table
@@ -64,6 +63,9 @@ class EventsController < ApplicationController
     #redirect to the event page
     if @event.save
   	   redirect_to :action => 'show', :id => @event.id
+    else
+      flash.now[:error] = "Error while saving event"
+      reload_new_form
     end
 
   end
@@ -94,6 +96,7 @@ class EventsController < ApplicationController
 
       @number_of_ratings = EventRating.find_by_sql('SELECT COUNT(*) FROM event_ratings WHERE event_id = ' + @event.id.to_s)[0]["COUNT(*)"].to_i
 
+      # Referrer is for redirects on admin_check and owner_check errors
       session[:referrer] = 'show'
 
     #-----------WEATHER-------------
@@ -197,6 +200,16 @@ class EventsController < ApplicationController
 
   private
 
+  def reload_new_form
+        # Reload 'new' form on error message
+        set_friends
+        @invited = params[:user_events].split(',')
+        respond_to do |form|
+          form.html { render :action => 'new' }
+          form.xml { head :ok }
+        end
+  end
+
   def owner_check
     if not current_user or @event.owner.id != current_user.id
       flash[:error] = "You are not the owner"
@@ -270,16 +283,22 @@ class EventsController < ApplicationController
     end
   end
 
+  # Action run when inviting a user (after event is created)
+  # and adding an admin. A hidden field in the add_user_to
+  # partial determines which.
   def user_add_exec
     @event = Event.find(params[:id])
     return unless admin_check
     if params[:friend] == '1'
+      # User selected in dropdown list
       usr = User.find(params[:friend_select])
     else
+      # User typed a name
       usr = User.find_by_login(params[:other_user])
     end
     if usr
-      return if params[:user_status] != "ADMIN" and params[:user_status] != "INVITED"
+      return if params[:user_status] != "ADMIN" and params[:user_status] != "INVITED" # validate input
+
       if @event.create_relationship(usr.id, current_user, params[:user_status])
         if params[:user_status] == "ADMIN"
           flash[:notice] = 'Admin added'
